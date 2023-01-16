@@ -1,6 +1,7 @@
 <template>
   <div class="DetailView">
     <h1>{{ maintext }}</h1>
+    <fa icon="fa-hippo"/>
   </div>
 </template>
 
