@@ -1,0 +1,8 @@
+@import "../General/variables.scss";
+
+.DetailView {
+    height: 80%;
+    width: 100%;
+    background-color: green;
+    @include flex-center;
+}

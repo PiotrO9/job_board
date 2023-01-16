@@ -1,0 +1,8 @@
+@import "../General/variables.scss";
+
+header {
+    height: 20vh;
+    width: 100%;
+    background-color: red;
+    @include flex-center;
+}
