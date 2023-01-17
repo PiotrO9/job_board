@@ -1,0 +1,19 @@
+@import "../General/variables.scss";
+
+.UserDatas {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+
+    .PictureData {
+        height: 40%;
+        border-radius: 50%;
+    }
+
+    .down-arrow {
+        width: 26px;
+        height: 12px;
+    }
+}

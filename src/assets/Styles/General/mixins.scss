@@ -8,3 +8,13 @@
     @include flex-center;
     justify-content: $justify;
 }
+
+@mixin flex-direction($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
+
+@mixin disable-borders {
+    border: none;
+    outline: none;
+}

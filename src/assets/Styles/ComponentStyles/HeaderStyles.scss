@@ -1,8 +1,23 @@
 @import "../General/variables.scss";
 
 header {
-    height: 20vh;
+    height: 8%;
     width: 100%;
-    background-color: red;
-    @include flex-center;
+    display: grid;
+    grid-template-columns: 3fr 7fr 2fr;
+    font-family: "Sora";
+
+    #LogoContainer {
+        display: flex;
+        align-items: center;
+
+        p {
+            font-size: 20px;
+            margin-left: 35px;
+        }
+    }
+
+    .UserDatasContainer {
+        height: 100%;
+    }
 }
