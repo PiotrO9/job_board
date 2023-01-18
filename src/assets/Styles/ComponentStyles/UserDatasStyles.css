@@ -3,8 +3,10 @@
   height: 100%;
   display: flex;
   flex-direction: row;
-  gap: 5px;
   align-items: center;
+  justify-content: start;
+  gap: 5px;
+  position: relative;
 }
 .UserDatas .PictureData {
   height: 40%;
@@ -13,4 +15,141 @@
 .UserDatas .down-arrow {
   width: 26px;
   height: 12px;
+}
+.UserDatas .modalUserDatas {
+  position: absolute;
+  right: 45%;
+  top: 110%;
+  height: 400%;
+  width: 110%;
+  min-height: 200px;
+  background-color: red;
+  border-radius: 15px;
+}
+.UserDatas .modalUserDatas .GeneralDatas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px;
+}
+.UserDatas .modalUserDatas .GeneralDatas .BasicDatas {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5px;
+}
+.UserDatas .modalUserDatas .GeneralDatas .BasicDatas:nth-child(2) svg {
+  margin-right: 2px;
+}
+.UserDatas .modalUserDatas .GeneralDatas .BasicDatas:nth-child(2) .SmallerLocationFont {
+  font-size: 12px;
+}
+.UserDatas .modalUserDatas .GeneralDatas img {
+  border-radius: 50%;
+}
+
+.rotateArrowUp {
+  -webkit-animation: rotateArrowUpAnimation 1s forwards;
+          animation: rotateArrowUpAnimation 1s forwards;
+}
+
+.rotateArrowDown {
+  -webkit-animation: rotateArrowDownAnimation 1s forwards;
+          animation: rotateArrowDownAnimation 1s forwards;
+}
+
+.moveUserDataToRight {
+  -webkit-animation: MoveDataToRightAnimation 1s forwards;
+          animation: MoveDataToRightAnimation 1s forwards;
+}
+
+.moveUserDataToLeft {
+  -webkit-animation: MoveDataToLeftAnimation 1s forwards;
+          animation: MoveDataToLeftAnimation 1s forwards;
+}
+
+.ModalUserData-enter-to {
+  -webkit-animation: DisplayModalUserDatas 2s forwards;
+          animation: DisplayModalUserDatas 2s forwards;
+}
+
+@-webkit-keyframes rotateArrowUpAnimation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes rotateArrowUpAnimation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+@-webkit-keyframes rotateArrowDownAnimation {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes rotateArrowDownAnimation {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@-webkit-keyframes MoveDataToRightAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(40%);
+  }
+}
+@keyframes MoveDataToRightAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(40%);
+  }
+}
+@-webkit-keyframes MoveDataToLeftAnimation {
+  0% {
+    transform: translateX(40%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes MoveDataToLeftAnimation {
+  0% {
+    transform: translateX(40%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes DisplayModalUserDatas {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes DisplayModalUserDatas {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=UserDatasStyles.css.map */

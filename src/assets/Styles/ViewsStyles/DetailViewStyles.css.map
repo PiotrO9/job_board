@@ -1,1 +1,1 @@
-{"version":3,"sources":["DetailViewStyles.scss","../General/mixins.scss","DetailViewStyles.css"],"names":[],"mappings":"AAEA;EACI,WAAA;EACA,WAAA;EACA,uBAAA;ECJA,aAAA;EACA,uBAAA;EACA,mBAAA;ACIJ","file":"DetailViewStyles.css"}
+{"version":3,"sources":["../General/variables.scss","DetailViewStyles.scss","../General/mixins.scss","DetailViewStyles.css"],"names":[],"mappings":"AAIQ,0FAAA;ACFR;EACI,WAAA;EACA,WAAA;EACA,uBAAA;ECJA,aAAA;EACA,uBAAA;EACA,mBAAA;ACKJ","file":"DetailViewStyles.css"}
