@@ -17,13 +17,16 @@
   height: 12px;
 }
 .UserDatas .modalUserDatas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
   right: 45%;
   top: 110%;
-  height: 400%;
+  height: 300%;
   width: 110%;
   min-height: 200px;
-  background-color: red;
+  background-color: white;
   border-radius: 15px;
 }
 .UserDatas .modalUserDatas .GeneralDatas {
@@ -43,8 +46,36 @@
 .UserDatas .modalUserDatas .GeneralDatas .BasicDatas:nth-child(2) .SmallerLocationFont {
   font-size: 12px;
 }
+.UserDatas .modalUserDatas .GeneralDatas .BasicDatas:nth-child(2) .SmallestLocationFont {
+  font-size: 10px;
+}
 .UserDatas .modalUserDatas .GeneralDatas img {
   border-radius: 50%;
+}
+.UserDatas .modalUserDatas hr {
+  width: 90%;
+  margin: 5px 4px 5px 4px;
+}
+.UserDatas .modalUserDatas .StatisticsFields {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 4px;
+}
+.UserDatas .modalUserDatas button {
+  border: none;
+  outline: none;
+  width: 40%;
+  height: 15%;
+  max-width: 120px;
+  min-height: 50px;
+  margin-top: 15px;
+  padding: 5px;
+  color: white;
+  font-family: "Sora";
+  background-color: rgb(46, 128, 255);
+  border-radius: 12px;
 }
 
 .rotateArrowUp {

@@ -19,15 +19,18 @@
             <div class="StatisticsFields">
                 <div class="PostField">
                     <p>Posts</p>
-
+                    <p><fa icon="fa-pen-to-square"/>1234</p>
                 </div>
                 <div class="FollowersField">
-
+                    <p>Followers</p>
+                    <p><fa icon="fa-people-group"/>1234</p>
                 </div>
                 <div class="FollowingField">
-
+                    <p>Following</p>
+                    <p><fa icon="fa-person-circle-check"/>1234</p>
                 </div>
             </div>
+            <button>View Full profile</button>
         </div>
     </transition>
   </div>
@@ -82,10 +85,15 @@ export default {
                 if(this.ModalUserDataVisibility) {
                     let CountryLength = this.UserDatas.location.country.length
                     let CityLength = this.UserDatas.location.city.length
-                    
-                    if(CountryLength + CityLength > 20) {
-                        const LocationDatas = document.getElementById("LocationDatas")
+                    const LocationDatas = document.getElementById("LocationDatas")
+
+
+                    if(CountryLength + CityLength >= 18) {
                         LocationDatas.classList.add("SmallerLocationFont")
+                    }
+                    else if(CountryLength + CityLength >= 24)
+                    {
+                        LocationDatas.classList.add("SmallestLocationFont")
                     }
                 }
             }, 1000)
