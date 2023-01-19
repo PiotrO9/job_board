@@ -7,6 +7,7 @@
   justify-content: start;
   gap: 5px;
   position: relative;
+  cursor: pointer;
 }
 .UserDatas .PictureData {
   height: 40%;
@@ -26,6 +27,7 @@
   height: 300%;
   width: 110%;
   min-height: 200px;
+  min-width: 250px;
   background-color: white;
   border-radius: 15px;
 }
@@ -33,6 +35,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  width: 100%;
   padding: 10px;
 }
 .UserDatas .modalUserDatas .GeneralDatas .BasicDatas {
@@ -47,7 +50,7 @@
   font-size: 12px;
 }
 .UserDatas .modalUserDatas .GeneralDatas .BasicDatas:nth-child(2) .SmallestLocationFont {
-  font-size: 10px;
+  font-size: 9px;
 }
 .UserDatas .modalUserDatas .GeneralDatas img {
   border-radius: 50%;
@@ -76,6 +79,13 @@
   font-family: "Sora";
   background-color: rgb(46, 128, 255);
   border-radius: 12px;
+}
+.UserDatas .modalUserDatas button a {
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .rotateArrowUp {

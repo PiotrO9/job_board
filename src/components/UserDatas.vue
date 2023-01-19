@@ -30,7 +30,7 @@
                     <p><fa icon="fa-person-circle-check"/>1234</p>
                 </div>
             </div>
-            <button>View Full profile</button>
+            <button><a href="/UserDetails">View Full profile</a></button>
         </div>
     </transition>
   </div>

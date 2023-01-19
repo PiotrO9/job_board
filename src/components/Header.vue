@@ -1,7 +1,10 @@
 <template>
   <header>
     <div id="LogoContainer">
-      <p>JOBBOARD</p>
+      <p>
+        <span>JOB</span>
+        <span class="secondPartOfLogo">BOARD</span>
+      </p>
     </div>
     <SearchFields />
     <div class="UserDatasContainer">

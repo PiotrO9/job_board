@@ -1,5 +1,5 @@
 <template>
-  <div class="DetailView">
+  <div class="OfferDetailView">
     <h1>{{ maintext }}</h1>
     <fa icon="fa-hippo"/>
   </div>
@@ -20,5 +20,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../assets/Styles/ViewsStyles/DetailViewStyles.scss";
+@import "../assets/Styles/ViewsStyles/OfferDetailsViewStyles.scss";
 </style>

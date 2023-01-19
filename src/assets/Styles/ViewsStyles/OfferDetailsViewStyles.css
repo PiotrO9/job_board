@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;500;700&display=swap");
-.DetailView {
-  height: 80%;
-  width: 100%;
-  background-color: green;
+.OfferDetailView {
   display: flex;
   justify-content: center;
   align-items: center;
-}/*# sourceMappingURL=DetailViewStyles.css.map */
+  height: 100%;
+  width: 100%;
+  background-color: green;
+}/*# sourceMappingURL=OfferDetailsViewStyles.css.map */
