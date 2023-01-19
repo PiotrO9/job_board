@@ -75,8 +75,6 @@ export default {
             }
             this.IsArrowDirectionDown = !this.IsArrowDirectionDown
             this.ModalUserDataVisibility = !this.ModalUserDataVisibility
-
-            
         }
     },
     watch: {
@@ -86,7 +84,6 @@ export default {
                     let CountryLength = this.UserDatas.location.country.length
                     let CityLength = this.UserDatas.location.city.length
                     const LocationDatas = document.getElementById("LocationDatas")
-
 
                     if(CountryLength + CityLength >= 18) {
                         LocationDatas.classList.add("SmallerLocationFont")

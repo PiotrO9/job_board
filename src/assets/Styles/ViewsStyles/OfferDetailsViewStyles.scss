@@ -2,7 +2,6 @@
 
 .OfferDetailView {
     @include flex-center;
-    height: 100%;
-    width: 100%;
+    @include width-height-val(100%);
     background-color: green;
 }

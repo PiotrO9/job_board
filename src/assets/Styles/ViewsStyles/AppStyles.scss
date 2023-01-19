@@ -1,3 +1,5 @@
+@import "../General/variables.scss";
+
 * {
     margin: 0px;
     padding: 0px;
@@ -5,7 +7,6 @@
 }
 
 html, body, #app {
-    height: 100%;
-    width: 100%;
+    @include width-height-val(100%);
     overflow: hidden;
 }

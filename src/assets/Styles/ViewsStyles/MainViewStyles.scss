@@ -1,7 +1,6 @@
 @import "../General/variables.scss";
 
 .MainView {
-    height: 92%;
-    width: 100%;
+    @include width-height(100%, 92%);
     background-color: green;
 }

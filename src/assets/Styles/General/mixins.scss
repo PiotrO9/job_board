@@ -18,3 +18,13 @@
     border: none;
     outline: none;
 }
+
+@mixin width-height-val($value) {
+    width: $value;
+    height: $value;
+}
+
+@mixin width-height($widthVal, $heightVal) {
+    width: $widthVal;
+    height: $heightVal;
+}

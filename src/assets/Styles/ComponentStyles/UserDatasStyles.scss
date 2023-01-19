@@ -1,11 +1,10 @@
 @import "../General/variables.scss";
+@import "../Animations/UserDatasAnimations.scss";
 
 .UserDatas {
+    @include flex-direction(row);
+    @include flex-justify(start);
     height: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: start;
     gap: 5px;
     position: relative;
     cursor: pointer;
@@ -21,30 +20,25 @@
     }
 
     .modalUserDatas {
-        display: flex;
-        flex-direction: column;
+        @include flex-direction(column);
+        @include width-height(110%, 300%);
         align-items: center;
         position: absolute;
         right: 45%;
         top: 110%;
-        height: 300%;
-        width: 110%;
         min-height: 200px;
         min-width: 250px;
         background-color: white;
         border-radius: 15px;
 
         .GeneralDatas {
-            display: flex;
-            flex-direction: row;
+            @include flex-direction(row);
             justify-content: space-around;
             width: 100%;
             padding: 10px;
 
             .BasicDatas {
-                display: flex;
-                flex-direction: column;
-
+                @include flex-direction(column);
                 margin-right: 5px;
 
                 &:nth-child(2) {
@@ -74,17 +68,15 @@
         }
 
         .StatisticsFields {
+            @include flex-direction(row);
             width: 100%;
-            display: flex;
-            flex-direction: row;
             justify-content: space-between;
             padding: 4px;
         }
 
         button {
             @include disable-borders;
-            width: 40%;
-            height: 15%;
+            @include width-height(40%, 15%);
             max-width: 120px;
             min-height: 50px;
             margin-top: 15px;
@@ -95,8 +87,7 @@
             border-radius: 12px;
 
             a {
-                height: 100%;
-                width: 100%;
+                @include width-height-val(100%);
                 text-decoration: none;
                 color: inherit;
                 cursor: pointer;
@@ -123,49 +114,4 @@
 
 .ModalUserData-enter-to {
     animation: DisplayModalUserDatas 2s forwards;
-}
-
-@keyframes rotateArrowUpAnimation {
-    0% {
-        transform: rotate(0);
-    }
-    100% {
-        transform: rotate(180deg);
-    }
-}
-
-@keyframes rotateArrowDownAnimation {
-    0% {
-        transform: rotate(180deg);
-    }
-    100% {
-        transform: rotate(0);
-    }
-}
-
-@keyframes MoveDataToRightAnimation {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(40%);
-    }
-}
-
-@keyframes MoveDataToLeftAnimation {
-    0% {
-        transform: translateX(40%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-@keyframes DisplayModalUserDatas {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }
