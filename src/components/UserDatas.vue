@@ -19,15 +19,15 @@
             <div class="StatisticsFields">
                 <div class="PostField">
                     <p>Posts</p>
-                    <p><fa icon="fa-pen-to-square"/>1234</p>
+                    <p><fa icon="fa-pen-to-square"/>{{ Statistics.posts }}</p>
                 </div>
                 <div class="FollowersField">
                     <p>Followers</p>
-                    <p><fa icon="fa-people-group"/>1234</p>
+                    <p><fa icon="fa-people-group"/>{{ Statistics.followers }}</p>
                 </div>
                 <div class="FollowingField">
                     <p>Following</p>
-                    <p><fa icon="fa-person-circle-check"/>1234</p>
+                    <p><fa icon="fa-person-circle-check"/>{{ Statistics.following }}</p>
                 </div>
             </div>
             <button><a href="/UserDetails">View Full profile</a></button>
@@ -39,6 +39,7 @@
 <script>
 import FetchRandomUserApi from '@/utils/ApiUtils/FetchRandomUserApi';
 import SetClassNameForUserLocationDatas from '@/utils/SetClassNameForUserLocationDatas.js';
+import GenerateRandomStatisticNumber from '@/utils/GenerateRandomStatisticNumber.js';
 
 export default {
     data() {
@@ -47,7 +48,12 @@ export default {
             PictureURL: "",
             IsArrowDirectionDown: true,
             ModalUserDataVisibility: false,
-            UserDatas: undefined
+            UserDatas: undefined,
+            Statistics: {
+                posts: 0,
+                followers: 0,
+                following: 0
+            }
         }
     },
     mounted() {
@@ -83,9 +89,18 @@ export default {
             setTimeout(() => {
                 if(this.ModalUserDataVisibility) {
                     const LocationDatas = document.getElementById("LocationDatas")
-                    LocationDatas.classList.add(SetClassNameForUserLocationDatas(this.UserDatas))
+                    let className = SetClassNameForUserLocationDatas(this.UserDatas)
+                    if(className != "") {
+                        LocationDatas.classList.add(className)
+                    }
                 }
-            }, 1000)
+
+                this.Statistics = {
+                    posts: GenerateRandomStatisticNumber(10, 150),
+                    followers: GenerateRandomStatisticNumber(10, 1000),
+                    following: GenerateRandomStatisticNumber(10, 500)
+                }
+            }, 200)
         }
     }
 }
