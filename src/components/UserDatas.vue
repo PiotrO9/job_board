@@ -38,6 +38,7 @@
 
 <script>
 import FetchRandomUserApi from '@/utils/ApiUtils/FetchRandomUserApi';
+import SetClassNameForUserLocationDatas from '@/utils/SetClassNameForUserLocationDatas.js';
 
 export default {
     data() {
@@ -81,17 +82,8 @@ export default {
         ModalUserDataVisibility() {
             setTimeout(() => {
                 if(this.ModalUserDataVisibility) {
-                    let CountryLength = this.UserDatas.location.country.length
-                    let CityLength = this.UserDatas.location.city.length
                     const LocationDatas = document.getElementById("LocationDatas")
-
-                    if(CountryLength + CityLength >= 18) {
-                        LocationDatas.classList.add("SmallerLocationFont")
-                    }
-                    else if(CountryLength + CityLength >= 24)
-                    {
-                        LocationDatas.classList.add("SmallestLocationFont")
-                    }
+                    LocationDatas.classList.add(SetClassNameForUserLocationDatas(this.UserDatas))
                 }
             }, 1000)
         }
