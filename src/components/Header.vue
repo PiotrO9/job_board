@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header :class="{ dark: darkMode }">
     <div id="LogoContainer">
       <p>
         <span>JOB</span>
@@ -16,11 +16,21 @@
 <script>
 import SearchFields from "@/components/SearchFields.vue"
 import UserDatas from "@/components/UserDatas.vue"
+import { ThemeMode } from "@/utils/store"
 
 export default {
   components: {
     SearchFields,
     UserDatas
+  },
+  data() {
+    return {
+      darkMode: false
+    }
+  },
+  mounted() {
+    this.darkMode = ThemeMode.isDarkMode
+    console.log(ThemeMode.isDarkMode)
   }
 }
 </script>

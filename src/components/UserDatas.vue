@@ -59,7 +59,7 @@ export default {
     mounted() {
         FetchRandomUserApi()
         .then((res) => {
-            this.UserDatas = res 
+            this.UserDatas = res
         })
 
     },
