@@ -2,5 +2,6 @@
 .MainView {
   width: 100%;
   height: 92%;
-  background-color: green;
+  display: grid;
+  grid-template-columns: 3fr 9fr;
 }/*# sourceMappingURL=MainViewStyles.css.map */

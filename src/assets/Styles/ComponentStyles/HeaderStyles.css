@@ -19,4 +19,12 @@ header #LogoContainer p .secondPartOfLogo {
 }
 header .UserDatasContainer {
   height: 100%;
+}
+
+header.dark {
+  background-color: black;
+  color: white;
+}
+header.dark #LogoContainer span {
+  color: white;
 }/*# sourceMappingURL=HeaderStyles.css.map */

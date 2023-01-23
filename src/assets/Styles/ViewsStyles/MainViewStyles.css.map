@@ -1,1 +1,1 @@
-{"version":3,"sources":["../General/variables.scss","MainViewStyles.scss","../General/mixins.scss","MainViewStyles.css"],"names":[],"mappings":"AAIQ,0FAAA;ACFR;ECyBI,WDxBsB;ECyBtB,WDzB4B;EAC5B,uBAAA;AECJ","file":"MainViewStyles.css"}
+{"version":3,"sources":["../General/variables.scss","MainViewStyles.scss","../General/mixins.scss","MainViewStyles.css"],"names":[],"mappings":"AAIQ,0FAAA;ACFR;ECyBI,WDxBsB;ECyBtB,WDzB4B;EAE5B,aAAA;EACA,8BAAA;AEAJ","file":"MainViewStyles.css"}
