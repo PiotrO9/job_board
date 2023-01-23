@@ -1,12 +1,14 @@
 <template>
   <div class="JobOffers">
-
+    <h1>Job Offers</h1>
   </div>
 </template>
 
 <script>
-export default {
+import FetchWorkableApi from "@/utils/ApiUtils/FetchWorkableApi.js";
 
+export default {
+    
 }
 </script>
 

@@ -30,7 +30,6 @@ export default {
   },
   mounted() {
     this.darkMode = ThemeMode.isDarkMode
-    console.log(ThemeMode.isDarkMode)
   }
 }
 </script>
