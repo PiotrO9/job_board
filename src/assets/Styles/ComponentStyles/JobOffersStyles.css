@@ -1,6 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;500;700&display=swap");
 .JobOffers {
   height: 100%;
-  width: 100%;
-  background-color: lightblue;
+  width: 97%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  margin-top: 10px;
+  overflow-y: scroll;
+}
+.JobOffers::-webkit-scrollbar {
+  display: none;
 }/*# sourceMappingURL=JobOffersStyles.css.map */

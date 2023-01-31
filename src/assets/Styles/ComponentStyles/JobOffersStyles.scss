@@ -2,6 +2,14 @@
 
 .JobOffers {
     height: 100%;
-    width: 100%;
-    background-color: lightblue;
+    width: 97%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    margin-top: 10px;
+    overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
 }
