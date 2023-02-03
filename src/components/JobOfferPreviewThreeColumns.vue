@@ -1,7 +1,8 @@
 <template>
   <div class="JobOfferPreviewThreeColumns">
     <div class="mainDatas">
-    <img class="CompanyLogo" :src=datas.logoUrl :width=datas.width :height=datas.height>
+    <img v-if="datas.logoUrl != undefined" class="CompanyLogo" :src=datas.logoUrl :width=datas.width :height=datas.height>
+    <img v-else src="../assets/images/question-mark.png" alt="Unknown logo">
     <p>{{ datas.jobOfferName }}</p>
     </div>
     <div class="detailDatas">
