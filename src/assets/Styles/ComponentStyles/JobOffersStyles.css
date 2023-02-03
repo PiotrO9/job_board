@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;500;700&display=swap");
+.loadingPhase.JobOffers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .JobOffers {
   height: 100%;
   width: 97%;

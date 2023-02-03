@@ -1,5 +1,11 @@
 @import "../General/variables.scss";
 
+.loadingPhase {
+    &.JobOffers {
+        @include flex-center;
+    }
+}
+
 .JobOffers {
     height: 100%;
     width: 97%;
@@ -12,4 +18,6 @@
         &::-webkit-scrollbar {
             display: none;
         }
+
+        
 }

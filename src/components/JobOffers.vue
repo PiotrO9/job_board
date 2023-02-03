@@ -1,7 +1,7 @@
 <template>
-  <div class="JobOffers">
+  <div :class="{ loadingPhase: jobOffers == null }" class="JobOffers">
     <div v-if="jobOffers == null">
-      <h3>Loading...</h3>
+      <Loading/>
     </div>
     <div v-for="jobOffer in jobOffers" v-bind:key="jobOffer">
       <JobOfferPreviewThreeColumns :datas="jobOffer" />
@@ -12,6 +12,7 @@
 <script>
 import FetchDataFromNoFluffJobsWithFilters from "@/utils/ApiUtils/FetchDataFromNoFluffJobsWithFilters.js"
 import JobOfferPreviewThreeColumns from "@/components/JobOfferPreviewThreeColumns.vue"
+import Loading from "@/components/Loading.vue"
 
 export default {
     data(){
@@ -20,7 +21,8 @@ export default {
       }
     },
     components: {
-      JobOfferPreviewThreeColumns
+      JobOfferPreviewThreeColumns,
+      Loading
     },
     mounted() {
       FetchDataFromNoFluffJobsWithFilters()
