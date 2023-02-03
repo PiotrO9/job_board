@@ -1,7 +1,7 @@
 <template>
   <div class="Loading">
     <img src="../assets/images/loading.png" alt="Loading circle">
-    <p id="LoadingText">Loading</p>
+    <p id="LoadingText">Loading...</p>
   </div>
 </template>
 
