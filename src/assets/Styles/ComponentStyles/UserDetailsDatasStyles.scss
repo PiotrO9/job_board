@@ -1,0 +1,5 @@
+@import "../General/variables.scss";
+
+.UserDetailsDatas {
+    @include width-height-val(100%);
+}

@@ -1,0 +1,6 @@
+@import "../General/variables.scss";
+
+.UserDetailsView {
+    @include width-height-val(100%);
+    @include flex-center;
+}
