@@ -30,7 +30,7 @@
                     <p><fa icon="fa-person-circle-check"/>{{ Statistics.following }}</p>
                 </div>
             </div>
-            <button><a href="/UserDetails">View Full profile</a></button>
+            <button @click="RedirectToUserDetails">View Full profile</button>
         </div>
     </transition>
   </div>
@@ -82,6 +82,11 @@ export default {
             }
             this.IsArrowDirectionDown = !this.IsArrowDirectionDown
             this.ModalUserDataVisibility = !this.ModalUserDataVisibility
+        },
+        RedirectToUserDetails() {
+            localStorage.setItem('userDatas', JSON.stringify(this.UserDatas))
+            localStorage.setItem('statistics', JSON.stringify(this.Statistics))
+            this.$router.push({ name: 'userDetails' })
         }
     },
     watch: {
