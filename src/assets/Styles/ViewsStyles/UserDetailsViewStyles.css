@@ -5,4 +5,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.UserDetailsView.dark {
+  background-color: rgb(30, 47, 68);
 }/*# sourceMappingURL=UserDetailsViewStyles.css.map */

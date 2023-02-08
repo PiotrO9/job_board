@@ -1,25 +1,9 @@
-@-webkit-keyframes rotateArrowUpAnimation {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(180deg);
-  }
-}
 @keyframes rotateArrowUpAnimation {
   0% {
     transform: rotate(0);
   }
   100% {
     transform: rotate(180deg);
-  }
-}
-@-webkit-keyframes rotateArrowDownAnimation {
-  0% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(0);
   }
 }
 @keyframes rotateArrowDownAnimation {
@@ -30,14 +14,6 @@
     transform: rotate(0);
   }
 }
-@-webkit-keyframes MoveDataToRightAnimation {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(40%);
-  }
-}
 @keyframes MoveDataToRightAnimation {
   0% {
     transform: translateX(0);
@@ -46,28 +22,12 @@
     transform: translateX(40%);
   }
 }
-@-webkit-keyframes MoveDataToLeftAnimation {
-  0% {
-    transform: translateX(40%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
 @keyframes MoveDataToLeftAnimation {
   0% {
     transform: translateX(40%);
   }
   100% {
     transform: translateX(0);
-  }
-}
-@-webkit-keyframes DisplayModalUserDatas {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 @keyframes DisplayModalUserDatas {

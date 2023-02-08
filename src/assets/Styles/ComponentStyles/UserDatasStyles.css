@@ -1,26 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;500;700&display=swap");
-@-webkit-keyframes rotateArrowUpAnimation {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(180deg);
-  }
-}
 @keyframes rotateArrowUpAnimation {
   0% {
     transform: rotate(0);
   }
   100% {
     transform: rotate(180deg);
-  }
-}
-@-webkit-keyframes rotateArrowDownAnimation {
-  0% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(0);
   }
 }
 @keyframes rotateArrowDownAnimation {
@@ -31,14 +15,6 @@
     transform: rotate(0);
   }
 }
-@-webkit-keyframes MoveDataToRightAnimation {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(40%);
-  }
-}
 @keyframes MoveDataToRightAnimation {
   0% {
     transform: translateX(0);
@@ -47,28 +23,12 @@
     transform: translateX(40%);
   }
 }
-@-webkit-keyframes MoveDataToLeftAnimation {
-  0% {
-    transform: translateX(40%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
 @keyframes MoveDataToLeftAnimation {
   0% {
     transform: translateX(40%);
   }
   100% {
     transform: translateX(0);
-  }
-}
-@-webkit-keyframes DisplayModalUserDatas {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 @keyframes DisplayModalUserDatas {
@@ -161,6 +121,7 @@
   font-family: "Sora";
   background-color: rgb(46, 128, 255);
   border-radius: 12px;
+  cursor: pointer;
 }
 .UserDatas .modalUserDatas button a {
   width: 100%;
@@ -171,26 +132,21 @@
 }
 
 .rotateArrowUp {
-  -webkit-animation: rotateArrowUpAnimation 1s forwards;
-          animation: rotateArrowUpAnimation 1s forwards;
+  animation: rotateArrowUpAnimation 1s forwards;
 }
 
 .rotateArrowDown {
-  -webkit-animation: rotateArrowDownAnimation 1s forwards;
-          animation: rotateArrowDownAnimation 1s forwards;
+  animation: rotateArrowDownAnimation 1s forwards;
 }
 
 .moveUserDataToRight {
-  -webkit-animation: MoveDataToRightAnimation 1s forwards;
-          animation: MoveDataToRightAnimation 1s forwards;
+  animation: MoveDataToRightAnimation 1s forwards;
 }
 
 .moveUserDataToLeft {
-  -webkit-animation: MoveDataToLeftAnimation 1s forwards;
-          animation: MoveDataToLeftAnimation 1s forwards;
+  animation: MoveDataToLeftAnimation 1s forwards;
 }
 
 .ModalUserData-enter-to {
-  -webkit-animation: DisplayModalUserDatas 2s forwards;
-          animation: DisplayModalUserDatas 2s forwards;
+  animation: DisplayModalUserDatas 2s forwards;
 }/*# sourceMappingURL=UserDatasStyles.css.map */

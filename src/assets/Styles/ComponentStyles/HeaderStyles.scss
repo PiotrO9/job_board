@@ -27,13 +27,6 @@ header {
 }
 
 header.dark {
-    background-color: black;
+    background-color: $DarkModeBackground;
     color: white;
-
-    #LogoContainer {
-
-        span {
-            color: white;
-        }
-    }
 }

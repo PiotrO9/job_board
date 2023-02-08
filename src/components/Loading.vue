@@ -1,5 +1,5 @@
 <template>
-  <div class="Loading">
+  <div :class="{ dark: darkMode }" class="Loading">
     <img src="../assets/images/loading.png" alt="Loading circle">
     <p id="LoadingText">Loading...</p>
   </div>
@@ -7,7 +7,14 @@
 
 <script>
 import Typewriter from 'typewriter-effect/dist/core';
+import { state } from '../main.js'
+
 export default {
+  computed: {
+        darkMode() {
+            return state.darkMode.value
+        }
+    },
     mounted() {
         const TypeWriterText = document.getElementById("LoadingText")
         const delayTime = 350

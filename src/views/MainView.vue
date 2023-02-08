@@ -1,5 +1,5 @@
 <template>
-  <div class="MainView">
+  <div class="MainView" :class="{ dark: darkMode }">
     <JobsFilter />
     <JobOffers />
   </div>
@@ -8,12 +8,22 @@
 <script>
 import JobsFilter from "@/components/JobsFilter.vue";
 import JobOffers from "@/components/JobOffers.vue";
+import { state } from '../main.js'
 
 export default {
-    mounted() {
-      let header = document.querySelector("header")
-      header.style.display = "grid"
-    }
+  computed: {
+        darkMode() {
+            return state.darkMode.value
+        }
+  },
+  components: {
+    JobsFilter,
+    JobOffers
+  },
+  mounted() {
+    let header = document.querySelector("header")
+    header.style.display = "grid"
+  }
 }
 </script>
 

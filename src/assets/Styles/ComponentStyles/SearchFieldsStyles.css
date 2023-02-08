@@ -41,4 +41,8 @@
   border-radius: 12px;
   background-color: rgb(46, 128, 255);
   color: white;
+}
+
+.SearchFields .JobSearch svg, .SearchFields .PlaceSearch svg {
+  color: black;
 }/*# sourceMappingURL=SearchFieldsStyles.css.map */

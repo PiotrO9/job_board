@@ -6,4 +6,8 @@
 
 jobsfilter {
   background-color: red;
+}
+
+.JobsFilter.dark h1 {
+  color: white;
 }/*# sourceMappingURL=JobsFilterStyles.css.map */

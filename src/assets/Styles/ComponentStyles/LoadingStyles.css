@@ -11,18 +11,15 @@
 .Loading img {
   width: 80px;
   height: 80px;
-  -webkit-animation: rotateLoadingAnimation 9s linear infinite;
-          animation: rotateLoadingAnimation 9s linear infinite;
+  animation: rotateLoadingAnimation 9s linear infinite;
 }
 .Loading p {
   font-size: 40px;
   font-family: "Sora";
 }
 
-@-webkit-keyframes rotateLoadingAnimation {
-  100% {
-    transform: rotate(360deg);
-  }
+.Loading.dark p {
+  color: white;
 }
 
 @keyframes rotateLoadingAnimation {

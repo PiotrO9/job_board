@@ -1,5 +1,6 @@
-import { createApp } from 'vue'
 import App from './App.vue'
+import { createApp } from 'vue'
+import { ref } from 'vue'
 import router from './router'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -16,3 +17,10 @@ createApp(App)
 .component('JobsFilter', JobsFilter)
 .use(router)
 .mount('#app')
+
+export const state = ({
+    darkMode: ref(false),
+    toggleDarkMode() {
+        this.darkMode.value = !this.darkMode.value
+    }
+})

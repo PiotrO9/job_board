@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ loadingPhase: jobOffers == null }" class="JobOffers">
+  <div  :class="{ loadingPhase: jobOffers == null, dark: darkMode }" class="JobOffers">
     <div v-if="jobOffers == null">
       <Loading/>
     </div>
@@ -13,12 +13,18 @@
 import FetchDataFromNoFluffJobsWithFilters from "@/utils/ApiUtils/FetchDataFromNoFluffJobsWithFilters.js"
 import JobOfferPreviewThreeColumns from "@/components/JobOfferPreviewThreeColumns.vue"
 import Loading from "@/components/Loading.vue"
+import { state } from '../main.js'
 
 export default {
     data(){
       return {
         jobOffers: null
       }
+    },
+    computed: {
+        darkMode() {
+            return state.darkMode.value
+        }
     },
     components: {
       JobOfferPreviewThreeColumns,

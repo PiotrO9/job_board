@@ -22,9 +22,6 @@ header .UserDatasContainer {
 }
 
 header.dark {
-  background-color: black;
-  color: white;
-}
-header.dark #LogoContainer span {
+  background-color: rgb(30, 47, 68);
   color: white;
 }/*# sourceMappingURL=HeaderStyles.css.map */

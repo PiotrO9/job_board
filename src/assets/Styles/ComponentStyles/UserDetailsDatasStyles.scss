@@ -28,3 +28,12 @@
         }
     }
 }
+
+.UserDetailsDatas.dark {
+    background-color: $DarkModeBackground;
+
+    button {
+        color: white;
+        background-color: $DarkModeCoreBackground;
+    }
+}

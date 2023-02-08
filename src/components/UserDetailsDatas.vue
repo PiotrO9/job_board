@@ -1,5 +1,5 @@
 <template>
-  <div v-if="statistics != null && userDatas != null" class="UserDetailsDatas">
+  <div v-if="statistics != null && userDatas != null" :class="{ dark: darkMode }" class="UserDetailsDatas">
     <UserDetailsDatasCard />
     <div class="GridUserDetailsDatas">
       <GridUserDetailsDataCell label="Age" :data=userDatas.dob.age />
@@ -21,6 +21,7 @@
 <script>
 import UserDetailsDatasCard from "@/components/UserDetailsDatasCard.vue";
 import GridUserDetailsDataCell from "./GridUserDetailsDataCell.vue";
+import { state } from '../main.js'
 
 export default {
   data() {
@@ -28,6 +29,11 @@ export default {
       statistics: null,
       userDatas: null
     }
+  },
+  computed: {
+        darkMode() {
+            return state.darkMode.value
+        }
   },
   components: {
     UserDetailsDatasCard,

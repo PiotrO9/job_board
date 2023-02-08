@@ -16,20 +16,17 @@
 <script>
 import SearchFields from "@/components/SearchFields.vue"
 import UserDatas from "@/components/UserDatas.vue"
-import { ThemeMode } from "@/utils/store"
+import { state } from '../main.js'
 
 export default {
+  computed: {
+        darkMode() {
+            return state.darkMode.value
+        }
+  },
   components: {
     SearchFields,
     UserDatas
-  },
-  data() {
-    return {
-      darkMode: false
-    }
-  },
-  mounted() {
-    this.darkMode = ThemeMode.isDarkMode
   }
 }
 </script>

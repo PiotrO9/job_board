@@ -17,6 +17,13 @@
     }
 }
 
+.Loading.dark {
+
+    p {
+        color: white;
+    }
+}
+
 @keyframes rotateLoadingAnimation {
     100% {
         transform: rotate(360deg);

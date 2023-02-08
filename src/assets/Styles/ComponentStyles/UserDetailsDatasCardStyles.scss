@@ -27,4 +27,27 @@
             }
         }
     }
+
+    .ThemeModeContainer {
+        @include flex-center;
+        width: 70%;
+        
+        .ThemeModeSwitch {
+            cursor: pointer;
+
+            .LightThemeMode, .DarkThemeMode {
+                @include flex-center;
+                @include flex-direction(row);
+
+                svg {
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+}
+
+.UserDetailsDatasCard.dark {
+    background-color: $DarkModeBackground;
+    color: white;
 }

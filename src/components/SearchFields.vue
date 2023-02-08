@@ -1,5 +1,5 @@
 <template>
-  <div class="SearchFields">
+  <div :class="{ dark: darkMode }" class="SearchFields">
     <div class="JobSearch">
         <fa icon="fa-magnifying-glass"/>
         <input type="text" placeholder="Search for Job">
@@ -15,8 +15,14 @@
 </template>
 
 <script>
-export default {
+import { state } from '../main.js'
 
+export default {
+  computed: {
+        darkMode() {
+            return state.darkMode.value
+        }
+  }
 }
 </script>
 
