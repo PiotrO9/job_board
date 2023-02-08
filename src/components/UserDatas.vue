@@ -86,7 +86,7 @@ export default {
         RedirectToUserDetails() {
             localStorage.setItem('userDatas', JSON.stringify(this.UserDatas))
             localStorage.setItem('statistics', JSON.stringify(this.Statistics))
-            this.$router.push({ name: 'userDetails' })
+            this.$router.push({ name: 'UserDetailsView' })
         }
     },
     watch: {

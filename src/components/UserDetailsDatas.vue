@@ -1,12 +1,48 @@
 <template>
-  <div class="UserDetailsDatas">
-
+  <div v-if="statistics != null && userDatas != null" class="UserDetailsDatas">
+    <UserDetailsDatasCard />
+    <div class="GridUserDetailsDatas">
+      <GridUserDetailsDataCell label="Age" :data=userDatas.dob.age />
+      <GridUserDetailsDataCell label="Gender" :data=userDatas.gender />
+      <GridUserDetailsDataCell label="Phone number" :data=userDatas.phone />
+      <GridUserDetailsDataCell label="Post code" :data=userDatas.location.postcode />
+      <GridUserDetailsDataCell label="Satate" :data=userDatas.location.state />
+      <GridUserDetailsDataCell label="Time zone" :data=userDatas.location.timezone.offset />
+      <GridUserDetailsDataCell label="Posts" :data=statistics.posts />
+      <GridUserDetailsDataCell label="Followers" :data=statistics.followers />
+      <GridUserDetailsDataCell label="Following" :data=statistics.following />
+    </div>
+    <button @click="ReturnToMainPage">
+      Back
+    </button>
   </div>
 </template>
 
 <script>
-export default {
+import UserDetailsDatasCard from "@/components/UserDetailsDatasCard.vue";
+import GridUserDetailsDataCell from "./GridUserDetailsDataCell.vue";
 
+export default {
+  data() {
+    return {
+      statistics: null,
+      userDatas: null
+    }
+  },
+  components: {
+    UserDetailsDatasCard,
+    GridUserDetailsDataCell
+  },
+  mounted() {
+    this.statistics = JSON.parse(localStorage.getItem('statistics'))
+    this.userDatas = JSON.parse(localStorage.getItem('userDatas'))
+    console.log(this.statistics)
+  },
+  methods: {
+    ReturnToMainPage() {
+      this.$router.push({ name: 'main' })
+    }
+  }
 }
 </script>
 

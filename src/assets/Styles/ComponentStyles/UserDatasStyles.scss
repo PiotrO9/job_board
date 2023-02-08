@@ -85,6 +85,7 @@
             font-family: "Sora";
             background-color: rgb(46, 128, 255);
             border-radius: 12px;
+            cursor: pointer;
 
             a {
                 @include width-height-val(100%);

@@ -1,6 +1,5 @@
 <template>
   <div class="UserDetailsView">
-    <h1>UserDetailsView</h1>
     <UserDetailsDatas />
   </div>
 </template>
@@ -23,6 +22,7 @@ export default {
     header.style.display = "none"
     this.statistics = JSON.parse(localStorage.getItem('statistics'))
     this.userDatas = JSON.parse(localStorage.getItem('userDatas'))
+    console.log(123)
   }
 }
 </script>

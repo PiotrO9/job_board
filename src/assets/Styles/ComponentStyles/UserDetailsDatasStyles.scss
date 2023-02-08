@@ -1,5 +1,30 @@
 @import "../General/variables.scss";
 
 .UserDetailsDatas {
-    @include width-height-val(100%);
+    @include width-height(60%, 70%);
+    display: flex;
+    flex-direction: column;
+    
+
+    .GridUserDetailsDatas {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 50px;
+    }
+
+    button {
+        @include disable-borders;
+        width: 300px;
+        height: 80px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        font-family: "Sora";
+        font-size: 30px;
+        border-radius: 15px;
+        
+        &:hover {
+            cursor: pointer;
+        }
+    }
 }

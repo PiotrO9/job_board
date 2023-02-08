@@ -1,0 +1,30 @@
+@import "../General/variables.scss";
+
+.UserDetailsDatasCard {
+    display: flex;
+    flex-direction: row;
+    font-family: "Sora";
+
+    img {
+        max-width: 200px;
+        max-height: 200px;
+        border-radius: 50%;
+        margin-right: 20px;
+    }
+
+    div {
+        @include flex-direction(column);
+        @include flex-justify(center);
+        align-items: start;
+
+        p {
+            &:nth-child(1) {
+                font-size: 30px;
+            }
+
+            &:nth-child(2) {
+                font-size: 20px;
+            }
+        }
+    }
+}
