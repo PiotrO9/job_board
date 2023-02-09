@@ -1,0 +1,71 @@
+@import "../General/variables.scss";
+
+.SalaryFilter {
+    width: 100%;
+    height: 10%;
+    padding: 14px;
+
+    p {
+        font-size: 24px;
+        font-family: "Sora";
+        margin-bottom: 8px;
+    }
+
+    .SalaryNumberInputs {
+        @include flex-center;
+        margin-top: 20px;
+
+        span {
+            font-size: 18px;
+            font-family: "Sora";
+            margin-right: 12px;
+
+            &:nth-child(3) {
+                margin-left: 14px;
+            }
+        }
+
+        input[type="number"] {
+            width: 25%;
+            height: 30px;
+            border: 2px solid black;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 100%;
+            font-family: "Sora";
+
+            &::-webkit-inner-spin-button,
+            &::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        }
+    }
+
+    .SalarySliderInputs {
+        position: relative;
+        background-color: red;
+        margin-top: 20px;
+
+        input[type="range"] {
+            @include disable-borders;
+            width: 90%;
+            height: 8px;
+            border-radius: 20px;
+            position: absolute;
+            left: 5%;
+            background: rgb(46, 128, 255);
+            pointer-events: none;
+            -webkit-appearance: none;
+
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                pointer-events: auto;
+                background: rgb(46, 128, 255);
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+            }
+        }
+    }
+}
