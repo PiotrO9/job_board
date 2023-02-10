@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;500;700&display=swap");
+.ContractType {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  gap: 10px;
+  margin: 25px 10px 20px 40px;
+}
+.ContractType svg {
+  position: absolute;
+  top: 5px;
+  left: 7px;
+  pointer-events: none;
+  color: white;
+}
+.ContractType input {
+  min-width: 30px;
+  min-width: 30px;
+  border: 2px solid black;
+  border-radius: 15%;
+  -webkit-appearance: none;
+}
+.ContractType input:checked {
+  background-color: RGB(47 176 206);
+}/*# sourceMappingURL=ContractTypeStyles.css.map */

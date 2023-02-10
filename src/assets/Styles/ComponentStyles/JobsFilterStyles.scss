@@ -19,8 +19,8 @@ aside {
             margin-right: 10px;
             cursor: pointer;
 
-            &:nth-child(2) {
-                color: rgb(46, 128, 255);
+            &:nth-child(3) {
+                color: $CoreDarkCyan;
             }
         }
     }
