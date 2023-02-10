@@ -3,34 +3,39 @@
     <p>Salary</p>
     <div class="SalaryNumberInputs">
         <span>Min </span>
-        <input type="number" min="3000" max="49000" value="3000" id="MinSalaryNumberInput" readonly>
+        <input type="number" min="0" max="48000" value="0" 
+            v-on:change="InputMinValue" id="MinSalaryNumberInput">
         <span> -       Max </span>
-        <input type="number" min="3100" max="50000" value="50000" id="MaxSalaryNumberInput" readonly>
-    </div>
-    <div class="SalarySliderInputs">
-        <input type="range" min="3000" max="49900" value="3000" 
-            id="MinSalaryRangeInput">
-        <input type="range" min="3100" max="50000" value="50000" 
-            id="MaxSalaryRangeInput">
+        <input type="number" min="3000" max="50000" value="50000" 
+            v-on:change="InputMaxValue" id="MaxSalaryNumberInput">
     </div>
   </article>
 </template>
 
 <script>
 export default {
-    mounted() {
-        const MinSalaryNumberInput = document.getElementById("MinSalaryNumberInput")
-        const MaxSalaryNumberInput = document.getElementById("MaxSalaryNumberInput")
-        const MinSalaryRangeInput = document.getElementById("MinSalaryRangeInput")
-        const MaxSalaryRangeInput = document.getElementById("MaxSalaryRangeInput")
+    methods: {
+        InputMinValue() {
+            const MinSalaryInput = document.getElementById("MinSalaryNumberInput")
+            const MaxSalaryInput = document.getElementById("MaxSalaryNumberInput")
 
-        MinSalaryRangeInput.addEventListener("input", function() {
+            if(MinSalaryInput.value >= MaxSalaryInput.value) {
+                MinSalaryInput.value = (MaxSalaryInput.value - 1000)
+            }
 
-        })
-
-        MaxSalaryRangeInput.addEventListener("input", function() {
+        },
+        InputMaxValue() {
+            const MinSalaryInput = document.getElementById("MinSalaryNumberInput")
+            const MaxSalaryInput = document.getElementById("MaxSalaryNumberInput")
             
-        })
+            if(MaxSalaryInput.value > 50000) {
+                MaxSalaryInput.value = 50000
+            }
+
+            if(MaxSalaryInput.value <= MinSalaryInput.value) {
+                MaxSalaryInput.value = Number(MinSalaryInput.value) + 1000
+            }
+        }
     }
 }
 </script>
