@@ -33,7 +33,18 @@ export default {
     mounted() {
       FetchDataFromNoFluffJobsWithFilters()
         .then((res) => this.jobOffers = res)
-        .then((res) => console.log(this.jobOffers))
+
+      fetch("http://localhost:3000/test", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        mode: "cors",
+        body: JSON.stringify({
+
+        }),
+      }).then(res => res.json())
+        .then(res => console.log(res))
     }
 }
 </script>
