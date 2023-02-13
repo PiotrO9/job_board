@@ -41,7 +41,16 @@ export default {
         },
         mode: "cors",
         body: JSON.stringify({
-
+          Location: "Warszawa",
+          Title: "Vue.js developer",
+          Criterias: {
+            Experience: ['Senior','Junior'],
+            ContractType: ['permanent', 'b2b', 'intern']
+          },
+          Salary: {
+            min: 10000,
+            max: 20000
+          }
         }),
       }).then(res => res.json())
         .then(res => console.log(res))
