@@ -23,6 +23,25 @@ aside .DisplayStrategyMode svg {
 aside .DisplayStrategyMode svg:nth-child(3) {
   color: rgb(47, 176, 206);
 }
+aside .SearchConfirm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+aside .SearchConfirm button {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 50%;
+  width: 50%;
+  height: 3%;
+  min-height: 45px;
+  margin: auto;
+  background-color: rgb(47, 176, 206);
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+}
 
 jobsfilter {
   background-color: red;

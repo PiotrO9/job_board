@@ -6,10 +6,15 @@
       <fa icon="fa-table-cells"/>
     </div>
     <section>
-        <SalaryFilter />
+        <SalaryFilter :minSalary=minSal />
         <ExperienceFilter />
         <ContractTypeFilter />
     </section>
+    <div class="SearchConfirm">
+      <button @click="SearchingConfirming">
+      Search
+      </button>
+    </div>
   </aside>
 </template>
 
@@ -19,8 +24,13 @@ import ExperienceFilter from "../components/ExperienceFilter.vue"
 import ContractTypeFilter from "../components/ContractTypeFilter.vue"
 import { state } from '../main.js'
 
-
 export default {
+  data() {
+    return {
+      minSal: 100,
+      maxSalary: 50000
+    }
+  },
   computed: {
         darkMode() {
             return state.darkMode.value
@@ -30,6 +40,15 @@ export default {
     SalaryFilter,
     ExperienceFilter,
     ContractTypeFilter
+  },
+  methods: {
+    SearchingConfirming() {
+      state.toggleReadiness()
+      console.log(state.filteringCriterias.Salary.minSalary.value)
+      console.log(state.filteringCriterias.Salary.maxSalary.value)
+      console.log(state.filteringCriterias.Criterias.Experience.value)
+      console.log(state.filteringCriterias.Criterias.ContractType.value)
+    }
   }
 }
 </script>

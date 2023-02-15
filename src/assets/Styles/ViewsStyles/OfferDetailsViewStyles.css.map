@@ -1,1 +1,1 @@
-{"version":3,"sources":["../General/variables.scss","OfferDetailsViewStyles.scss","../General/mixins.scss","OfferDetailsViewStyles.css"],"names":[],"mappings":"AAMQ,0FAAA;ACJR;ECDI,aAAA;EACA,uBAAA;EACA,mBAAA;EAmBA,WDlB0B;ECmB1B,YDnB0B;EAC1B,uBAAA;AEGJ","file":"OfferDetailsViewStyles.css"}
+{"version":3,"sources":["../General/variables.scss","OfferDetailsViewStyles.scss","../General/mixins.scss","OfferDetailsViewStyles.css"],"names":[],"mappings":"AAQQ,0FAAA;ACNR;ECDI,aAAA;EACA,uBAAA;EACA,mBAAA;EAmBA,WDlB0B;ECmB1B,YDnB0B;EAC1B,uBAAA;AEGJ","file":"OfferDetailsViewStyles.css"}

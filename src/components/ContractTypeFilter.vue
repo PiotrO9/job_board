@@ -12,6 +12,7 @@
 
 <script>
 import ContractType from './ContractType.vue';
+import { state } from '../main.js'
 
 export default {
     data() {
@@ -33,7 +34,7 @@ export default {
                                         .filter(el => el !== data.Contract)
             }
 
-            console.log(this.ContractTypes)
+            state.filteringCriterias.ChangeContractTypeCriterias(this.ContractTypes)
         }
     }
 }

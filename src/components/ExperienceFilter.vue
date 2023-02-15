@@ -12,6 +12,7 @@
 
 <script>
 import ExperienceLevel from './ExperienceLevel.vue';
+import { state } from '../main.js'
 
 export default {
     data() {
@@ -32,6 +33,8 @@ export default {
                 this.ExperienceLevels = this.ExperienceLevels
                                         .filter(el => el !== data.Level)
             }
+
+            state.filteringCriterias.ChangeExperienceCriterias(this.ExperienceLevels)
         }
     }
 }

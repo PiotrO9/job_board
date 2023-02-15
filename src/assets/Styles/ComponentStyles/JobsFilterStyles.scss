@@ -24,6 +24,24 @@ aside {
             }
         }
     }
+
+    .SearchConfirm {
+        @include flex-center;
+
+        button {
+            @include disable-borders;
+            @include width-height(100%, 50%);
+            width: 50%;
+            height: 3%;
+            min-height: 45px;
+            margin: auto;
+            background-color: $CoreDarkCyan;
+            color: white;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+    }
+    
 }
 
 jobsfilter {

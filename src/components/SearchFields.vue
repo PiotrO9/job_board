@@ -2,19 +2,20 @@
   <div :class="{ dark: darkMode }" class="SearchFields">
     <div class="JobSearch">
         <fa icon="fa-magnifying-glass"/>
-        <input type="text" placeholder="Search for Job">
+        <input id="TitleInputField" type="text" placeholder="Search for Job" @change="UpdateTitle">
     </div>
     <div class="PlaceSearch">
         <fa icon="fa-location-dot"/>
-        <input type="text" placeholder="Add country or city">
+        <input id="LocationInputField" type="text" placeholder="Add country or city" @change="UpdateLocation">
     </div>
     <div class="SearchSubmitButton">
-        <button>Search</button>
+        <SubmitSearchFilters />
     </div>
   </div>
 </template>
 
 <script>
+import SubmitSearchFilters from './SubmitSearchFilters.vue';
 import { state } from '../main.js'
 
 export default {
@@ -22,6 +23,19 @@ export default {
         darkMode() {
             return state.darkMode.value
         }
+  },
+  components: {
+    SubmitSearchFilters
+  },
+  methods: {
+    UpdateTitle() {
+      const TitleInputField = document.getElementById("TitleInputField")
+      state.filteringCriterias.ChangeTitle(TitleInputField.value)
+    },
+    UpdateLocation() {
+      const LocationInputField = document.getElementById("LocationInputField")
+      state.filteringCriterias.ChangeLocation(LocationInputField.value)
+    }
   }
 }
 </script>

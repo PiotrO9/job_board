@@ -24,6 +24,9 @@ export default {
     computed: {
         darkMode() {
             return state.darkMode.value
+        },
+        readyState() {
+          return state.readyForFiltering.value
         }
     },
     components: {
@@ -34,26 +37,38 @@ export default {
       FetchDataFromNoFluffJobsWithFilters()
         .then((res) => this.jobOffers = res)
 
-      fetch("http://localhost:3000/test", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        mode: "cors",
-        body: JSON.stringify({
-          Location: "Warszawa",
-          Title: "Vue.js developer",
-          Criterias: {
-            Experience: ['Senior','Junior'],
-            ContractType: ['permanent', 'b2b', 'intern']
-          },
-          Salary: {
-            min: 10000,
-            max: 20000
-          }
-        }),
-      }).then(res => res.json())
-        .then(res => console.log(res))
+      // fetch("http://localhost:3000/test", {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json"
+      //   },
+      //   mode: "cors",
+      //   body: JSON.stringify({
+      //     Location: "Warszawa",
+      //     Title: "Vue.js developer",
+      //     Criterias: {
+      //       Experience: ['Senior','Junior'],
+      //       ContractType: ['permanent', 'b2b', 'intern']
+      //     },
+      //     Salary: {
+      //       min: 10000,
+      //       max: 20000
+      //     }
+      //   }),
+      // }).then(res => res.json())
+      //   .then(res => console.log(res))
+    },
+    methods: {
+      test(data) {
+        console.log("Zdarzenie dotartło")
+      }
+    },
+    watch: {
+      readyState() {
+        if (state.readyForFiltering.value) {
+
+        }
+      }
     }
 }
 </script>
