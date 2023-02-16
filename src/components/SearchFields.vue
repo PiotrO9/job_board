@@ -30,11 +30,11 @@ export default {
   methods: {
     UpdateTitle() {
       const TitleInputField = document.getElementById("TitleInputField")
-      state.filteringCriterias.ChangeTitle(TitleInputField.value)
+      state.filteringCriterias.value.ChangeTitle(TitleInputField.value)
     },
     UpdateLocation() {
       const LocationInputField = document.getElementById("LocationInputField")
-      state.filteringCriterias.ChangeLocation(LocationInputField.value)
+      state.filteringCriterias.value.ChangeLocation(LocationInputField.value)
     }
   }
 }

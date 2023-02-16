@@ -34,7 +34,7 @@ export default {
                                         .filter(el => el !== data.Contract)
             }
 
-            state.filteringCriterias.ChangeContractTypeCriterias(this.ContractTypes)
+            state.filteringCriterias.value.ChangeContractTypeCriterias(this.ContractTypes)
         }
     }
 }

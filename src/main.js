@@ -16,7 +16,7 @@ export const state = ({
     toggleDarkMode() {
         this.darkMode.value = !this.darkMode.value
     },
-    filteringCriterias: {
+    filteringCriterias: ref({
         Salary: {
             minSalary: ref(0),
             maxSalary: ref(50000),
@@ -29,23 +29,26 @@ export const state = ({
         Title: ref(""),
 
         ChangeMinSalary(val) {
-            this.Salary.minSalary.value = val
+            this.Salary.minSalary = val
         },
         ChangeMaxSalary(val) {
-            this.Salary.maxSalary.value = val
+            this.Salary.maxSalary = val
         },
         ChangeExperienceCriterias(val) {
-            this.Criterias.Experience.value = val
+            this.Criterias.Experience = val
         },
         ChangeContractTypeCriterias(val) {
-            this.Criterias.ContractType.value = val
+            this.Criterias.ContractType = val
         },
         ChangeLocation(val) {
-            this.Location.value = val
+            this.Location = val
         },
         ChangeTitle(val) {
-            this.Title.value = val
+            this.Title = val
         }
+    }),
+    getFilteringCriterias() {
+        return this.filteringCriterias.value
     },
     readyForFiltering: ref(false),
     toggleReadiness() {

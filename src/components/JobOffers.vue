@@ -14,6 +14,7 @@ import FetchDataFromNoFluffJobsWithFilters from "@/utils/ApiUtils/FetchDataFromN
 import JobOfferPreviewThreeColumns from "@/components/JobOfferPreviewThreeColumns.vue"
 import Loading from "@/components/Loading.vue"
 import { state } from '../main.js'
+import FetchDataFromNoFluffJobsWithCriterias from "@/utils/ApiUtils/FetchDataFromNoFluffJobsWithCriterias"
 
 export default {
     data(){
@@ -36,27 +37,6 @@ export default {
     mounted() {
       FetchDataFromNoFluffJobsWithFilters()
         .then((res) => this.jobOffers = res)
-
-      // fetch("http://localhost:3000/test", {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json"
-      //   },
-      //   mode: "cors",
-      //   body: JSON.stringify({
-      //     Location: "Warszawa",
-      //     Title: "Vue.js developer",
-      //     Criterias: {
-      //       Experience: ['Senior','Junior'],
-      //       ContractType: ['permanent', 'b2b', 'intern']
-      //     },
-      //     Salary: {
-      //       min: 10000,
-      //       max: 20000
-      //     }
-      //   }),
-      // }).then(res => res.json())
-      //   .then(res => console.log(res))
     },
     methods: {
       test(data) {
@@ -66,7 +46,10 @@ export default {
     watch: {
       readyState() {
         if (state.readyForFiltering.value) {
-
+          this.jobOffers = null
+          FetchDataFromNoFluffJobsWithCriterias()
+            .then(responseOffers => this.jobOffers = responseOffers)
+            .then(state.toggleReadiness())
         }
       }
     }

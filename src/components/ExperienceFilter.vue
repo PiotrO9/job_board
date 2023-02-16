@@ -34,7 +34,7 @@ export default {
                                         .filter(el => el !== data.Level)
             }
 
-            state.filteringCriterias.ChangeExperienceCriterias(this.ExperienceLevels)
+            state.filteringCriterias.value.ChangeExperienceCriterias(this.ExperienceLevels)
         }
     }
 }
