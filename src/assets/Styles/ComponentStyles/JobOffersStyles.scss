@@ -7,8 +7,7 @@
 }
 
 .JobOffers {
-    height: 100%;
-    width: 97%;
+    @include width-height(100%, 97%);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;

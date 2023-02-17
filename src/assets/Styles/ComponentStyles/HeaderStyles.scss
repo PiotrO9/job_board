@@ -1,8 +1,7 @@
 @import "../General/variables.scss";
 
 header {
-    height: 8%;
-    width: 100%;
+    @include width-height(100%, 8%);
     display: grid;
     grid-template-columns: 3fr 7fr 2fr;
     font-family: "Sora";

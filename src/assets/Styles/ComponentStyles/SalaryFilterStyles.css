@@ -5,9 +5,9 @@
   padding: 14px;
 }
 .SalaryFilter p {
+  margin-bottom: 8px;
   font-size: 24px;
   font-family: "Sora";
-  margin-bottom: 8px;
 }
 .SalaryFilter .SalaryNumberInputs {
   display: flex;
@@ -16,9 +16,9 @@
   margin-top: 20px;
 }
 .SalaryFilter .SalaryNumberInputs span {
+  margin-right: 14px;
   font-size: 20px;
   font-family: "Sora";
-  margin-right: 14px;
 }
 .SalaryFilter .SalaryNumberInputs span:nth-child(3) {
   margin-left: 16px;
@@ -26,9 +26,9 @@
 .SalaryFilter .SalaryNumberInputs input[type=number] {
   width: 25%;
   height: 30px;
+  text-align: center;
   border: 2px solid black;
   border-radius: 5px;
-  text-align: center;
   font-size: 100%;
   font-family: "Sora";
 }

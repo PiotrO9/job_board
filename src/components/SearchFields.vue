@@ -2,11 +2,17 @@
   <div :class="{ dark: darkMode }" class="SearchFields">
     <div class="JobSearch">
         <fa icon="fa-magnifying-glass"/>
-        <input id="TitleInputField" type="text" placeholder="Search for Job" @change="UpdateTitle">
+        <input id="TitleInputField" 
+          type="text" 
+          placeholder="Search for Job" 
+          @change="UpdateTitle">
     </div>
     <div class="PlaceSearch">
         <fa icon="fa-location-dot"/>
-        <input id="LocationInputField" type="text" placeholder="Add country or city" @change="UpdateLocation">
+        <input id="LocationInputField" 
+          type="text" 
+          placeholder="Add country or city" 
+          @change="UpdateLocation">
     </div>
     <div class="SearchSubmitButton">
         <SubmitSearchFilters />

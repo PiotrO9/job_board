@@ -5,12 +5,12 @@
   font-family: "Sora";
 }
 .GridUserDetailsDataCell p {
-  font-size: 26px;
-  color: grey;
+  text-align: center;
   margin-top: 10px;
   margin-left: 20px;
   margin-bottom: 10px;
-  text-align: center;
+  color: grey;
+  font-size: 26px;
 }
 .GridUserDetailsDataCell div {
   display: flex;
@@ -18,13 +18,13 @@
   align-items: center;
   width: 100%;
   min-height: 60px;
+  background-color: rgb(251, 251, 251);
   color: black;
-  font-size: 40px;
   border: 2px solid rgb(249, 249, 249);
   border-radius: 15px;
-  background-color: rgb(251, 251, 251);
+  font-size: 40px;
 }
 .GridUserDetailsDataCell div span {
-  font-size: 32px;
   text-align: center;
+  font-size: 32px;
 }/*# sourceMappingURL=GridUserDetailsDataCellStyles.css.map */

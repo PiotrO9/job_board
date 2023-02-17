@@ -38,11 +38,6 @@ export default {
       FetchDataFromNoFluffJobsWithFilters()
         .then((res) => this.jobOffers = res)
     },
-    methods: {
-      test(data) {
-        console.log("Zdarzenie dotartło")
-      }
-    },
     watch: {
       readyState() {
         if (state.readyForFiltering.value) {

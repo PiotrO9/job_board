@@ -2,7 +2,6 @@
 
 .MainView {
     @include width-height(100%, 92%);
-    // background-color: green;
     display: grid;
     grid-template-columns: 3fr 9fr;
 }

@@ -1,20 +1,20 @@
 <template>
-  <div v-if="statistics != null && userDatas != null" :class="{ dark: darkMode }" class="UserDetailsDatas">
-    <UserDetailsDatasCard />
-    <div class="GridUserDetailsDatas">
-      <GridUserDetailsDataCell label="Age" :data=userDatas.dob.age />
-      <GridUserDetailsDataCell label="Gender" :data=userDatas.gender />
-      <GridUserDetailsDataCell label="Phone number" :data=userDatas.phone />
-      <GridUserDetailsDataCell label="Post code" :data=userDatas.location.postcode />
-      <GridUserDetailsDataCell label="Satate" :data=userDatas.location.state />
-      <GridUserDetailsDataCell label="Time zone" :data=userDatas.location.timezone.offset />
-      <GridUserDetailsDataCell label="Posts" :data=statistics.posts />
-      <GridUserDetailsDataCell label="Followers" :data=statistics.followers />
-      <GridUserDetailsDataCell label="Following" :data=statistics.following />
-    </div>
-    <button @click="ReturnToMainPage">
-      Back
-    </button>
+  <div v-if="statistics != null && userDatas != null" 
+    :class="{ dark: darkMode }" 
+    class="UserDetailsDatas">
+      <UserDetailsDatasCard />
+      <div class="GridUserDetailsDatas">
+        <GridUserDetailsDataCell label="Age" :data=userDatas.dob.age />
+        <GridUserDetailsDataCell label="Gender" :data=userDatas.gender />
+        <GridUserDetailsDataCell label="Phone number" :data=userDatas.phone />
+        <GridUserDetailsDataCell label="Post code" :data=userDatas.location.postcode />
+        <GridUserDetailsDataCell label="Satate" :data=userDatas.location.state />
+        <GridUserDetailsDataCell label="Time zone" :data=userDatas.location.timezone.offset />
+        <GridUserDetailsDataCell label="Posts" :data=statistics.posts />
+        <GridUserDetailsDataCell label="Followers" :data=statistics.followers />
+        <GridUserDetailsDataCell label="Following" :data=statistics.following />
+      </div>
+      <button @click="ReturnToMainPage">Back</button>
   </div>
 </template>
 
@@ -42,7 +42,6 @@ export default {
   mounted() {
     this.statistics = JSON.parse(localStorage.getItem('statistics'))
     this.userDatas = JSON.parse(localStorage.getItem('userDatas'))
-    console.log(this.statistics)
   },
   methods: {
     ReturnToMainPage() {

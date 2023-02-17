@@ -1,14 +1,13 @@
 @import "../General/variables.scss";
 
 .SalaryFilter {
-    width: 100%;
-    height: 10%;
+    @include width-height(100%, 10%);
     padding: 14px;
 
     p {
+        margin-bottom: 8px;
         font-size: 24px;
         font-family: "Sora";
-        margin-bottom: 8px;
     }
 
     .SalaryNumberInputs {
@@ -16,9 +15,9 @@
         margin-top: 20px;
 
         span {
+            margin-right: 14px;
             font-size: 20px;
             font-family: "Sora";
-            margin-right: 14px;
 
             &:nth-child(3) {
                 margin-left: 16px;
@@ -28,9 +27,9 @@
         input[type="number"] {
             width: 25%;
             height: 30px;
+            text-align: center;
             border: 2px solid black;
             border-radius: 5px;
-            text-align: center;
             font-size: 100%;
             font-family: "Sora";
 
