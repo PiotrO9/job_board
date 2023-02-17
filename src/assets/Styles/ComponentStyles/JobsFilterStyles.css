@@ -20,7 +20,7 @@ aside .DisplayStrategyMode svg {
   margin-right: 10px;
   cursor: pointer;
 }
-aside .DisplayStrategyMode svg:nth-child(3) {
+aside .DisplayStrategyMode svg.ActiveDisplayMode {
   color: rgb(47, 176, 206);
 }
 aside .SearchConfirm {

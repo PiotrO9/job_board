@@ -18,9 +18,13 @@ aside {
             margin-right: 10px;
             cursor: pointer;
 
-            &:nth-child(3) {
-                color: $CoreDarkCyan;
-            }
+            // &:nth-child(3) {
+            //     color: $CoreDarkCyan;
+            // }
+        }
+
+        svg.ActiveDisplayMode {
+            color: $CoreDarkCyan;
         }
     }
 

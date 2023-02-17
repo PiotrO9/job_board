@@ -1,10 +1,10 @@
 <template>
-  <div  :class="{ loadingPhase: jobOffers == null, dark: darkMode }" class="JobOffers">
+  <div :class="{ loadingPhase: jobOffers == null, dark: darkMode }" class="JobOffers">
     <div v-if="jobOffers == null">
       <Loading/>
     </div>
     <div v-for="jobOffer in jobOffers" v-bind:key="jobOffer">
-      <JobOfferPreviewThreeColumns :datas="jobOffer" />
+      <JobOfferPreviewThreeColumns :datas="jobOffer"/>
     </div>
   </div>
 </template>

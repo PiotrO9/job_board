@@ -2,8 +2,8 @@
   <aside :class="{ dark: darkMode }">
     <div class="DisplayStrategyMode">
       <p>Display mode: </p>
-      <fa icon="fa-table-cells-large"/>
-      <fa icon="fa-table-cells"/>
+      <fa id="TwoColumnsDisplayMode" icon="fa-table-cells-large" @click="SetTwoColumnsDisplayMode"/>
+      <fa id="ThreeColumnsDisplayMode" class="ActiveDisplayMode" icon="fa-table-cells" @click="SetThreeColumnsDisplayMode"/>
     </div>
     <section>
         <SalaryFilter :minSalary=minSal />
@@ -44,6 +44,25 @@ export default {
   methods: {
     SearchingConfirming() {
       state.toggleReadiness()
+    },
+    SetTwoColumnsDisplayMode() {
+      this.DisableActiveDisplayModes()
+      const TwoColumnsDisplayMode = document.getElementById("TwoColumnsDisplayMode").classList.add("ActiveDisplayMode")
+      state.setDisplayMode(false)
+      console.log(state.ThreeColumnDisplayMode)
+    },
+    SetThreeColumnsDisplayMode() {
+      this.DisableActiveDisplayModes()
+      const ThreeColumnsDisplayMode = document.getElementById("ThreeColumnsDisplayMode").classList.add("ActiveDisplayMode")
+      state.setDisplayMode(true)
+      console.log(state.ThreeColumnDisplayMode)
+    },
+    DisableActiveDisplayModes() {
+      const TwoColumnsDisplayMode = document.getElementById("TwoColumnsDisplayMode")
+      const ThreeColumnsDisplayMode = document.getElementById("ThreeColumnsDisplayMode")
+      
+      TwoColumnsDisplayMode.classList.remove("ActiveDisplayMode")
+      ThreeColumnsDisplayMode.classList.remove("ActiveDisplayMode")
     }
   }
 }
