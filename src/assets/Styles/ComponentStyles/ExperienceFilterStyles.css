@@ -5,4 +5,8 @@
 }
 .ExperienceFilter p {
   font-size: 22px;
+}
+
+.ExperienceFilter.dark p {
+  color: rgb(255, 255, 255);
 }/*# sourceMappingURL=ExperienceFilterStyles.css.map */

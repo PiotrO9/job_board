@@ -35,4 +35,11 @@
 .SalaryFilter .SalaryNumberInputs input[type=number]::-webkit-inner-spin-button, .SalaryFilter .SalaryNumberInputs input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.SalaryFilter.dark p {
+  color: rgb(255, 255, 255);
+}
+.SalaryFilter.dark .SalaryNumberInputs span {
+  color: rgb(255, 255, 255);
 }/*# sourceMappingURL=SalaryFilterStyles.css.map */

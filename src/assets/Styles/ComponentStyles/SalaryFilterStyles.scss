@@ -41,3 +41,15 @@
         }
     }
 }
+
+.SalaryFilter.dark {
+    p {
+        color: $DarkModeFontColor;
+    }
+
+    .SalaryNumberInputs {
+        span {
+            color: $DarkModeFontColor;
+        }
+    }
+}

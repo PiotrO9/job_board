@@ -1,10 +1,5 @@
 <template>
   <aside :class="{ dark: darkMode }">
-    <div class="DisplayStrategyMode">
-      <p>Display mode: </p>
-      <fa id="TwoColumnsDisplayMode" icon="fa-table-cells-large" @click="SetTwoColumnsDisplayMode"/>
-      <fa id="ThreeColumnsDisplayMode" class="ActiveDisplayMode" icon="fa-table-cells" @click="SetThreeColumnsDisplayMode"/>
-    </div>
     <section>
         <SalaryFilter :minSalary=minSal />
         <ExperienceFilter />

@@ -41,4 +41,13 @@
   text-align: start;
   font-size: 120%;
   font-family: "Sora";
+}
+
+.JobOfferPreviewThreeColumns.dark {
+  background-color: rgb(21, 30, 45);
+  border: 3px solid grey;
+  color: rgb(255, 255, 255);
+}
+.JobOfferPreviewThreeColumns.dark .detailDatas svg {
+  color: rgb(255, 120, 0);
 }/*# sourceMappingURL=JobOfferPreviewThreeColumnsStyles.css.map */

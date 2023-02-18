@@ -1,5 +1,5 @@
 <template>
-  <div class="JobOfferPreviewThreeColumns">
+  <div class="JobOfferPreviewThreeColumns" :class="{ dark: darkMode }">
     <div class="mainDatas">
     <img v-if="datas.logoUrl != undefined" class="CompanyLogo" :src=datas.logoUrl :width=datas.width :height=datas.height>
     <img v-else src="../assets/images/question-mark.png" alt="Unknown logo">
@@ -17,8 +17,15 @@
 </template>
 
 <script>
+import { state } from '../main.js'
+
 export default {
-    props: ['datas']
+    props: ['datas'],
+    computed: {
+        darkMode() {
+            return state.darkMode.value
+        }
+  }
 }
 </script>
 

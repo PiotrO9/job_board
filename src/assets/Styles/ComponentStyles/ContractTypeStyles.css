@@ -21,4 +21,8 @@
 }
 .ContractType input:checked {
   background-color: rgb(47, 176, 206);
+}
+
+.ContractType.dark input {
+  border: 2px solid rgb(255, 255, 255);
 }/*# sourceMappingURL=ContractTypeStyles.css.map */

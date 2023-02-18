@@ -1,5 +1,5 @@
 <template>
-  <div class="ContractTypeFilter">
+  <div class="ContractTypeFilter" :class="{ dark: darkMode }">
     <p>Contract type</p>
     <div class="ContractTypes">
         <ContractType v-for="ContractName in ContractTypeNames" 
@@ -23,6 +23,11 @@ export default {
     },
     components: {
         ContractType
+    },
+    computed: {
+        darkMode() {
+            return state.darkMode.value
+        }
     },
     methods: {
         ChangeContractNames(data) {

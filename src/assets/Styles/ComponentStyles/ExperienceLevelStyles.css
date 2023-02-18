@@ -22,4 +22,8 @@
 }
 .ExperienceLevel input:checked {
   background-color: rgb(47, 176, 206);
+}
+
+.ExperienceLevel.dark input {
+  border: 2px solid rgb(255, 255, 255);
 }/*# sourceMappingURL=ExperienceLevelStyles.css.map */

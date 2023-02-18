@@ -1,6 +1,7 @@
 <template>
   <div v-if="UserDatas != undefined" 
     class="UserDatas" 
+    :class="{ dark: darkMode }"
     @click="ArrowClick">
         <img class="PictureData" 
         :src=UserDatas.picture.thumbnail 
@@ -44,6 +45,7 @@
 import FetchRandomUserApi from '@/utils/ApiUtils/FetchRandomUserApi';
 import SetClassNameForUserLocationDatas from '@/utils/SetClassNameForUserLocationDatas.js';
 import GenerateRandomStatisticNumber from '@/utils/GenerateRandomStatisticNumber.js';
+import { state } from '../main.js'
 
 export default {
     data() {
@@ -58,6 +60,11 @@ export default {
                 followers: 0,
                 following: 0
             }
+        }
+    },
+    computed: {
+        darkMode() {
+            return state.darkMode.value
         }
     },
     mounted() {

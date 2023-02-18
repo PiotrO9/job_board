@@ -83,7 +83,7 @@
             padding: 5px;
             color: white;
             font-family: "Sora";
-            background-color: rgb(46, 128, 255);
+            background-color: $CoreDarkCyan;
             border-radius: 12px;
             cursor: pointer;
 
@@ -94,6 +94,13 @@
                 cursor: pointer;
             }
         }
+    }
+}
+
+.UserDatas.dark {
+
+    .modalUserDatas {
+    background-color: $DarkModeBackground;
     }
 }
 

@@ -32,7 +32,6 @@
         @include width-height(100%, 50%);
         display: grid;
         grid-template-columns: 1fr 7fr;
-        
 
         svg {
             margin-left: 20px;
@@ -44,6 +43,19 @@
             text-align: start;
             font-size: 120%;
             font-family: "Sora";
+        }
+    }
+}
+
+.JobOfferPreviewThreeColumns.dark {
+    background-color: $DarkModeCoreBackground;
+    border: 3px solid grey;
+    color: $DarkModeFontColor;
+
+    .detailDatas {
+
+        svg {
+            color: $CoreOrange;
         }
     }
 }

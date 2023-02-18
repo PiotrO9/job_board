@@ -1,5 +1,5 @@
 <template>
-  <div class="ExperienceFilter">
+  <div class="ExperienceFilter" :class="{ dark: darkMode }">
     <p>Experience</p>
     <div class="ExperienceLevels">
         <ExperienceLevel v-for="ExpName in ExperienceNames" 
@@ -23,6 +23,11 @@ export default {
     },
     components: {
         ExperienceLevel
+    },
+    computed: {
+        darkMode() {
+            return state.darkMode.value
+        }
     },
     methods: {
         ChangeExperienceLevels(data) {

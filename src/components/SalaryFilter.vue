@@ -1,5 +1,5 @@
 <template>
-  <article class="SalaryFilter">
+  <article class="SalaryFilter" :class="{ dark: darkMode }">
     <p>Salary</p>
     <div class="SalaryNumberInputs">
         <span>Min </span>
@@ -17,6 +17,11 @@ import { state } from '../main.js'
 
 export default {
     props: ['minSalary'],
+    computed: {
+        darkMode() {
+            return state.darkMode.value
+        }
+    },
     methods: {
         InputMinValue() {
             const MinSalaryInput = document.getElementById("MinSalaryNumberInput")
