@@ -1,7 +1,96 @@
 @import "../General/variables.scss";
 
 .OfferDetailView {
-    @include flex-center;
     @include width-height-val(100%);
-    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    overflow: scroll;
+
+    .OfferDetailViewContent {
+        justify-content: center;
+        align-items: start;
+        width: 50%;
+        margin-top: 5vh;
+
+        .OfferDetailViewContentCard {
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+            margin-bottom: 7vh;
+            
+            img {
+                max-width: 180px;
+                max-height: 120px;
+            }
+
+            p {
+                margin-top: 14px;
+                text-align: center;
+                font-size: 50px;
+                font-family: "Sora";
+            }
+        }
+
+        .OfferDetailViewContentDatas {
+
+            section {
+
+                article {
+                    font-family: "Sora";
+
+                    p {
+                        font-size: 32px;
+                        margin-top: 16px;
+                        margin-bottom: 16px;
+                    }
+
+                    .SkillContainer {
+                        display: flex;
+                        justify-content: space-evenly;
+                        gap: 10px;
+                        flex-wrap: wrap;
+                        text-align: center;
+
+                        span {
+                            font-size: 100%;
+                            border: 2px solid grey;
+                            padding: 2px;
+                            height: 30px;
+                            width: 100%;
+                            max-width: 220px;
+                        }
+                    }
+
+                    .RequirementsContainer {
+                        list-style-type: none;
+
+                        li {
+                            margin: 9px;
+                            margin-left: 16px;
+                        }
+                    }
+
+                    .JobDescription {
+                        margin: 14px;
+                    }
+                }
+            }
+        }
+
+        .BackButtonContainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 4vh;
+
+            button {
+                @include disable-borders;
+                margin-bottom: 2vh;
+                border-radius: 15px;
+                font-size: 100%;
+                background-color: $CoreDarkCyan;
+            }
+        }
+    }
 }

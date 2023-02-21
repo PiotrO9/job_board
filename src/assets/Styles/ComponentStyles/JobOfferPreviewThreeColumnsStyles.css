@@ -20,11 +20,13 @@
   margin-left: 10px;
   margin-top: 10px;
 }
-.JobOfferPreviewThreeColumns .mainDatas p {
+.JobOfferPreviewThreeColumns .mainDatas a {
   margin-top: 20px;
   text-align: center;
-  font-size: 100%;
+  text-decoration: none;
+  font-size: 110%;
   font-family: "Sora";
+  color: black;
 }
 .JobOfferPreviewThreeColumns .detailDatas {
   width: 100%;
@@ -49,5 +51,5 @@
   color: rgb(255, 255, 255);
 }
 .JobOfferPreviewThreeColumns.dark .detailDatas svg {
-  color: rgb(255, 120, 0);
+  color: rgb(255, 69, 0);
 }/*# sourceMappingURL=JobOfferPreviewThreeColumnsStyles.css.map */

@@ -20,11 +20,14 @@
             margin-top: 10px;
         }
 
-        p {
+        a {
             margin-top: 20px;
             text-align: center;
-            font-size: 100%;
+            text-decoration: none;
+            font-size: 110%;
             font-family: "Sora";
+            color: black;
+            cursor: pointer;
         }
     }
 

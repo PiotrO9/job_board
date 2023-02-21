@@ -10,7 +10,7 @@ const routes = [
     component: MainView
   },
   {
-    path: '/OfferDetails/:id',
+    path: '/OfferDetails',
     name: 'offerDetails',
     component: OfferDetailsView
   },
