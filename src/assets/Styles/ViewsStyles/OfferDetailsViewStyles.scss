@@ -94,3 +94,11 @@
         }
     }
 }
+
+.OfferDetailView.dark {
+    background-color: $DarkModeBackground;
+
+    button, p, span, li {
+         color: $DarkModeFontColor;
+    }
+}

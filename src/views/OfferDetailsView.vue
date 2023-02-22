@@ -1,5 +1,5 @@
 <template>
-  <div class="OfferDetailView">
+  <div class="OfferDetailView" :class="{ dark: darkMode }">
     <div v-if="JobDetailsData && JobOfferData" class="OfferDetailViewContent">
       <div class="OfferDetailViewContentCard">
         <img v-if="JobOfferData.logoUrl" :src=JobOfferData.logoUrl alt="Company logo">
@@ -8,7 +8,7 @@
       </div>
       <div class="OfferDetailViewContentDatas">
         <section>
-          <article>
+          <article v-if="JobDetailsData.NeccessarySkillsList.length > 0">
             <p>Neccessary skills</p>
             <div class="SkillContainer">
               <span v-for="Skill in JobDetailsData.NeccessarySkillsList" v-bind:key="Skill">
@@ -16,7 +16,7 @@
               </span>
             </div>
           </article>
-          <article>
+          <article v-if="JobDetailsData.RequirementsList.length > 0">
             <p>Requirements</p>
             <ul class="RequirementsContainer">
               <li v-for="Requirement in JobDetailsData.RequirementsList" v-bind:key="Requirement">
@@ -42,12 +42,18 @@
 </template>
 
 <script>
+import { state } from '../main.js'
 
 export default {
     data() {
         return {
             JobDetailsData: null,
             JobOfferData: null
+        }
+    },
+    computed: {
+        darkMode() {
+            return state.darkMode.value
         }
     },
     methods: {
