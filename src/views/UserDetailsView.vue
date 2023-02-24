@@ -25,7 +25,9 @@ export default {
   },
   mounted() {
     let header = document.querySelector("header")
-    header.style.display = "none"
+    header.classList.remove("ShowHeader")
+    header.classList.add("HideHeader")
+    // header.style.display = "none"
     this.statistics = JSON.parse(localStorage.getItem('statistics'))
     this.userDatas = JSON.parse(localStorage.getItem('userDatas'))
     console.log(123)

@@ -5,6 +5,7 @@
         <span>JOB</span>
         <span class="secondPartOfLogo">BOARD</span>
       </p>
+      <fa icon="fa-bars"/>
     </div>
     <SearchFields />
     <div class="UserDatasContainer">

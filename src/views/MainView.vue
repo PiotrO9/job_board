@@ -22,7 +22,9 @@ export default {
   },
   mounted() {
     let header = document.querySelector("header")
-    header.style.display = "grid"
+    header.classList.remove("HideHeader")
+    header.classList.add("ShowHeader")
+    // header.style.display = "grid"
   }
 }
 </script>

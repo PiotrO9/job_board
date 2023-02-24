@@ -40,6 +40,11 @@ aside .SearchConfirm button {
   border-radius: 12px;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  aside {
+    display: none;
+  }
+}
 
 aside.dark h1 {
   color: white;

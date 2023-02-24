@@ -12,8 +12,24 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 40px;
   margin-top: 10px;
+  margin-right: 100px;
   overflow-y: scroll;
 }
 .JobOffers::-webkit-scrollbar {
   display: none;
+}
+@media (max-width: 1500px) {
+  .JobOffers {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 1000px) {
+  .JobOffers {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .JobOffers {
+    height: 50%;
+  }
 }/*# sourceMappingURL=JobOffersStyles.css.map */

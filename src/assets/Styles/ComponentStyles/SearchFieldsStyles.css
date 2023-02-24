@@ -23,6 +23,13 @@
 .SearchFields .JobSearch svg, .SearchFields .PlaceSearch svg {
   padding-right: 5px;
 }
+@media (max-width: 768px) {
+  .SearchFields .JobSearch, .SearchFields .PlaceSearch {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+  }
+}
 .SearchFields .SearchSubmitButton {
   display: flex;
   justify-content: center;
@@ -41,6 +48,19 @@
   border-radius: 12px;
   background-color: rgb(47, 176, 206);
   color: white;
+}
+@media (max-width: 768px) {
+  .SearchFields .SearchSubmitButton {
+    width: 80%;
+    min-width: 100px;
+  }
+}
+@media (max-width: 768px) {
+  .SearchFields {
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+  }
 }
 
 .SearchFields .JobSearch svg, .SearchFields .PlaceSearch svg {

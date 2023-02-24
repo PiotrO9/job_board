@@ -9,6 +9,7 @@ header {
 header #LogoContainer {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 header #LogoContainer p {
   font-size: 20px;
@@ -17,8 +18,54 @@ header #LogoContainer p {
 header #LogoContainer p .secondPartOfLogo {
   color: rgb(56, 127, 237);
 }
+header #LogoContainer svg {
+  display: none;
+  margin-right: 12vw;
+  height: 30px;
+}
+@media (max-width: 768px) {
+  header #LogoContainer {
+    height: 30%;
+  }
+  header #LogoContainer svg {
+    display: flex;
+  }
+}
 header .UserDatasContainer {
   height: 100%;
+}
+@media (max-width: 768px) {
+  header .UserDatasContainer {
+    height: 20%;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+header.HideHeader {
+  display: none;
+}
+
+header.ShowHeader {
+  display: grid;
+}
+@media (max-width: 768px) {
+  header.ShowHeader .UserDatasContainer {
+    height: 30%;
+    margin-top: 5vh;
+  }
+}
+@media (max-width: 768px) {
+  header.ShowHeader {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 header.dark {

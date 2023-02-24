@@ -43,6 +43,9 @@ aside {
         }
     }
     
+    @media (max-width: $BigMobileWidth) {
+        display: none;
+    }
 }
 
 aside.dark {

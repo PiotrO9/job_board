@@ -23,6 +23,12 @@
         svg {
             padding-right: 5px;
         }
+
+        @media (max-width: $BigMobileWidth) {
+            display: flex;
+            flex-direction: row;
+            width: 80%;
+        }
     }
 
     .SearchSubmitButton {
@@ -39,6 +45,17 @@
             background-color: $CoreDarkCyan;
             color: white;
         }
+
+        @media (max-width: $BigMobileWidth) {
+            width: 80%;
+            min-width: 100px;
+        }
+    }
+
+    @media (max-width: $BigMobileWidth) {
+        display: flex;
+        flex-direction: column;
+        height: 30%;
     }
 }
 

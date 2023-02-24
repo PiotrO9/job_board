@@ -63,7 +63,9 @@ export default {
     },
     mounted() {
       let header = document.querySelector("header")
-      header.style.display = "none"
+      header.classList.remove("ShowHeader")
+      header.classList.add("HideHeader")
+      // header.style.display = "none"
       this.JobDetailsData = JSON.parse(localStorage.getItem("JobDetailsData"))
       this.JobOfferData = JSON.parse(localStorage.getItem("JobOfferData"))
       console.log(this.JobDetailsData)

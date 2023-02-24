@@ -108,6 +108,11 @@
   justify-content: space-between;
   padding: 4px;
 }
+@media (max-width: 768px) {
+  .UserDatas .modalUserDatas .StatisticsFields {
+    gap: 20px;
+  }
+}
 .UserDatas .modalUserDatas button {
   border: none;
   outline: none;
@@ -130,6 +135,22 @@
   color: inherit;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  .UserDatas .modalUserDatas {
+    width: 100%;
+    height: 200%;
+    top: 30%;
+    left: auto;
+    right: auto;
+  }
+}
+@media (max-width: 768px) {
+  .UserDatas {
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 .UserDatas.dark .modalUserDatas {
   background-color: rgb(30, 47, 68);
@@ -146,9 +167,19 @@
 .moveUserDataToRight {
   animation: MoveDataToRightAnimation 1s forwards;
 }
+@media (max-width: 768px) {
+  .moveUserDataToRight {
+    animation: none;
+  }
+}
 
 .moveUserDataToLeft {
   animation: MoveDataToLeftAnimation 1s forwards;
+}
+@media (max-width: 768px) {
+  .moveUserDataToLeft {
+    animation: none;
+  }
 }
 
 .ModalUserData-enter-to {

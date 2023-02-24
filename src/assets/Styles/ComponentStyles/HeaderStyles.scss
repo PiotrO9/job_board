@@ -9,6 +9,7 @@ header {
     #LogoContainer {
         display: flex;
         align-items: center;
+        justify-content: space-between;
 
         p {
             font-size: 20px;
@@ -18,10 +19,55 @@ header {
                 color: rgb(56, 127, 237);
             }
         }
+
+        svg {
+            display: none;
+            margin-right: 12vw;
+            height: 30px;
+        }
+
+        @media (max-width: $BigMobileWidth) {
+            height: 30%;
+
+            svg {
+                display: flex;
+            }
+        }
     }
 
     .UserDatasContainer {
         height: 100%;
+
+        @media (max-width: $BigMobileWidth) {
+            height: 20%;
+        }
+    }
+
+    @media (max-width: $BigMobileWidth) {
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+header.HideHeader {
+    display: none;
+}
+
+header.ShowHeader {
+    display: grid;
+
+    .UserDatasContainer {
+        @media (max-width: $BigMobileWidth) {
+            height: 30%;
+            margin-top: 5vh;
+        }
+    }
+
+    @media (max-width: $BigMobileWidth) {
+        height: 40%;
+        display: flex;
+        flex-direction: column;
     }
 }
 
