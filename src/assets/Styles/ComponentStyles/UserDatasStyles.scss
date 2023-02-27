@@ -112,6 +112,10 @@
         justify-content: center;
         align-items: center;
     }
+
+    @media (max-width: $BigMobileWidth) and (max-height: $BigMobileHeight) {
+        height: 8rem;
+    }
 }
 
 .UserDatas.dark {

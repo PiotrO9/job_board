@@ -5,6 +5,7 @@
         <input id="TitleInputField" 
           type="text" 
           placeholder="Search for Job" 
+          autocomplete="off"
           @change="UpdateTitle">
     </div>
     <div class="PlaceSearch">
@@ -12,6 +13,7 @@
         <input id="LocationInputField" 
           type="text" 
           placeholder="Add country or city" 
+          autocomplete="off"
           @change="UpdateLocation">
     </div>
     <div class="SearchSubmitButton">

@@ -15,13 +15,5 @@ export default {
 </script>
 
 <style lang="scss">
-button {
-min-width: 250px;
-min-height: 50px;
-font-family: "Sora";
-
-    &:hover {
-        cursor: pointer;
-    }
-}
+@import "../assets/Styles/ComponentStyles/SubmitSearchFiltersStyles.scss";
 </style>

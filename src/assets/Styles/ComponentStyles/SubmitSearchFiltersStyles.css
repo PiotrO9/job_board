@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;500;700&display=swap");
+button {
+  min-width: 250px;
+  min-height: 50px;
+  font-family: "Sora";
+}
+button:hover {
+  cursor: pointer;
+}
+@media (max-width: 1200px) {
+  button {
+    min-width: 200px;
+    max-height: 20px;
+  }
+}/*# sourceMappingURL=SubmitSearchFiltersStyles.css.map */
