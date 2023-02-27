@@ -46,6 +46,16 @@ aside .SearchConfirm button {
   }
 }
 
+@media (max-width: 768px) {
+  aside.ShowMobileFilters {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+  }
+}
+
 aside.dark h1 {
   color: white;
 }/*# sourceMappingURL=JobsFilterStyles.css.map */

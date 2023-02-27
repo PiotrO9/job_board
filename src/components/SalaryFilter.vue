@@ -1,6 +1,8 @@
 <template>
   <article class="SalaryFilter" :class="{ dark: darkMode }">
-    <p>Salary</p>
+    <p>Salary
+        <fa icon="fa-xmark" @click="HideMobileFiters"/>
+    </p>
     <div class="SalaryNumberInputs">
         <span>Min </span>
         <input type="number" min="0" max="48000" value="0"
@@ -46,6 +48,10 @@ export default {
             }
 
             state.filteringCriterias.ChangeMaxSalary(MaxSalaryInput.value)
+        },
+        HideMobileFiters() {
+            state.SetterFiltersInMobileMode(false)
+            console.log(123)
         }
     }
 }

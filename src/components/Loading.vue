@@ -13,6 +13,9 @@ export default {
   computed: {
         darkMode() {
             return state.darkMode.value
+        },
+        filtersInMobileMode() {
+          return state.filtersInMobileMode.value
         }
     },
     mounted() {
@@ -34,7 +37,18 @@ export default {
         .typeString(".")
         .pauseFor(delayTime)
         .start()
+    },
+    watch: {
+    filtersInMobileMode() {
+      const loading = document.querySelector(".Loading")
+      if(this.filtersInMobileMode) {
+        loading.classList.add("HideLoading")
+      }
+      else {
+        loading.classList.remove("HideLoading")
+      }
     }
+  }
 }
 </script>
 

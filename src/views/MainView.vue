@@ -24,7 +24,6 @@ export default {
     let header = document.querySelector("header")
     header.classList.remove("HideHeader")
     header.classList.add("ShowHeader")
-    // header.style.display = "grid"
   }
 }
 </script>

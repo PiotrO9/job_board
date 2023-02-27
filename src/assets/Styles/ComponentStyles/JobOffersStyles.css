@@ -30,6 +30,12 @@
 }
 @media (max-width: 768px) {
   .JobOffers {
-    height: 50%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .JobOffers.loadingPhase {
+    height: 60%;
   }
 }/*# sourceMappingURL=JobOffersStyles.css.map */

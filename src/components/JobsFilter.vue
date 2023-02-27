@@ -29,12 +29,26 @@ export default {
   computed: {
         darkMode() {
             return state.darkMode.value
+        },
+        filtersInMobileMode() {
+            return state.filtersInMobileMode.value
         }
   },
   components: {
     SalaryFilter,
     ExperienceFilter,
     ContractTypeFilter
+  },
+  watch: {
+    filtersInMobileMode() {
+      const aside = document.getElementsByTagName("aside")[0]
+      if(this.filtersInMobileMode) {
+        aside.classList.add("ShowMobileFilters")
+      }
+      else {
+        aside.classList.remove("ShowMobileFilters")
+      }
+    }
   },
   methods: {
     SearchingConfirming() {

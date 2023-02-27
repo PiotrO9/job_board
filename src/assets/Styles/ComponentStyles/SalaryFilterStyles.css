@@ -5,9 +5,14 @@
   padding: 14px;
 }
 .SalaryFilter p {
+  position: relative;
   margin-bottom: 8px;
   font-size: 24px;
   font-family: "Sora";
+}
+.SalaryFilter p svg {
+  position: absolute;
+  right: 0;
 }
 .SalaryFilter .SalaryNumberInputs {
   display: flex;

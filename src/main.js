@@ -52,6 +52,10 @@ export const state = ({
     readyForFiltering: ref(false),
     toggleReadiness() {
         this.readyForFiltering.value = !this.readyForFiltering.value
+    },
+    filtersInMobileMode: ref(false),
+    SetterFiltersInMobileMode(val) {
+        this.filtersInMobileMode.value = val
     }
 })
 

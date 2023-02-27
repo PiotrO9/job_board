@@ -5,7 +5,7 @@
         <span>JOB</span>
         <span class="secondPartOfLogo">BOARD</span>
       </p>
-      <fa icon="fa-bars"/>
+      <fa icon="fa-bars" @click="ShowFiltersInMobileMode"/>
     </div>
     <SearchFields />
     <div class="UserDatasContainer">
@@ -28,6 +28,11 @@ export default {
   components: {
     SearchFields,
     UserDatas
+  },
+  methods: {
+    ShowFiltersInMobileMode() {
+      state.SetterFiltersInMobileMode(true)
+    }
   }
 }
 </script>

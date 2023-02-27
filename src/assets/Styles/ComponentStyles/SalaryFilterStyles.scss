@@ -5,9 +5,15 @@
     padding: 14px;
 
     p {
+        position: relative;
         margin-bottom: 8px;
         font-size: 24px;
         font-family: "Sora";
+
+        svg {
+            position: absolute;
+            right: 0;
+        }
     }
 
     .SalaryNumberInputs {
