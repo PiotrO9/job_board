@@ -10,6 +10,12 @@
   border-radius: 50%;
   margin-right: 20px;
 }
+@media (max-width: 768px) {
+  .UserDetailsDatasCard img {
+    max-width: 90px;
+    max-height: 90px;
+  }
+}
 .UserDetailsDatasCard div {
   display: flex;
   flex-direction: column;
@@ -22,8 +28,18 @@
 .UserDetailsDatasCard div p:nth-child(1) {
   font-size: 30px;
 }
+@media (max-width: 1000px) {
+  .UserDetailsDatasCard div p:nth-child(1) {
+    font-size: 22px;
+  }
+}
 .UserDetailsDatasCard div p:nth-child(2) {
   font-size: 20px;
+}
+@media (max-width: 1000px) {
+  .UserDetailsDatasCard div p:nth-child(2) {
+    font-size: 14px;
+  }
 }
 .UserDetailsDatasCard .ThemeModeContainer {
   display: flex;
@@ -41,8 +57,18 @@
   display: flex;
   flex-direction: row;
 }
+@media (max-width: 768px) {
+  .UserDetailsDatasCard .ThemeModeContainer .ThemeModeSwitch .LightThemeMode p, .UserDetailsDatasCard .ThemeModeContainer .ThemeModeSwitch .DarkThemeMode p {
+    font-size: 18px;
+  }
+}
 .UserDetailsDatasCard .ThemeModeContainer .ThemeModeSwitch .LightThemeMode svg, .UserDetailsDatasCard .ThemeModeContainer .ThemeModeSwitch .DarkThemeMode svg {
   margin-left: 15px;
+}
+@media (max-width: 768px) {
+  .UserDetailsDatasCard {
+    margin-left: 4%;
+  }
 }
 
 .UserDetailsDatasCard.dark {

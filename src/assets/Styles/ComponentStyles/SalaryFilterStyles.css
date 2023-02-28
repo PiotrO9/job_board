@@ -22,6 +22,11 @@
     display: inline;
   }
 }
+@media (max-width: 1200px) {
+  .SalaryFilter p {
+    font-size: 20px;
+  }
+}
 .SalaryFilter .SalaryNumberInputs {
   display: flex;
   justify-content: center;
@@ -30,11 +35,21 @@
 }
 .SalaryFilter .SalaryNumberInputs span {
   margin-right: 14px;
-  font-size: 20px;
+  font-size: 19px;
   font-family: "Sora";
 }
 .SalaryFilter .SalaryNumberInputs span:nth-child(3) {
   margin-left: 16px;
+}
+@media (max-width: 1200px) {
+  .SalaryFilter .SalaryNumberInputs span {
+    font-size: 15px;
+  }
+}
+@media (max-width: 1000px) {
+  .SalaryFilter .SalaryNumberInputs span {
+    font-size: 14px;
+  }
 }
 .SalaryFilter .SalaryNumberInputs input[type=number] {
   width: 25%;
@@ -48,6 +63,11 @@
 .SalaryFilter .SalaryNumberInputs input[type=number]::-webkit-inner-spin-button, .SalaryFilter .SalaryNumberInputs input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+@media (max-width: 1200px) {
+  .SalaryFilter .SalaryNumberInputs input[type=number] {
+    font-size: 80%;
+  }
 }
 
 .SalaryFilter.dark p {

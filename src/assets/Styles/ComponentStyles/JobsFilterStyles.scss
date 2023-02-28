@@ -51,10 +51,13 @@ aside.ShowMobileFilters {
         display: flex;
         flex-direction: column;
         background-color: white;
+        overflow: scroll;
     }
 }
 
 aside.dark {
+    background-color: $DarkModeCoreBackground;
+
     h1 {
         color: white;
     }

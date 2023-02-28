@@ -21,6 +21,7 @@ export default {
     JobOffers
   },
   mounted() {
+    console.log(321)
     let header = document.querySelector("header")
     header.classList.remove("HideHeader")
     header.classList.add("ShowHeader")

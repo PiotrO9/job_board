@@ -3,13 +3,18 @@
 .UserDetailsDatas {
     @include width-height(60%, 70%);
     display: flex;
+    align-items: center;
     flex-direction: column;
     
-
     .GridUserDetailsDatas {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 50px;
+
+        @media (max-width: $BigMobileWidth) {
+            width: 80%;
+            gap: 20px;
+        }
     }
 
     button {
@@ -26,6 +31,14 @@
         &:hover {
             cursor: pointer;
         }
+    }
+
+    @media (max-width: $OldDesktopWidth) {
+        width: 80%;
+    }
+
+    @media (max-width: $BigMobileWidth) {
+        @include width-height(100%, 90%);
     }
 }
 

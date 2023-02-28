@@ -3,6 +3,7 @@
 .GridUserDetailsDataCell {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     font-family: "Sora";
 
     p {
@@ -12,6 +13,15 @@
         margin-bottom: 10px;
         color: grey;
         font-size: 26px;
+
+        @media (max-width: $SmallDesktopWidth) {
+            font-size: 20px;
+        }
+
+        @media (max-width: $BigMobileWidth) {
+            font-size: 15px;
+            margin-left: 0px;
+        }
     }
 
     div {
@@ -27,6 +37,18 @@
         span {
             text-align: center;
             font-size:32px;
+
+            @media (max-width: $SmallDesktopWidth) {
+                font-size: 22px;
+            }
+
+            @media (max-width: $BigMobileWidth) {
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: $BigMobileWidth) {
+            min-height: 40px;
         }
     }
 }

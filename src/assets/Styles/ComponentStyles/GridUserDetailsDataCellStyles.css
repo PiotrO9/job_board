@@ -2,6 +2,7 @@
 .GridUserDetailsDataCell {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   font-family: "Sora";
 }
 .GridUserDetailsDataCell p {
@@ -11,6 +12,17 @@
   margin-bottom: 10px;
   color: grey;
   font-size: 26px;
+}
+@media (max-width: 1000px) {
+  .GridUserDetailsDataCell p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .GridUserDetailsDataCell p {
+    font-size: 15px;
+    margin-left: 0px;
+  }
 }
 .GridUserDetailsDataCell div {
   display: flex;
@@ -27,4 +39,19 @@
 .GridUserDetailsDataCell div span {
   text-align: center;
   font-size: 32px;
+}
+@media (max-width: 1000px) {
+  .GridUserDetailsDataCell div span {
+    font-size: 22px;
+  }
+}
+@media (max-width: 768px) {
+  .GridUserDetailsDataCell div span {
+    font-size: 13px;
+  }
+}
+@media (max-width: 768px) {
+  .GridUserDetailsDataCell div {
+    min-height: 40px;
+  }
 }/*# sourceMappingURL=GridUserDetailsDataCellStyles.css.map */

@@ -23,11 +23,30 @@
   max-width: 180px;
   max-height: 120px;
 }
+@media (max-width: 768px) {
+  .OfferDetailView .OfferDetailViewContent .OfferDetailViewContentCard img {
+    max-width: 120px;
+    max-height: 90px;
+  }
+}
 .OfferDetailView .OfferDetailViewContent .OfferDetailViewContentCard p {
   margin-top: 14px;
   text-align: center;
   font-size: 50px;
   font-family: "Sora";
+}
+@media (max-width: 768px) {
+  .OfferDetailView .OfferDetailViewContent .OfferDetailViewContentCard p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .OfferDetailView .OfferDetailViewContent .OfferDetailViewContentCard {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+  }
 }
 .OfferDetailView .OfferDetailViewContent .OfferDetailViewContentDatas section article {
   font-family: "Sora";
@@ -36,6 +55,11 @@
   font-size: 32px;
   margin-top: 16px;
   margin-bottom: 16px;
+}
+@media (max-width: 768px) {
+  .OfferDetailView .OfferDetailViewContent .OfferDetailViewContentDatas section article p {
+    text-align: center;
+  }
 }
 .OfferDetailView .OfferDetailViewContent .OfferDetailViewContentDatas section article .SkillContainer {
   display: flex;
@@ -62,6 +86,15 @@
 .OfferDetailView .OfferDetailViewContent .OfferDetailViewContentDatas section article .JobDescription {
   margin: 14px;
 }
+@media (max-width: 768px) {
+  .OfferDetailView .OfferDetailViewContent .OfferDetailViewContentDatas section article .JobDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
 .OfferDetailView .OfferDetailViewContent .BackButtonContainer {
   display: flex;
   align-items: center;
@@ -75,6 +108,11 @@
   border-radius: 15px;
   font-size: 100%;
   background-color: rgb(47, 176, 206);
+}
+@media (max-width: 768px) {
+  .OfferDetailView .OfferDetailViewContent {
+    width: 100%;
+  }
 }
 
 .OfferDetailView.dark {

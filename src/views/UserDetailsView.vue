@@ -24,13 +24,12 @@ export default {
     UserDetailsDatas
   },
   mounted() {
+    console.log(123)
     let header = document.querySelector("header")
     header.classList.remove("ShowHeader")
     header.classList.add("HideHeader")
-    // header.style.display = "none"
     this.statistics = JSON.parse(localStorage.getItem('statistics'))
     this.userDatas = JSON.parse(localStorage.getItem('userDatas'))
-    console.log(123)
   }
 }
 </script>

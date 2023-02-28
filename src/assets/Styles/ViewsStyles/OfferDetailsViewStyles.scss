@@ -22,6 +22,11 @@
             img {
                 max-width: 180px;
                 max-height: 120px;
+
+                @media (max-width: $BigMobileWidth) {
+                    max-width: 120px;
+                    max-height: 90px;
+                }
             }
 
             p {
@@ -29,6 +34,17 @@
                 text-align: center;
                 font-size: 50px;
                 font-family: "Sora";
+
+                @media (max-width: $BigMobileWidth) {
+                    font-size: 20px;
+                }
+            }
+
+            @media (max-width: $BigMobileWidth) {
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                gap: 10px;
             }
         }
 
@@ -43,6 +59,10 @@
                         font-size: 32px;
                         margin-top: 16px;
                         margin-bottom: 16px;
+
+                        @media (max-width: $BigMobileWidth) {
+                            text-align: center;
+                        }
                     }
 
                     .SkillContainer {
@@ -73,6 +93,14 @@
 
                     .JobDescription {
                         margin: 14px;
+
+                        @media (max-width: $BigMobileWidth) {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            text-align: center;
+                        }
                     }
                 }
             }
@@ -91,6 +119,10 @@
                 font-size: 100%;
                 background-color: $CoreDarkCyan;
             }
+        }
+
+        @media (max-width: $BigMobileWidth) {
+            width: 100%;
         }
     }
 }

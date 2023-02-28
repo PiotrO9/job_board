@@ -21,6 +21,10 @@
                 display: inline;
             }
         }
+
+        @media (max-width: $OldDesktopWidth) {
+            font-size: 20px;
+        }
     }
 
     .SalaryNumberInputs {
@@ -29,11 +33,19 @@
 
         span {
             margin-right: 14px;
-            font-size: 20px;
+            font-size: 19px;
             font-family: "Sora";
 
             &:nth-child(3) {
                 margin-left: 16px;
+            }
+
+            @media (max-width: $OldDesktopWidth) {
+                font-size: 15px;
+            }
+
+            @media (max-width: $SmallDesktopWidth) {
+                font-size: 14px;
             }
         }
 
@@ -50,6 +62,10 @@
             &::-webkit-outer-spin-button {
                 -webkit-appearance: none;
                 margin: 0;
+            }
+
+            @media (max-width: $OldDesktopWidth) {
+                font-size: 80%;
             }
         }
     }

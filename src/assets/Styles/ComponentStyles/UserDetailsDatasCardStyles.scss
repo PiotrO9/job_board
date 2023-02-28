@@ -10,6 +10,11 @@
         max-height: 200px;
         border-radius: 50%;
         margin-right: 20px;
+
+        @media (max-width: $BigMobileWidth) {
+            max-width: 90px;
+            max-height: 90px;
+        }
     }
 
     div {
@@ -20,10 +25,18 @@
         p {
             &:nth-child(1) {
                 font-size: 30px;
+
+                @media (max-width: $SmallDesktopWidth) {
+                    font-size: 22px;
+                }
             }
 
             &:nth-child(2) {
                 font-size: 20px;
+
+                @media (max-width: $SmallDesktopWidth) {
+                    font-size: 14px;
+                }
             }
         }
     }
@@ -39,11 +52,21 @@
                 @include flex-center;
                 @include flex-direction(row);
 
+                p {
+                    @media (max-width: $BigMobileWidth) {
+                       font-size: 18px;
+                    }
+                }
+
                 svg {
                     margin-left: 15px;
                 }
             }
         }
+    }
+
+    @media (max-width: $BigMobileWidth) {
+        margin-left: 4%;
     }
 }
 

@@ -53,9 +53,13 @@ aside .SearchConfirm button {
     display: flex;
     flex-direction: column;
     background-color: white;
+    overflow: scroll;
   }
 }
 
+aside.dark {
+  background-color: rgb(21, 30, 45);
+}
 aside.dark h1 {
   color: white;
 }/*# sourceMappingURL=JobsFilterStyles.css.map */
