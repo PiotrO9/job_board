@@ -125,12 +125,12 @@
             width: 100%;
         }
     }
-}
 
-.OfferDetailView.dark {
-    background-color: $DarkModeBackground;
+    &.dark {
+        background-color: $DarkModeBackground;
 
-    button, p, span, li {
-         color: $DarkModeFontColor;
+        button, p, span, li {
+             color: $DarkModeFontColor;
+        }
     }
 }

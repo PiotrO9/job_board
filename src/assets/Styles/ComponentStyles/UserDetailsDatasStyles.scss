@@ -40,13 +40,13 @@
     @media (max-width: $BigMobileWidth) {
         @include width-height(100%, 90%);
     }
-}
 
-.UserDetailsDatas.dark {
-    background-color: $DarkModeBackground;
+    &.dark {
+        background-color: $DarkModeBackground;
 
-    button {
-        color: white;
-        background-color: $CoreDarkCyan;
+        button {
+            color: white;
+            background-color: $CoreDarkCyan;
+        }
     }
 }

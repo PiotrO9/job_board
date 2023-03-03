@@ -116,12 +116,12 @@
     @media (max-width: $BigMobileWidth) and (max-height: $BigMobileHeight) {
         height: 8rem;
     }
-}
 
-.UserDatas.dark {
+    &.dark {
 
-    .modalUserDatas {
-        background-color: $DarkModeBackground;
+        .modalUserDatas {
+            background-color: $DarkModeBackground;
+        }
     }
 }
 

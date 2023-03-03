@@ -45,11 +45,9 @@ header .UserDatasContainer {
     flex-direction: column;
   }
 }
-
 header.HideHeader {
   display: none;
 }
-
 header.ShowHeader {
   display: grid;
   grid-template-columns: 3fr 7fr 2fr;
@@ -67,7 +65,6 @@ header.ShowHeader {
     flex-direction: column;
   }
 }
-
 header.dark {
   background-color: rgb(30, 47, 68);
   color: white;

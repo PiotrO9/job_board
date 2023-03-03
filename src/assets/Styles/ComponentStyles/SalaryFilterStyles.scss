@@ -69,16 +69,16 @@
             }
         }
     }
-}
 
-.SalaryFilter.dark {
-    p {
-        color: $DarkModeFontColor;
-    }
-
-    .SalaryNumberInputs {
-        span {
+    &.dark {
+        p {
             color: $DarkModeFontColor;
+        }
+    
+        .SalaryNumberInputs {
+            span {
+                color: $DarkModeFontColor;
+            }
         }
     }
 }

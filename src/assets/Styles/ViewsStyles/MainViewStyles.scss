@@ -8,8 +8,8 @@
     @media (max-width: $BigMobileWidth) {
         grid-template-columns: 1fr;
     }
-}
 
-.MainView.dark {
-    background-color: $DarkModeBackground;
+    &.dark {
+        background-color: $DarkModeBackground;
+    }
 }

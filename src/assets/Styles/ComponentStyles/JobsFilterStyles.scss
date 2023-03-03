@@ -42,23 +42,23 @@ aside {
     @media (max-width: $BigMobileWidth) {
         display: none;
     }
-}
 
-aside.ShowMobileFilters {
-    @media (max-width: $BigMobileWidth) {
-        position: absolute;
-        top: 0;
-        display: flex;
-        flex-direction: column;
-        background-color: white;
-        overflow: scroll;
+    &.ShowMobileFilters {
+        @media (max-width: $BigMobileWidth) {
+            position: absolute;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            overflow: scroll;
+        }
     }
-}
 
-aside.dark {
-    background-color: $DarkModeCoreBackground;
+    &.dark {
+        background-color: $DarkModeCoreBackground;
 
-    h1 {
-        color: white;
+        h1 {
+            color: white;
+        }
     }
 }

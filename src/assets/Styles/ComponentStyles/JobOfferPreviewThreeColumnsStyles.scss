@@ -48,24 +48,24 @@
             font-family: "Sora";
         }
     }
-}
 
-.JobOfferPreviewThreeColumns.dark {
-    background-color: $DarkModeCoreBackground;
-    border: 3px solid grey;
-    color: $DarkModeFontColor;
-
-    .mainDatas {
-
-        a {
-            color: $DarkModeFontColor;
+    &.dark {
+        background-color: $DarkModeCoreBackground;
+        border: 3px solid grey;
+        color: $DarkModeFontColor;
+    
+        .mainDatas {
+    
+            a {
+                color: $DarkModeFontColor;
+            }
         }
-    }
-
-    .detailDatas {
-
-        svg {
-            color: $CoreOrange;
+    
+        .detailDatas {
+    
+            svg {
+                color: $CoreOrange;
+            }
         }
     }
 }

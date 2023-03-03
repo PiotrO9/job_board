@@ -11,10 +11,10 @@
             font-size: 20px;
         }
     }
-}
 
-.ContractTypeFilter.dark {
-    p {
-        color: $DarkModeFontColor;
+    &.dark {
+        p {
+            color: $DarkModeFontColor;
+        }
     }
 }

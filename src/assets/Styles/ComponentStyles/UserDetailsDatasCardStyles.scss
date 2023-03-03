@@ -68,9 +68,9 @@
     @media (max-width: $BigMobileWidth) {
         margin-left: 4%;
     }
-}
 
-.UserDetailsDatasCard.dark {
-    background-color: $DarkModeBackground;
-    color: white;
+    &.dark {
+        background-color: $DarkModeBackground;
+        color: white;
+    }
 }

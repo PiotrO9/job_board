@@ -45,7 +45,6 @@ aside .SearchConfirm button {
     display: none;
   }
 }
-
 @media (max-width: 768px) {
   aside.ShowMobileFilters {
     position: absolute;
@@ -56,7 +55,6 @@ aside .SearchConfirm button {
     overflow: scroll;
   }
 }
-
 aside.dark {
   background-color: rgb(21, 30, 45);
 }

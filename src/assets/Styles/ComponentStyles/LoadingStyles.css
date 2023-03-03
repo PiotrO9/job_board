@@ -17,13 +17,11 @@
   font-size: 40px;
   font-family: "Sora";
 }
-
-.Loading.HideLoading {
-  display: none;
-}
-
 .Loading.dark p {
   color: white;
+}
+.Loading.HideLoading {
+  display: none;
 }
 
 @keyframes rotateLoadingAnimation {

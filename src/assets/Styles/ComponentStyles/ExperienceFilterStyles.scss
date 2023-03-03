@@ -11,10 +11,11 @@
             font-size: 20px;
         }
     }
-}
 
-.ExperienceFilter.dark {
-    p {
-        color: $DarkModeFontColor;
+    &.dark {
+        
+        p {
+            color: $DarkModeFontColor;
+        }
     }
 }

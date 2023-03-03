@@ -26,11 +26,11 @@
             background-color: $CoreDarkCyan;
         }
     }
-}
 
-.ExperienceLevel.dark {
-
-    input {
-        border: 2px solid $DarkModeFontColor;
+    &.dark {
+        
+        input {
+            border: 2px solid $DarkModeFontColor;
+        }
     }
 }

@@ -15,16 +15,16 @@
         font-size: 40px;
         font-family: "Sora";
     }
-}
 
-.Loading.HideLoading {
-    display: none;
-}
+    &.dark {
 
-.Loading.dark {
+        p {
+            color: white;
+        }
+    }
 
-    p {
-        color: white;
+    &.HideLoading {
+        display: none;
     }
 }
 

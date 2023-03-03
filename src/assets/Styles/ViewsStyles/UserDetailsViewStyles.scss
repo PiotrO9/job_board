@@ -3,8 +3,8 @@
 .UserDetailsView {
     @include width-height-val(100%);
     @include flex-center;
-}
 
-.UserDetailsView.dark {
-    background-color: $DarkModeBackground;
+    &.dark {
+        background-color: $DarkModeBackground;
+    }
 }
