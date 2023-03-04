@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;500;700&display=swap");
+.NoResultContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  max-height: 200px;
+}
+.NoResultContainer__MainText {
+  font-size: 24px;
+  font-family: "Sora";
+}
+.NoResultContainer.dark {
+  color: rgb(255, 255, 255);
+}/*# sourceMappingURL=NoResultsStyles.css.map */

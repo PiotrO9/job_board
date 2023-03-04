@@ -1,9 +1,12 @@
 <template>
-  <div :class="{ loadingPhase: jobOffers == null, dark: darkMode }" class="JobOffers">
+  <div :class="{ loadingPhase: jobOffers == null || jobOffers.length < 1, dark: darkMode }" class="JobOffers">
     <div v-if="jobOffers == null">
       <Loading/>
     </div>
-    <div v-for="jobOffer in jobOffers" v-bind:key="jobOffer">
+    <div v-else-if="jobOffers.length < 1" class="NoResults">
+      <NoResults/>
+    </div>
+    <div v-else v-for="jobOffer in jobOffers" v-bind:key="jobOffer">
       <JobOfferPreviewThreeColumns :datas="jobOffer"/>
     </div>
   </div>
@@ -13,6 +16,7 @@
 import FetchDataFromNoFluffJobsWithFilters from "@/utils/ApiUtils/FetchDataFromNoFluffJobsWithFilters.js"
 import JobOfferPreviewThreeColumns from "@/components/JobOfferPreviewThreeColumns.vue"
 import Loading from "@/components/Loading.vue"
+import NoResults from "@/components/NoResults.vue"
 import { state } from '../main.js'
 import FetchDataFromNoFluffJobsWithCriterias from "@/utils/ApiUtils/FetchDataFromNoFluffJobsWithCriterias"
 
@@ -32,7 +36,8 @@ export default {
     },
     components: {
       JobOfferPreviewThreeColumns,
-      Loading
+      Loading,
+      NoResults
     },
     mounted() {
       FetchDataFromNoFluffJobsWithFilters()
