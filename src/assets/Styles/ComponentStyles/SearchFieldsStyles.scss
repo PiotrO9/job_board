@@ -5,7 +5,7 @@
     width: 100%;
     align-items: center;
     gap: 10px;
-    font-family: "Sora";
+    font-family: $CoreFontFamily;
 
     .JobSearch, .PlaceSearch {
         min-width: 35%;

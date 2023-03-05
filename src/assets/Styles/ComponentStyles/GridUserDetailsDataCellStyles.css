@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
 .GridUserDetailsDataCell {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  font-family: "Sora";
+  font-family: "Tilt Neon";
 }
 .GridUserDetailsDataCell p {
   text-align: center;

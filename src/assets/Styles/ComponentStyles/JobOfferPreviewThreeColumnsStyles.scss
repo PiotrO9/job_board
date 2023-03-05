@@ -25,7 +25,7 @@
             text-align: center;
             text-decoration: none;
             font-size: 110%;
-            font-family: "Sora";
+            font-family: $SmallComponentsFontFamily;
             color: black;
             cursor: pointer;
         }
@@ -45,7 +45,8 @@
         p {
             text-align: start;
             font-size: 120%;
-            font-family: "Sora";
+            font-family: $SmallComponentsFontFamily;
+            font-weight: bold;
         }
     }
 

@@ -3,7 +3,7 @@
 header {
     @include width-height(100%, 8%);
     display: none;
-    font-family: "Sora";
+    font-family: $CoreFontFamily;
 
     #LogoContainer {
         display: flex;

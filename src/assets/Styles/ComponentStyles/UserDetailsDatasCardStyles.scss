@@ -3,7 +3,7 @@
 .UserDetailsDatasCard {
     display: flex;
     flex-direction: row;
-    font-family: "Sora";
+    font-family: $SmallComponentsFontFamily;
 
     img {
         max-width: 200px;

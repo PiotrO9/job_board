@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-family: "Sora";
+    font-family: $SmallComponentsFontFamily;
 
     p {
         text-align: center;
@@ -36,7 +36,7 @@
 
         span {
             text-align: center;
-            font-size:32px;
+            font-size: 32px;
 
             @media (max-width: $SmallDesktopWidth) {
                 font-size: 22px;

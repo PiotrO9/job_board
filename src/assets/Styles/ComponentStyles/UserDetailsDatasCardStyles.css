@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
 .UserDetailsDatasCard {
   display: flex;
   flex-direction: row;
-  font-family: "Sora";
+  font-family: "Tilt Neon";
 }
 .UserDetailsDatasCard img {
   max-width: 200px;
