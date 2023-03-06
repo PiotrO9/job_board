@@ -7,8 +7,8 @@
                 <p>{{ userDatas.name.first }} {{ userDatas.name.last }}</p>
                 <p>{{ userDatas.location.country }}, {{ userDatas.location.city }}</p>
             </div>
-            <div class="ThemeModeContainer">
-                <div class="ThemeModeSwitch" @click="SwitchThemes">
+            <div class="UserDetailsDatasCard__ThemeModeContainer">
+                <div class="UserDetailsDatasCard__ThemeModeContainer-switch" @click="SwitchThemes">
                     <div v-if="darkMode" class="LightThemeMode">
                         <p>Light mode </p>
                         <fa icon="fa-sun"/>

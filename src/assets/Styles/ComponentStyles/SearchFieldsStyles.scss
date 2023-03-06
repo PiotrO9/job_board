@@ -7,12 +7,13 @@
     gap: 10px;
     font-family: $CoreFontFamily;
 
-    .JobSearch, .PlaceSearch {
+    &__JobSearch, &__PlaceSearch {
         min-width: 35%;
         padding: 12px;
         background-color: $SearchFieldsBackground;
         border: 1px solid lightgray;
         border-radius: 10px;
+        color: black;
 
         input {
             @include disable-borders;
@@ -46,7 +47,7 @@
         }
     }
 
-    .SearchSubmitButton {
+    &__SearchSubmitButton {
         @include flex-justify(start);
         width: 20%;
         min-height: 50px;
@@ -80,15 +81,5 @@
         flex-direction: column;
         height: 30%;
         width: 100%;
-    }
-}
-
-.SearchFields {
-
-    .JobSearch, .PlaceSearch {
-   
-        svg {
-            color: black;
-        }
     }
 }

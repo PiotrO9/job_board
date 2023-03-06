@@ -27,7 +27,7 @@
         }
     }
 
-    .SalaryNumberInputs {
+    &__NumberInputs {
         @include flex-center;
         margin-top: 20px;
 
@@ -75,10 +75,8 @@
             color: $DarkModeFontColor;
         }
     
-        .SalaryNumberInputs {
-            span {
-                color: $DarkModeFontColor;
-            }
+        span {
+            color: $DarkModeFontColor;
         }
     }
 }

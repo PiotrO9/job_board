@@ -8,68 +8,71 @@
   align-items: start;
   overflow: scroll;
 }
-.OfferDetailView .OfferDetailViewContent {
+.OfferDetailView::-webkit-scrollbar {
+  display: none;
+}
+.OfferDetailView__Content {
   justify-content: center;
   align-items: start;
   width: 50%;
   margin-top: 5vh;
 }
-.OfferDetailView .OfferDetailViewContent .OfferDetailViewContentCard {
+.OfferDetailView__Content-Card {
   display: flex;
   flex-direction: row;
   gap: 50px;
   margin-bottom: 7vh;
 }
-.OfferDetailView .OfferDetailViewContent .OfferDetailViewContentCard img {
+.OfferDetailView__Content-Card img {
   max-width: 180px;
   max-height: 120px;
 }
 @media (max-width: 768px) {
-  .OfferDetailView .OfferDetailViewContent .OfferDetailViewContentCard img {
+  .OfferDetailView__Content-Card img {
     max-width: 120px;
     max-height: 90px;
   }
 }
-.OfferDetailView .OfferDetailViewContent .OfferDetailViewContentCard p {
+.OfferDetailView__Content-Card p {
   margin-top: 14px;
   text-align: center;
   font-size: 50px;
   font-family: "Sora";
 }
 @media (max-width: 768px) {
-  .OfferDetailView .OfferDetailViewContent .OfferDetailViewContentCard p {
+  .OfferDetailView__Content-Card p {
     font-size: 20px;
   }
 }
 @media (max-width: 768px) {
-  .OfferDetailView .OfferDetailViewContent .OfferDetailViewContentCard {
+  .OfferDetailView__Content-Card {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     gap: 10px;
   }
 }
-.OfferDetailView .OfferDetailViewContent .OfferDetailViewContentDatas section article {
+.OfferDetailView__Content-Datas section article {
   font-family: "Sora";
 }
-.OfferDetailView .OfferDetailViewContent .OfferDetailViewContentDatas section article p {
+.OfferDetailView__Content-Datas section article p {
   font-size: 32px;
   margin-top: 16px;
   margin-bottom: 16px;
 }
 @media (max-width: 768px) {
-  .OfferDetailView .OfferDetailViewContent .OfferDetailViewContentDatas section article p {
+  .OfferDetailView__Content-Datas section article p {
     text-align: center;
   }
 }
-.OfferDetailView .OfferDetailViewContent .OfferDetailViewContentDatas section article .SkillContainer {
+.OfferDetailView__Content-Datas section article .Skill-Container {
   display: flex;
   justify-content: space-evenly;
   gap: 10px;
   flex-wrap: wrap;
   text-align: center;
 }
-.OfferDetailView .OfferDetailViewContent .OfferDetailViewContentDatas section article .SkillContainer span {
+.OfferDetailView__Content-Datas section article .Skill-Container span {
   font-family: "Tilt Neon";
   font-size: 100%;
   border: 2px solid grey;
@@ -78,22 +81,22 @@
   width: 100%;
   max-width: 220px;
 }
-.OfferDetailView .OfferDetailViewContent .OfferDetailViewContentDatas section article .RequirementsContainer {
+.OfferDetailView__Content-Datas section article .Requirements-Container {
   list-style-type: none;
 }
-.OfferDetailView .OfferDetailViewContent .OfferDetailViewContentDatas section article .RequirementsContainer li {
+.OfferDetailView__Content-Datas section article .Requirements-Container li {
   margin: 9px;
   margin-left: 16px;
   font-family: "Tilt Neon";
   font-size: 18px;
 }
-.OfferDetailView .OfferDetailViewContent .OfferDetailViewContentDatas section article .JobDescription {
+.OfferDetailView__Content-Datas section article .Job-Description {
   margin: 14px;
   font-family: "Tilt Neon";
   font-size: 18px;
 }
 @media (max-width: 768px) {
-  .OfferDetailView .OfferDetailViewContent .OfferDetailViewContentDatas section article .JobDescription {
+  .OfferDetailView__Content-Datas section article .Job-Description {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -101,13 +104,13 @@
     text-align: center;
   }
 }
-.OfferDetailView .OfferDetailViewContent .BackButtonContainer {
+.OfferDetailView__Content-BackButtonContainer {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 4vh;
 }
-.OfferDetailView .OfferDetailViewContent .BackButtonContainer button {
+.OfferDetailView__Content-BackButtonContainer button {
   border: none;
   outline: none;
   margin-bottom: 2vh;
@@ -116,7 +119,7 @@
   background-color: rgb(47, 176, 206);
 }
 @media (max-width: 768px) {
-  .OfferDetailView .OfferDetailViewContent {
+  .OfferDetailView__Content {
     width: 100%;
   }
 }

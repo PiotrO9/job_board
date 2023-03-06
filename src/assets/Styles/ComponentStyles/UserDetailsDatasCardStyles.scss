@@ -41,12 +41,13 @@
         }
     }
 
-    .ThemeModeContainer {
+    &__ThemeModeContainer {
         @include flex-center;
         width: 70%;
         
-        .ThemeModeSwitch {
+        &-switch {
             cursor: pointer;
+            margin-left: 10px;
 
             .LightThemeMode, .DarkThemeMode {
                 @include flex-center;

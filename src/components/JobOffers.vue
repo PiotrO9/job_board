@@ -7,14 +7,14 @@
       <NoResults/>
     </div>
     <div v-else v-for="jobOffer in jobOffers" v-bind:key="jobOffer">
-      <JobOfferPreviewThreeColumns :datas="jobOffer"/>
+      <JobOffer :datas="jobOffer"/>
     </div>
   </div>
 </template>
 
 <script>
 import FetchDataFromNoFluffJobsWithFilters from "@/utils/ApiUtils/FetchDataFromNoFluffJobsWithFilters.js"
-import JobOfferPreviewThreeColumns from "@/components/JobOfferPreviewThreeColumns.vue"
+import JobOffer from "@/components/JobOffer.vue"
 import Loading from "@/components/Loading.vue"
 import NoResults from "@/components/NoResults.vue"
 import { state } from '../main.js'
@@ -35,7 +35,7 @@ export default {
         }
     },
     components: {
-      JobOfferPreviewThreeColumns,
+      JobOffer,
       Loading,
       NoResults
     },

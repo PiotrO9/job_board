@@ -1,16 +1,16 @@
 <template>
   <div class="OfferDetailView" :class="{ dark: darkMode }">
-    <div v-if="JobDetailsData && JobOfferData" class="OfferDetailViewContent">
-      <div class="OfferDetailViewContentCard">
+    <div v-if="JobDetailsData && JobOfferData" class="OfferDetailView__Content">
+      <div class="OfferDetailView__Content-Card">
         <img v-if="JobOfferData.logoUrl" :src=JobOfferData.logoUrl alt="Company logo">
         <img v-else src="../assets/images/question-mark.png" alt="Company logo">
         <p>{{ JobOfferData.jobOfferName }}</p>
       </div>
-      <div class="OfferDetailViewContentDatas">
+      <div class="OfferDetailView__Content-Datas">
         <section>
           <article v-if="JobDetailsData.NeccessarySkillsList.length > 0">
             <p>Neccessary skills</p>
-            <div class="SkillContainer">
+            <div class="Skill-Container">
               <span v-for="Skill in JobDetailsData.NeccessarySkillsList" v-bind:key="Skill">
                 {{ Skill }}
               </span>
@@ -18,7 +18,7 @@
           </article>
           <article v-if="JobDetailsData.RequirementsList.length > 0">
             <p>Requirements</p>
-            <ul class="RequirementsContainer">
+            <ul class="Requirements-Container">
               <li v-for="Requirement in JobDetailsData.RequirementsList" v-bind:key="Requirement">
                 {{ Requirement }}
               </li>
@@ -26,13 +26,13 @@
           </article>
           <article>
             <p>Job description</p>
-            <span class="JobDescription">
+            <span class="Job-Description">
               {{ JobDetailsData.JobOfferDescription }}
             </span>
           </article>
         </section>
       </div>
-      <div class="BackButtonContainer">
+      <div class="OfferDetailView__Content-BackButtonContainer">
         <button @click="RedirectToMainPage">
           Back
         </button>

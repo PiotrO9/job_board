@@ -28,31 +28,31 @@
     font-size: 20px;
   }
 }
-.SalaryFilter .SalaryNumberInputs {
+.SalaryFilter__NumberInputs {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
 }
-.SalaryFilter .SalaryNumberInputs span {
+.SalaryFilter__NumberInputs span {
   margin-right: 14px;
   font-size: 19px;
   font-family: "Sora";
 }
-.SalaryFilter .SalaryNumberInputs span:nth-child(3) {
+.SalaryFilter__NumberInputs span:nth-child(3) {
   margin-left: 16px;
 }
 @media (max-width: 1200px) {
-  .SalaryFilter .SalaryNumberInputs span {
+  .SalaryFilter__NumberInputs span {
     font-size: 15px;
   }
 }
 @media (max-width: 1000px) {
-  .SalaryFilter .SalaryNumberInputs span {
+  .SalaryFilter__NumberInputs span {
     font-size: 14px;
   }
 }
-.SalaryFilter .SalaryNumberInputs input[type=number] {
+.SalaryFilter__NumberInputs input[type=number] {
   width: 25%;
   height: 30px;
   text-align: center;
@@ -61,18 +61,18 @@
   font-size: 100%;
   font-family: "Sora";
 }
-.SalaryFilter .SalaryNumberInputs input[type=number]::-webkit-inner-spin-button, .SalaryFilter .SalaryNumberInputs input[type=number]::-webkit-outer-spin-button {
+.SalaryFilter__NumberInputs input[type=number]::-webkit-inner-spin-button, .SalaryFilter__NumberInputs input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 @media (max-width: 1200px) {
-  .SalaryFilter .SalaryNumberInputs input[type=number] {
+  .SalaryFilter__NumberInputs input[type=number] {
     font-size: 80%;
   }
 }
 .SalaryFilter.dark p {
   color: rgb(255, 255, 255);
 }
-.SalaryFilter.dark .SalaryNumberInputs span {
+.SalaryFilter.dark span {
   color: rgb(255, 255, 255);
 }/*# sourceMappingURL=SalaryFilterStyles.css.map */

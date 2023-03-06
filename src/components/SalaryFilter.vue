@@ -3,7 +3,7 @@
     <p>Salary
         <fa icon="fa-xmark" @click="HideMobileFiters"/>
     </p>
-    <div class="SalaryNumberInputs">
+    <div class="SalaryFilter__NumberInputs">
         <span>Min </span>
         <input type="number" min="0" max="48000" value="0"
             v-on:change="InputMinValue" id="MinSalaryNumberInput">

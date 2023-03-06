@@ -42,16 +42,17 @@
     font-size: 14px;
   }
 }
-.UserDetailsDatasCard .ThemeModeContainer {
+.UserDetailsDatasCard__ThemeModeContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 70%;
 }
-.UserDetailsDatasCard .ThemeModeContainer .ThemeModeSwitch {
+.UserDetailsDatasCard__ThemeModeContainer-switch {
   cursor: pointer;
+  margin-left: 10px;
 }
-.UserDetailsDatasCard .ThemeModeContainer .ThemeModeSwitch .LightThemeMode, .UserDetailsDatasCard .ThemeModeContainer .ThemeModeSwitch .DarkThemeMode {
+.UserDetailsDatasCard__ThemeModeContainer-switch .LightThemeMode, .UserDetailsDatasCard__ThemeModeContainer-switch .DarkThemeMode {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,11 +60,11 @@
   flex-direction: row;
 }
 @media (max-width: 768px) {
-  .UserDetailsDatasCard .ThemeModeContainer .ThemeModeSwitch .LightThemeMode p, .UserDetailsDatasCard .ThemeModeContainer .ThemeModeSwitch .DarkThemeMode p {
+  .UserDetailsDatasCard__ThemeModeContainer-switch .LightThemeMode p, .UserDetailsDatasCard__ThemeModeContainer-switch .DarkThemeMode p {
     font-size: 18px;
   }
 }
-.UserDetailsDatasCard .ThemeModeContainer .ThemeModeSwitch .LightThemeMode svg, .UserDetailsDatasCard .ThemeModeContainer .ThemeModeSwitch .DarkThemeMode svg {
+.UserDetailsDatasCard__ThemeModeContainer-switch .LightThemeMode svg, .UserDetailsDatasCard__ThemeModeContainer-switch .DarkThemeMode svg {
   margin-left: 15px;
 }
 @media (max-width: 768px) {

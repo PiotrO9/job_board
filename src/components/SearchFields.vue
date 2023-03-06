@@ -1,6 +1,6 @@
 <template>
   <div :class="{ dark: darkMode }" class="SearchFields">
-    <div class="JobSearch">
+    <div class="SearchFields__JobSearch">
         <fa icon="fa-magnifying-glass"/>
         <input id="TitleInputField" 
           type="text" 
@@ -8,7 +8,7 @@
           autocomplete="off"
           @change="UpdateTitle">
     </div>
-    <div class="PlaceSearch">
+    <div class="SearchFields__PlaceSearch">
         <fa icon="fa-location-dot"/>
         <input id="LocationInputField" 
           type="text" 
@@ -16,7 +16,7 @@
           autocomplete="off"
           @change="UpdateLocation">
     </div>
-    <div class="SearchSubmitButton">
+    <div class="SearchFields__SearchSubmitButton">
         <SubmitSearchFilters />
     </div>
   </div>

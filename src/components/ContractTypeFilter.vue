@@ -1,7 +1,7 @@
 <template>
   <div class="ContractTypeFilter" :class="{ dark: darkMode }">
     <p>Contract type</p>
-    <div class="ContractTypes">
+    <div class="ContractTypeFilter__Types">
         <ContractType v-for="ContractName in ContractTypeNames" 
             :contract=ContractName 
             v-bind:key=ContractName

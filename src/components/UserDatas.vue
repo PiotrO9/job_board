@@ -3,16 +3,16 @@
     class="UserDatas" 
     :class="{ dark: darkMode }"
     @click="ArrowClick">
-        <img class="PictureData" 
+        <img class="UserDatas__PictureData" 
         :src=UserDatas.picture.thumbnail 
         alt="Profile picture">
-        <p class="NameData">{{ UserDatas.name.first }}</p>
+        <p class="UserDatas__NameData">{{ UserDatas.name.first }}</p>
         <img id="UserDataDownArrow" class="down-arrow" src="../assets/images/down-arrow.png"> 
         <transition appear v-if="ModalUserDataVisibility" name="ModalUserData">
             <div class="modalUserDatas">
-                <div class="GeneralDatas">
+                <div class="modalUserDatas__GeneralDatas">
                     <img :src=UserDatas.picture.thumbnail alt="Profile picture">
-                    <div class="BasicDatas">
+                    <div class="modalUserDatas__GeneralDatas-BasicDatas">
                         <p>{{ UserDatas.name.first }}  {{ UserDatas.name.second }}</p>
                         <p>
                             <fa icon="fa-location-dot"/>
@@ -21,16 +21,16 @@
                     </div>
                 </div>
                 <hr>
-                <div class="StatisticsFields">
-                    <div class="PostField">
+                <div class="modalUserDatas__StatisticsFields">
+                    <div class="modalUserDatas__StatisticsFields-PostField">
                         <p>Posts</p>
                         <p><fa icon="fa-pen-to-square"/>{{ Statistics.posts }}</p>
                     </div>
-                    <div class="FollowersField">
+                    <div class="modalUserDatas__StatisticsFields-FollowersField">
                         <p>Followers</p>
                         <p><fa icon="fa-people-group"/>{{ Statistics.followers }}</p>
                     </div>
-                    <div class="FollowingField">
+                    <div class="modalUserDatas__StatisticsFields-FollowingField">
                         <p>Following</p>
                         <p><fa icon="fa-person-circle-check"/>{{ Statistics.following }}</p>
                     </div>

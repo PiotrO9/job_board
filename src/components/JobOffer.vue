@@ -1,11 +1,11 @@
 <template>
-  <div class="JobOfferPreviewThreeColumns" :class="{ dark: darkMode }">
-    <div class="mainDatas">
-    <img v-if="datas.logoUrl != undefined" class="CompanyLogo" :src=datas.logoUrl :width=datas.width :height=datas.height>
+  <div class="JobOffer" :class="{ dark: darkMode }">
+    <div class="JobOffer__MainDatas">
+    <img v-if="datas.logoUrl != undefined" class="JobOffer__MainDatas-CompanyLogo" :src=datas.logoUrl :width=datas.width :height=datas.height>
     <img v-else src="../assets/images/question-mark.png" alt="Unknown logo">
     <a @click="RedirectToDetailPage">{{ datas.jobOfferName }}</a>
     </div>
-    <div class="detailDatas">
+    <div class="JobOffer__DetailDatas">
         <fa icon="fa-building"/>
         <p>{{ datas.companyName }}</p>
         <fa icon="fa-location-dot"/>
@@ -41,5 +41,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../assets/Styles/ComponentStyles/JobOfferPreviewThreeColumnsStyles.scss";
+@import "../assets/Styles/ComponentStyles/JobOfferStyles.scss";
 </style>

@@ -3,7 +3,7 @@
     :class="{ dark: darkMode }" 
     class="UserDetailsDatas">
       <UserDetailsDatasCard />
-      <div class="GridUserDetailsDatas">
+      <div class="UserDetailsDatas__grid">
         <GridUserDetailsDataCell label="Age" :data=userDatas.dob.age />
         <GridUserDetailsDataCell label="Gender" :data=userDatas.gender />
         <GridUserDetailsDataCell label="Phone number" :data=userDatas.phone />

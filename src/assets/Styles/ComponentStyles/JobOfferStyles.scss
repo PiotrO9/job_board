@@ -1,13 +1,13 @@
 @import "../General/variables.scss";
 
-.JobOfferPreviewThreeColumns {
+.JobOffer {
     @include width-height-val(100%);
     min-height: 250px;
     background-color: white;
     border: 3px solid $SearchFieldsBackground;
     border-radius: 10px;
 
-    .mainDatas {
+    &__MainDatas {
         @include width-height(100%, 50%);
         display: flex;
         flex-direction: row;
@@ -31,7 +31,7 @@
         }
     }
 
-    .detailDatas {
+    &__DetailDatas {
         @include width-height(100%, 50%);
         display: grid;
         grid-template-columns: 1fr 7fr;
@@ -54,19 +54,13 @@
         background-color: $DarkModeCoreBackground;
         border: 3px solid grey;
         color: $DarkModeFontColor;
-    
-        .mainDatas {
-    
-            a {
-                color: $DarkModeFontColor;
-            }
+
+        a {
+            color: $DarkModeFontColor;
         }
-    
-        .detailDatas {
-    
-            svg {
-                color: $CoreOrange;
-            }
+        
+        svg {
+            color: $CoreOrange;
         }
     }
 }

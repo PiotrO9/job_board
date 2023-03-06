@@ -52,7 +52,7 @@
   position: relative;
   cursor: pointer;
 }
-.UserDatas .PictureData {
+.UserDatas__PictureData {
   height: 40%;
   border-radius: 50%;
 }
@@ -78,35 +78,35 @@
   background-color: white;
   border-radius: 15px;
 }
-.UserDatas .modalUserDatas .GeneralDatas {
+.UserDatas .modalUserDatas__GeneralDatas {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
   padding: 10px;
 }
-.UserDatas .modalUserDatas .GeneralDatas .BasicDatas {
+.UserDatas .modalUserDatas__GeneralDatas-BasicDatas {
   display: flex;
   flex-direction: column;
   margin-right: 5px;
 }
-.UserDatas .modalUserDatas .GeneralDatas .BasicDatas:nth-child(2) svg {
+.UserDatas .modalUserDatas__GeneralDatas-BasicDatas:nth-child(2) svg {
   margin-right: 2px;
 }
-.UserDatas .modalUserDatas .GeneralDatas .BasicDatas:nth-child(2) .SmallerLocationFont {
+.UserDatas .modalUserDatas__GeneralDatas-BasicDatas:nth-child(2) .SmallerLocationFont {
   font-size: 12px;
 }
-.UserDatas .modalUserDatas .GeneralDatas .BasicDatas:nth-child(2) .SmallestLocationFont {
+.UserDatas .modalUserDatas__GeneralDatas-BasicDatas:nth-child(2) .SmallestLocationFont {
   font-size: 9px;
 }
-.UserDatas .modalUserDatas .GeneralDatas img {
+.UserDatas .modalUserDatas__GeneralDatas img {
   border-radius: 50%;
 }
 .UserDatas .modalUserDatas hr {
   width: 90%;
   margin: 5px 4px 5px 4px;
 }
-.UserDatas .modalUserDatas .StatisticsFields {
+.UserDatas .modalUserDatas__StatisticsFields {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -114,7 +114,7 @@
   padding: 4px;
 }
 @media (max-width: 768px) {
-  .UserDatas .modalUserDatas .StatisticsFields {
+  .UserDatas .modalUserDatas__StatisticsFields {
     gap: 20px;
   }
 }

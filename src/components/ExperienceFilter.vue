@@ -1,7 +1,7 @@
 <template>
   <div class="ExperienceFilter" :class="{ dark: darkMode }">
     <p>Experience</p>
-    <div class="ExperienceLevels">
+    <div class="ExperienceFilter__Levels">
         <ExperienceLevel v-for="ExpName in ExperienceNames" 
             :level=ExpName 
             v-bind:key="ExpName" 
