@@ -6,7 +6,7 @@
         <ContractTypeFilter />
     </section>
     <div class="SearchConfirm">
-      <button @click="SearchingConfirming">
+      <button id="SearchFiltersConfirm" @click="SearchingConfirming">
       Search
       </button>
     </div>

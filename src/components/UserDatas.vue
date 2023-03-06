@@ -35,7 +35,7 @@
                         <p><fa icon="fa-person-circle-check"/>{{ Statistics.following }}</p>
                     </div>
                 </div>
-                <button @click="RedirectToUserDetails">View Full profile</button>
+                <button id="UserDetailsRedirecting" @click="RedirectToUserDetails">View Full profile</button>
             </div>
         </transition>
   </div>
