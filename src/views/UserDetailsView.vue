@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import UserDetailsDatas from "@/components/UserDetailsDatas.vue";
+import UserDetailsDatas from "@/components/user.components/UserDetailsDatas.vue";
 import { state } from '../main.js'
 
 export default {

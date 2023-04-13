@@ -19,9 +19,9 @@
 </template>
 
 <script>
-import UserDetailsDatasCard from "@/components/UserDetailsDatasCard.vue";
-import GridUserDetailsDataCell from "./GridUserDetailsDataCell.vue";
-import { state } from '../main.js'
+import UserDetailsDatasCard from "./UserDetailsDatasCard.vue";
+import GridUserDetailsDataCell from "../GridUserDetailsDataCell.vue";
+import { state } from '../../main.js'
 
 export default {
   data() {
@@ -51,6 +51,57 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import "../assets/Styles/ComponentStyles/UserDetailsDatasStyles.scss";
+<style lang="scss" scoped>
+@import "../../assets/Styles/General/variables.scss";
+
+.UserDetailsDatas {
+    @include width-height(60%, 70%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 50px;
+
+        @media (max-width: $BigMobileWidth) {
+            width: 80%;
+            gap: 20px;
+        }
+    }
+
+    button {
+        @include disable-borders;
+        width: 300px;
+        height: 80px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        font-family: $CoreFontFamily;
+        font-size: 30px;
+        border-radius: 15px;
+        
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    @media (max-width: $OldDesktopWidth) {
+        width: 80%;
+    }
+
+    @media (max-width: $BigMobileWidth) {
+        @include width-height(100%, 90%);
+    }
+
+    &.dark {
+        background-color: $DarkModeBackground;
+
+        button {
+            color: white;
+            background-color: $CoreDarkCyan;
+        }
+    }
+}
 </style>
