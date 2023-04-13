@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import JobsFilter from "@/components/JobsFilter.vue";
-import JobOffers from "@/components/JobOffers.vue";
+import JobsFilter from "@/components/job.components/JobsFilter.vue";
+import JobOffers from "@/components/job.components/JobOffers.vue";
 import { state } from '../main.js'
 
 export default {

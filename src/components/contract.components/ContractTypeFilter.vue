@@ -12,7 +12,7 @@
 
 <script>
 import ContractType from './ContractType.vue';
-import { state } from '../main.js'
+import { state } from '../../main.js';
 
 export default {
     data() {
@@ -45,6 +45,25 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import "../assets/Styles/ComponentStyles/ContractTypeFilterStyles.scss";
+<style lang="scss" scoped>
+@import "../../assets/Styles/General/variables.scss";
+
+.ContractTypeFilter {
+    padding: 20px;
+    font-family: $CoreFontFamily;
+
+    p {
+        font-size: 22px;
+
+        @media (max-width: $OldDesktopWidth) {
+            font-size: 20px;
+        }
+    }
+
+    &.dark {
+        p {
+            color: $DarkModeFontColor;
+        }
+    }
+}
 </style>

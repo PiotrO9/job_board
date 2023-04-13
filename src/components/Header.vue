@@ -16,7 +16,7 @@
 
 <script>
 import SearchFields from "@/components/SearchFields.vue"
-import UserDatas from "@/components/UserDatas.vue"
+import UserDatas from "@/components/user.components/UserDatas.vue";
 import { state } from '../main.js'
 
 export default {

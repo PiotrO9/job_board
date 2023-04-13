@@ -14,10 +14,10 @@
 </template>
 
 <script>
-import SalaryFilter from "../components/SalaryFilter.vue"
-import ExperienceFilter from "../components/ExperienceFilter.vue"
-import ContractTypeFilter from "../components/ContractTypeFilter.vue"
-import { state } from '../main.js'
+import SalaryFilter from "../SalaryFilter.vue"
+import ExperienceFilter from "../ExperienceFilter.vue"
+import ContractTypeFilter from "../contract.components/ContractTypeFilter.vue"
+import { state } from '../../main.js'
 
 export default {
   data() {
@@ -75,6 +75,70 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import "../assets/Styles/ComponentStyles/JobsFilterStyles.scss";
+<style lang="scss" scoped>
+@import "../../assets/Styles/General/variables.scss";
+
+aside {
+    @include width-height-val(100%);
+
+    .DisplayStrategyMode {
+        @include flex-center;
+        @include width-height(100%, 3%);
+
+        p {
+            margin-right: 20px;
+            font-size: 24px;
+            font-family: $CoreFontFamily;
+        }
+
+        svg {
+            height: 100%;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        svg.ActiveDisplayMode {
+            color: $CoreDarkCyan;
+        }
+    }
+
+    .SearchConfirm {
+        @include flex-center;
+
+        button {
+            @include disable-borders;
+            @include width-height(50%, 50%);
+            min-height: 45px;
+            margin: auto;
+            background-color: $CoreDarkCyan;
+            color: white;
+            border-radius: 12px;
+            font-family: $SmallComponentsFontFamily;
+            cursor: pointer;
+        }
+    }
+    
+    @media (max-width: $BigMobileWidth) {
+        display: none;
+    }
+
+    &.ShowMobileFilters {
+        @media (max-width: $BigMobileWidth) {
+            position: absolute;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            overflow: scroll;
+        }
+    }
+
+    &.dark {
+        background-color: $DarkModeBackground;
+
+        h1 {
+            color: white;
+        }
+    }
+}
 </style>

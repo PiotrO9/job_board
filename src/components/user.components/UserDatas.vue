@@ -7,7 +7,7 @@
         :src=UserDatas.picture.thumbnail 
         alt="Profile picture">
         <p class="UserDatas__NameData">{{ UserDatas.name.first }}</p>
-        <img id="UserDataDownArrow" class="down-arrow" src="../assets/images/down-arrow.png"> 
+        <img id="UserDataDownArrow" class="down-arrow" src="../../assets/images/down-arrow.png"> 
         <transition appear v-if="ModalUserDataVisibility" name="ModalUserData">
             <div class="modalUserDatas">
                 <div class="modalUserDatas__GeneralDatas">
@@ -45,7 +45,7 @@
 import FetchRandomUserApi from '@/utils/ApiUtils/FetchRandomUserApi';
 import SetClassNameForUserLocationDatas from '@/utils/SetClassNameForUserLocationDatas.js';
 import GenerateRandomStatisticNumber from '@/utils/GenerateRandomStatisticNumber.js';
-import { state } from '../main.js'
+import { state } from '../../main.js';
 
 export default {
     data() {
@@ -121,6 +121,164 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import "../assets/Styles/ComponentStyles/UserDatasStyles.scss";
+<style lang="scss" scoped>
+@import "../../assets/Styles/General/variables.scss";
+@import "../../assets/Styles/Animations/UserDatasAnimations.scss";
+
+.UserDatas {
+    @include flex-direction(row);
+    @include flex-justify(start);
+    height: 100%;
+    gap: 5px;
+    position: relative;
+    cursor: pointer;
+
+    &__PictureData {
+        height: 40%;
+        border-radius: 50%;
+    }
+
+    p {
+        font-family: $SmallComponentsFontFamily;
+        font-weight: bold;
+    }
+
+    .down-arrow {
+        width: 26px;
+        height: 12px;
+    }
+
+    .modalUserDatas {
+        @include flex-direction(column);
+        @include width-height(110%, 300%);
+        align-items: center;
+        position: absolute;
+        right: 45%;
+        top: 110%;
+        min-height: 200px;
+        min-width: 250px;
+        background-color: white;
+        border-radius: 15px;
+
+        &__GeneralDatas {
+            @include flex-direction(row);
+            justify-content: space-around;
+            width: 100%;
+            padding: 10px;
+
+            &-BasicDatas {
+                @include flex-direction(column);
+                margin-right: 5px;
+
+                &:nth-child(2) {
+
+                    svg {
+                        margin-right: 2px;
+                    }
+
+                    .SmallerLocationFont {
+                        font-size: 12px;
+                    }
+
+                    .SmallestLocationFont {
+                        font-size: 9px;
+                    }
+                }
+            }
+
+            img {
+                border-radius: 50%;
+            }
+        }
+
+        hr {
+            width: 90%;
+            margin: 5px 4px 5px 4px;
+        }
+
+        &__StatisticsFields {
+            @include flex-direction(row);
+            width: 100%;
+            justify-content: space-between;
+            padding: 4px;
+
+            @media (max-width: $BigMobileWidth) {
+                gap: 20px;
+            }
+        }
+
+        button {
+            @include disable-borders;
+            @include width-height(40%, 15%);
+            max-width: 120px;
+            min-height: 50px;
+            margin-top: 15px;
+            padding: 5px;
+            color: white;
+            font-family: $CoreFontFamily;
+            background-color: $CoreDarkCyan;
+            border-radius: 12px;
+            cursor: pointer;
+
+            a {
+                @include width-height-val(100%);
+                text-decoration: none;
+                color: inherit;
+                cursor: pointer;
+            }
+        }
+
+        @media (max-width: $BigMobileWidth) {
+            @include width-height(100%, 200%);
+            top: 30%;
+            left: auto;
+            right: auto;
+        }
+    }
+
+    @media (max-width: $BigMobileWidth) {
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media (max-width: $BigMobileWidth) and (max-height: $BigMobileHeight) {
+        height: 8rem;
+    }
+
+    &.dark {
+
+        .modalUserDatas {
+            background-color: $DarkModeBackground;
+        }
+    }
+}
+
+.rotateArrowUp {
+    animation: rotateArrowUpAnimation 1s forwards;
+}
+
+.rotateArrowDown {
+    animation: rotateArrowDownAnimation 1s forwards;
+}
+
+.moveUserDataToRight {
+    animation: MoveDataToRightAnimation 1s forwards;
+
+    @media (max-width: $BigMobileWidth) {
+        animation: none;
+    }
+}
+
+.moveUserDataToLeft {
+    animation: MoveDataToLeftAnimation 1s forwards;
+
+    @media (max-width: $BigMobileWidth) {
+        animation: none;
+    }
+}
+
+.ModalUserData-enter-to {
+    animation: DisplayModalUserDatas 2s forwards;
+}
 </style>

@@ -14,10 +14,10 @@
 
 <script>
 import FetchDataFromNoFluffJobsWithFilters from "@/utils/ApiUtils/FetchDataFromNoFluffJobsWithFilters.js"
-import JobOffer from "@/components/JobOffer.vue"
+import JobOffer from "./JobOffer.vue"
 import Loading from "@/components/Loading.vue"
 import NoResults from "@/components/NoResults.vue"
-import { state } from '../main.js'
+import { state } from '../../main.js'
 import FetchDataFromNoFluffJobsWithCriterias from "@/utils/ApiUtils/FetchDataFromNoFluffJobsWithCriterias"
 
 export default {
@@ -56,6 +56,44 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import "../assets/Styles/ComponentStyles/JobOffersStyles.scss";
+<style lang="scss" scoped>
+@import "../../assets/Styles/General/variables.scss";
+
+.loadingPhase {
+    &.JobOffers {
+        @include flex-center;
+    }
+}
+
+.JobOffers {
+    @include width-height(100%, 97%);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    margin-top: 10px;
+    margin-right: 100px;
+    overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+    @media (max-width: $MediumDesktopWidth) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: $SmallDesktopWidth) {
+        grid-template-columns: 1fr;
+    }
+
+    @media (max-width: $BigMobileWidth) {
+        height: 100%;
+    }
+
+    &.loadingPhase {
+        @media (max-width: $BigMobileWidth) {
+            height: 60%;
+        }
+    }
+}
 </style>
