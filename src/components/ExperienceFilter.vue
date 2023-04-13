@@ -4,7 +4,7 @@
     <div class="ExperienceFilter__Levels">
         <ExperienceLevel v-for="ExpName in ExperienceNames" 
             :level=ExpName 
-            v-bind:key="ExpName" 
+            :key="ExpName" 
             @changeState="ChangeExperienceLevels"/>
     </div>
   </div>

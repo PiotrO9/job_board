@@ -6,7 +6,7 @@
     <div v-else-if="jobOffers.length < 1" class="NoResults">
       <NoResults/>
     </div>
-    <div v-else v-for="jobOffer in jobOffers" v-bind:key="jobOffer">
+    <div v-else v-for="jobOffer in jobOffers" :key="jobOffer">
       <JobOffer :datas="jobOffer"/>
     </div>
   </div>

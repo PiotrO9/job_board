@@ -4,7 +4,7 @@
     <div class="ContractTypeFilter__Types">
         <ContractType v-for="ContractName in ContractTypeNames" 
             :contract=ContractName 
-            v-bind:key=ContractName
+            :key=ContractName
             @changeState="ChangeContractNames"/>
     </div>
   </div>
