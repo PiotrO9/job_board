@@ -58,13 +58,11 @@ export default {
       this.DisableActiveDisplayModes()
       const TwoColumnsDisplayMode = document.getElementById("TwoColumnsDisplayMode").classList.add("ActiveDisplayMode")
       state.setDisplayMode(false)
-      console.log(state.ThreeColumnDisplayMode)
     },
     SetThreeColumnsDisplayMode() {
       this.DisableActiveDisplayModes()
       const ThreeColumnsDisplayMode = document.getElementById("ThreeColumnsDisplayMode").classList.add("ActiveDisplayMode")
       state.setDisplayMode(true)
-      console.log(state.ThreeColumnDisplayMode)
     },
     DisableActiveDisplayModes() {
       const TwoColumnsDisplayMode = document.getElementById("TwoColumnsDisplayMode")

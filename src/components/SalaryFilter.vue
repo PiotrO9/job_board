@@ -51,7 +51,6 @@ export default {
         },
         HideMobileFiters() {
             state.SetterFiltersInMobileMode(false)
-            console.log(123)
         }
     }
 }

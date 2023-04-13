@@ -24,7 +24,6 @@ export default {
     UserDetailsDatas
   },
   mounted() {
-    console.log(123)
     let header = document.querySelector("header")
     header.classList.remove("ShowHeader")
     header.classList.add("HideHeader")
