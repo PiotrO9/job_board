@@ -11,7 +11,7 @@
           <article v-if="JobDetailsData.NeccessarySkillsList.length > 0">
             <p>Neccessary skills</p>
             <div class="Skill-Container">
-              <span v-for="Skill in JobDetailsData.NeccessarySkillsList" v-bind:key="Skill">
+              <span v-for="Skill in JobDetailsData.NeccessarySkillsList" :key="Skill">
                 {{ Skill }}
               </span>
             </div>
@@ -19,7 +19,7 @@
           <article v-if="JobDetailsData.RequirementsList.length > 0">
             <p>Requirements</p>
             <ul class="Requirements-Container">
-              <li v-for="Requirement in JobDetailsData.RequirementsList" v-bind:key="Requirement">
+              <li v-for="Requirement in JobDetailsData.RequirementsList" :key="Requirement">
                 {{ Requirement }}
               </li>
             </ul>
