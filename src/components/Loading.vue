@@ -52,6 +52,40 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import "../assets/Styles/ComponentStyles/LoadingStyles.scss";
+<style lang="scss" scoped>
+@import "../assets/Styles/General/variables.scss";
+
+.Loading {
+    @include flex-center;
+    @include flex-direction(column);
+    max-width: 200px;
+    max-height: 200px;
+
+    img {
+        @include width-height-val(80px);
+        animation: rotateLoadingAnimation 9s linear infinite;
+    }
+
+    p {
+        font-size: 40px;
+        font-family: $CoreFontFamily;
+    }
+
+    &.dark {
+
+        p {
+            color: white;
+        }
+    }
+
+    &.HideLoading {
+        display: none;
+    }
+}
+
+@keyframes rotateLoadingAnimation {
+    100% {
+        transform: rotate(360deg);
+    }
+}
 </style>
