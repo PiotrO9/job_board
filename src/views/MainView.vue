@@ -28,6 +28,20 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import "../assets/Styles/ViewsStyles/MainViewStyles.scss";
+<style lang="scss" scoped>
+@import "../assets/Styles/General/variables.scss";
+
+.MainView {
+    @include width-height(100%, 92%);
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+
+    @media (max-width: $BigMobileWidth) {
+        grid-template-columns: 1fr;
+    }
+
+    &.dark {
+        background-color: $DarkModeBackground;
+    }
+}
 </style>

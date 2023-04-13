@@ -33,6 +33,15 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import "../assets/Styles/ViewsStyles/UserDetailsViewStyles.scss";
+<style lang="scss" scoped>
+@import "../assets/Styles/General/variables.scss";
+
+.UserDetailsView {
+    @include width-height-val(100%);
+    @include flex-center;
+
+    &.dark {
+        background-color: $DarkModeBackground;
+    }
+}
 </style>
