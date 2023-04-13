@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import MainView from '../views/MainView.vue'
-import OfferDetailsView from '../views/OfferDetailsView.vue'
-import UserDetailsView from '../views/UserDetailsView.vue'
+
+const UserDetailsView = () => import('../views/UserDetailsView.vue')
+const OfferDetailsView = () => import('../views/OfferDetailsView.vue')
+const MainView = () => import('../views/MainView.vue')
 
 const routes = [
   {
