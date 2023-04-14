@@ -17,12 +17,16 @@
 <script>
 import { state } from '../main.js'
 import { useDarkModeStore } from '@/stores/DarkModeStore'
+import { useFilterStore } from '@/stores/FilterStore'
 
 export default {
     props: ['minSalary'],
     computed: {
         darkMode() {
             return useDarkModeStore()
+        },
+        filterStore() {
+            return useFilterStore()
         }
     },
     methods: {
@@ -34,6 +38,7 @@ export default {
                 MinSalaryInput.value = (MaxSalaryInput.value - 1000)
             }
 
+            this.filterStore.ChangeMinSalary(MinSalaryInput.value)
             state.filteringCriterias.ChangeMinSalary(MinSalaryInput.value)
         },
         InputMaxValue() {

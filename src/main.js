@@ -12,10 +12,6 @@ import JobsFilter from "@/components/job.components/JobsFilter.vue";
 library.add(fas)
 
 export const state = ({
-    darkMode: ref(false),
-    toggleDarkMode() {
-        this.darkMode.value = !this.darkMode.value
-    },
     filteringCriterias: ref({
         Salary: {
             minSalary: ref(0),
