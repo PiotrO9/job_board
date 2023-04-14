@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ dark: darkMode }" class="Loading">
+  <div :class="{ dark: darkMode.getDarkModeState }" class="Loading">
     <img src="../assets/images/loading.png" alt="Loading circle">
     <p id="LoadingText">Loading...</p>
   </div>
@@ -8,11 +8,13 @@
 <script>
 import Typewriter from 'typewriter-effect/dist/core';
 import { state } from '../main.js'
+import { useDarkModeStore } from '@/stores/DarkModeStore'
+
 
 export default {
   computed: {
         darkMode() {
-            return state.darkMode.value
+            return useDarkModeStore()
         },
         filtersInMobileMode() {
           return state.filtersInMobileMode.value

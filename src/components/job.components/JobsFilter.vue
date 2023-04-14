@@ -1,5 +1,5 @@
 <template>
-  <aside :class="{ dark: darkMode }">
+  <aside :class="{ dark: darkMode.getDarkModeState }">
     <section>
         <SalaryFilter :minSalary=minSal />
         <ExperienceFilter />
@@ -18,6 +18,7 @@ import SalaryFilter from "../SalaryFilter.vue"
 import ExperienceFilter from "../ExperienceFilter.vue"
 import ContractTypeFilter from "../contract.components/ContractTypeFilter.vue"
 import { state } from '../../main.js'
+import { useDarkModeStore } from '@/stores/DarkModeStore'
 
 export default {
   data() {
@@ -28,7 +29,7 @@ export default {
   },
   computed: {
         darkMode() {
-            return state.darkMode.value
+            return useDarkModeStore()
         },
         filtersInMobileMode() {
             return state.filtersInMobileMode.value

@@ -1,5 +1,5 @@
 <template>
-  <div class="MainView" :class="{ dark: darkMode }">
+  <div class="MainView" :class="{ dark: darkMode.getDarkModeState }">
     <JobsFilter />
     <JobOffers />
   </div>
@@ -8,12 +8,12 @@
 <script>
 import JobsFilter from "@/components/job.components/JobsFilter.vue";
 import JobOffers from "@/components/job.components/JobOffers.vue";
-import { state } from '../main.js'
+import { useDarkModeStore } from "@/stores/DarkModeStore";
 
 export default {
   computed: {
         darkMode() {
-            return state.darkMode.value
+            return useDarkModeStore()
         }
   },
   components: {

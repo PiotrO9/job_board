@@ -1,5 +1,5 @@
 <template>
-  <article class="SalaryFilter" :class="{ dark: darkMode }">
+  <article class="SalaryFilter" :class="{ dark: darkMode.getDarkModeState }">
     <p>Salary
         <fa icon="fa-xmark" @click="HideMobileFiters"/>
     </p>
@@ -16,12 +16,13 @@
 
 <script>
 import { state } from '../main.js'
+import { useDarkModeStore } from '@/stores/DarkModeStore'
 
 export default {
     props: ['minSalary'],
     computed: {
         darkMode() {
-            return state.darkMode.value
+            return useDarkModeStore()
         }
     },
     methods: {

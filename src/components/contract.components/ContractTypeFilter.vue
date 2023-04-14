@@ -1,5 +1,5 @@
 <template>
-  <div class="ContractTypeFilter" :class="{ dark: darkMode }">
+  <div class="ContractTypeFilter" :class="{ dark: darkMode.getDarkModeState }">
     <p>Contract type</p>
     <div class="ContractTypeFilter__Types">
         <ContractType v-for="ContractName in ContractTypeNames" 
@@ -13,6 +13,7 @@
 <script>
 import ContractType from './ContractType.vue';
 import { state } from '../../main.js';
+import { useDarkModeStore } from '@/stores/DarkModeStore'
 
 export default {
     data() {
@@ -26,7 +27,7 @@ export default {
     },
     computed: {
         darkMode() {
-            return state.darkMode.value
+            return useDarkModeStore()
         }
     },
     methods: {

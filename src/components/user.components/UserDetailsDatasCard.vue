@@ -9,7 +9,7 @@
             </div>
             <div class="UserDetailsDatasCard__ThemeModeContainer">
                 <div class="UserDetailsDatasCard__ThemeModeContainer-switch" @click="SwitchThemes">
-                    <div v-if="darkMode" class="LightThemeMode">
+                    <div v-if="darkMode.getDarkModeState" class="LightThemeMode">
                         <p>Light mode </p>
                         <fa icon="fa-sun"/>
                     </div>
@@ -23,7 +23,6 @@
 </template>
 
 <script>
-import { state } from '../../main.js'
 import { useDarkModeStore } from '@/stores/DarkModeStore'
 
 export default {

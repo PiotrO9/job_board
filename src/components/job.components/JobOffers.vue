@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ loadingPhase: jobOffers == null || jobOffers.length < 1, dark: darkMode }" class="JobOffers">
+  <div :class="{ loadingPhase: jobOffers == null || jobOffers.length < 1, dark: darkMode.getDarkModeState }" class="JobOffers">
     <div v-if="jobOffers == null">
       <Loading/>
     </div>
@@ -19,6 +19,7 @@ import Loading from "@/components/Loading.vue"
 import NoResults from "@/components/NoResults.vue"
 import { state } from '../../main.js'
 import FetchDataFromNoFluffJobsWithCriterias from "@/utils/ApiUtils/FetchDataFromNoFluffJobsWithCriterias"
+import { useDarkModeStore } from '@/stores/DarkModeStore'
 
 export default {
     data(){
@@ -28,7 +29,7 @@ export default {
     },
     computed: {
         darkMode() {
-            return state.darkMode.value
+            return useDarkModeStore()
         },
         readyState() {
           return state.readyForFiltering.value

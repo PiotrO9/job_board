@@ -1,5 +1,5 @@
 <template>
-  <div class="OfferDetailView" :class="{ dark: darkMode }">
+  <div class="OfferDetailView" :class="{ dark: darkMode.getDarkModeState }">
     <div v-if="JobDetailsData && JobOfferData" class="OfferDetailView__Content">
       <div class="OfferDetailView__Content-Card">
         <img v-if="JobOfferData.logoUrl" :src=JobOfferData.logoUrl alt="Company logo">
@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import { state } from '../main.js'
+import { useDarkModeStore } from '@/stores/DarkModeStore'
 
 export default {
     data() {
@@ -53,7 +53,7 @@ export default {
     },
     computed: {
         darkMode() {
-            return state.darkMode.value
+            return useDarkModeStore()
         }
     },
     methods: {

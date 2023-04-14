@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ dark: darkMode }" class="SearchFields">
+  <div :class="{ dark: darkMode.getDarkModeState }" class="SearchFields">
     <div class="SearchFields__JobSearch">
         <fa icon="fa-magnifying-glass"/>
         <input id="TitleInputField" 
@@ -25,11 +25,13 @@
 <script>
 import SubmitSearchFilters from './SubmitSearchFilters.vue';
 import { state } from '../main.js'
+import { useDarkModeStore } from '@/stores/DarkModeStore'
+
 
 export default {
   computed: {
         darkMode() {
-            return state.darkMode.value
+            return useDarkModeStore()
         }
   },
   components: {

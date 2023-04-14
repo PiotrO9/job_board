@@ -1,12 +1,13 @@
 <template>
-  <div :class="{ dark: darkMode }" class="UserDetailsView">
+  <div :class="{ dark: darkMode.getDarkModeState }" class="UserDetailsView">
     <UserDetailsDatas />
   </div>
 </template>
 
 <script>
 import UserDetailsDatas from "@/components/user.components/UserDetailsDatas.vue";
-import { state } from '../main.js'
+import { useDarkModeStore } from '@/stores/DarkModeStore'
+
 
 export default {
   data() {
@@ -17,7 +18,7 @@ export default {
   },
   computed: {
         darkMode() {
-            return state.darkMode.value
+            return useDarkModeStore()
         }
   },
   components: {
