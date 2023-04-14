@@ -3,12 +3,18 @@
 </template>
 
 <script>
-import { state } from '../main.js'
+import { useFilterStore } from '@/stores/FilterStore';
 
 export default {
+    computed: {
+        filterState() {
+            return useFilterStore()
+        }
+    },
     methods: {
         SearchingConfirming() {
-            state.toggleReadiness()
+            console.log(123)
+            this.filterState.toggleReadiness()
         }
     }
 }

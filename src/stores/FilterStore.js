@@ -22,6 +22,9 @@ export const useFilterStore = defineStore('filterStore', {
         getFilteringCriterias() {
             return this.filteringCriterias
         },
+        getReadinessValue() {
+            return this.readyForFiltering
+        }
     },
     actions: {
         toggleReadiness() {
@@ -46,7 +49,7 @@ export const useFilterStore = defineStore('filterStore', {
             this.filteringCriterias.Location = val
         },
         ChangeTitle(val) {
-            this.filteringCriterias.Criterias.ContractType = val
+            this.filteringCriterias.Title = val
         }
     }
 })

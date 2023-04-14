@@ -15,7 +15,6 @@
 </template>
 
 <script>
-import { state } from '../main.js'
 import { useDarkModeStore } from '@/stores/DarkModeStore'
 import { useFilterStore } from '@/stores/FilterStore'
 
@@ -39,7 +38,6 @@ export default {
             }
 
             this.filterStore.ChangeMinSalary(MinSalaryInput.value)
-            state.filteringCriterias.ChangeMinSalary(MinSalaryInput.value)
         },
         InputMaxValue() {
             const MinSalaryInput = document.getElementById("MinSalaryNumberInput")
@@ -53,10 +51,10 @@ export default {
                 MaxSalaryInput.value = Number(MinSalaryInput.value) + 1000
             }
 
-            state.filteringCriterias.ChangeMaxSalary(MaxSalaryInput.value)
+            this.filterStore.ChangeMaxSalary(MaxSalaryInput.value)
         },
         HideMobileFiters() {
-            state.SetterFiltersInMobileMode(false)
+            this.filterStore.SetterFiltersInMobileMode(false)
         }
     }
 }

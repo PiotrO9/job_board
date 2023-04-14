@@ -12,8 +12,8 @@
 
 <script>
 import ContractType from './ContractType.vue';
-import { state } from '../../main.js';
 import { useDarkModeStore } from '@/stores/DarkModeStore'
+import { useFilterStore } from '@/stores/FilterStore';
 
 export default {
     data() {
@@ -28,6 +28,9 @@ export default {
     computed: {
         darkMode() {
             return useDarkModeStore()
+        },
+        filterState() {
+            return useFilterStore()
         }
     },
     methods: {
@@ -40,7 +43,7 @@ export default {
                                         .filter(el => el !== data.Contract)
             }
 
-            state.filteringCriterias.value.ChangeContractTypeCriterias(this.ContractTypes)
+            this.filterState.ChangeContractTypeCriterias(this.ContractTypes)
         }
     }
 }

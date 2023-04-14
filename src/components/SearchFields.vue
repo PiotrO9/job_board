@@ -24,14 +24,16 @@
 
 <script>
 import SubmitSearchFilters from './SubmitSearchFilters.vue';
-import { state } from '../main.js'
 import { useDarkModeStore } from '@/stores/DarkModeStore'
-
+import { useFilterStore } from '@/stores/FilterStore';
 
 export default {
   computed: {
         darkMode() {
             return useDarkModeStore()
+        },
+        filterStore() {
+            return useFilterStore()
         }
   },
   components: {
@@ -40,11 +42,11 @@ export default {
   methods: {
     UpdateTitle() {
       const TitleInputField = document.getElementById("TitleInputField")
-      state.filteringCriterias.value.ChangeTitle(TitleInputField.value)
+      this.filterStore.ChangeTitle(TitleInputField.value)
     },
     UpdateLocation() {
       const LocationInputField = document.getElementById("LocationInputField")
-      state.filteringCriterias.value.ChangeLocation(LocationInputField.value)
+      this.filterStore.ChangeLocation(LocationInputField.value)
     }
   }
 }

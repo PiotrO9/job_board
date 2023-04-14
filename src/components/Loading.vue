@@ -7,9 +7,8 @@
 
 <script>
 import Typewriter from 'typewriter-effect/dist/core';
-import { state } from '../main.js'
 import { useDarkModeStore } from '@/stores/DarkModeStore'
-
+import { useFilterStore } from '@/stores/FilterStore';
 
 export default {
   computed: {
@@ -17,7 +16,7 @@ export default {
             return useDarkModeStore()
         },
         filtersInMobileMode() {
-          return state.filtersInMobileMode.value
+          return useFilterStore().$state.filtersInMobileMode
         }
     },
     mounted() {
@@ -41,7 +40,7 @@ export default {
         .start()
     },
     watch: {
-    filtersInMobileMode() {
+    filtersInMobileMode () {
       const loading = document.querySelector(".Loading")
       if(this.filtersInMobileMode) {
         loading.classList.add("HideLoading")

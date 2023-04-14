@@ -17,13 +17,16 @@
 <script>
 import SearchFields from "@/components/SearchFields.vue"
 import UserDatas from "@/components/user.components/UserDatas.vue";
-import { state } from '../main.js'
 import { useDarkModeStore } from "@/stores/DarkModeStore";
+import { useFilterStore } from "@/stores/FilterStore";
 
 export default {
   computed: {
         darkMode() {
             return useDarkModeStore()
+        },
+        filterStore() {
+          return useFilterStore()
         }
   },
   components: {
@@ -32,7 +35,7 @@ export default {
   },
   methods: {
     ShowFiltersInMobileMode() {
-      state.SetterFiltersInMobileMode(true)
+      this.filterStore.SetterFiltersInMobileMode(true)
     }
   }
 }
