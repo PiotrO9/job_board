@@ -1,5 +1,5 @@
 <template>
-  <div class="ExperienceFilter" :class="{ dark: darkMode }">
+  <div class="ExperienceFilter" :class="{ dark: darkMode.getDarkModeState }">
     <p>Experience</p>
     <div class="ExperienceFilter__Levels">
         <ExperienceLevel v-for="ExpName in ExperienceNames" 
@@ -12,7 +12,8 @@
 
 <script>
 import ExperienceLevel from './ExperienceLevel.vue';
-import { state } from '../main.js'
+import { useDarkModeStore } from '@/stores/DarkModeStore'
+import { useFilterStore } from '@/stores/FilterStore';
 
 export default {
     data() {
@@ -26,7 +27,10 @@ export default {
     },
     computed: {
         darkMode() {
-            return state.darkMode.value
+            return useDarkModeStore()
+        },
+        filterStore() {
+            return useFilterStore()
         }
     },
     methods: {
@@ -39,7 +43,7 @@ export default {
                                         .filter(el => el !== data.Level)
             }
 
-            state.filteringCriterias.value.ChangeExperienceCriterias(this.ExperienceLevels)
+            this.filterStore.ChangeExperienceCriterias(this.ExperienceLevels)
         }
     }
 }

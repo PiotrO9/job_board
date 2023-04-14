@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ dark: darkMode }" class="SearchFields">
+  <div :class="{ dark: darkMode.getDarkModeState }" class="SearchFields">
     <div class="SearchFields__JobSearch">
         <fa icon="fa-magnifying-glass"/>
         <input id="TitleInputField" 
@@ -24,12 +24,16 @@
 
 <script>
 import SubmitSearchFilters from './SubmitSearchFilters.vue';
-import { state } from '../main.js'
+import { useDarkModeStore } from '@/stores/DarkModeStore'
+import { useFilterStore } from '@/stores/FilterStore';
 
 export default {
   computed: {
         darkMode() {
-            return state.darkMode.value
+            return useDarkModeStore()
+        },
+        filterStore() {
+            return useFilterStore()
         }
   },
   components: {
@@ -38,11 +42,11 @@ export default {
   methods: {
     UpdateTitle() {
       const TitleInputField = document.getElementById("TitleInputField")
-      state.filteringCriterias.value.ChangeTitle(TitleInputField.value)
+      this.filterStore.ChangeTitle(TitleInputField.value)
     },
     UpdateLocation() {
       const LocationInputField = document.getElementById("LocationInputField")
-      state.filteringCriterias.value.ChangeLocation(LocationInputField.value)
+      this.filterStore.ChangeLocation(LocationInputField.value)
     }
   }
 }

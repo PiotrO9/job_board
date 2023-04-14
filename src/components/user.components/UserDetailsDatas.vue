@@ -1,6 +1,6 @@
 <template>
   <div v-if="statistics != null && userDatas != null" 
-    :class="{ dark: darkMode }" 
+    :class="{ dark: darkMode.getDarkModeState }" 
     class="UserDetailsDatas">
       <UserDetailsDatasCard />
       <div class="UserDetailsDatas__grid">
@@ -21,7 +21,7 @@
 <script>
 import UserDetailsDatasCard from "./UserDetailsDatasCard.vue";
 import GridUserDetailsDataCell from "../GridUserDetailsDataCell.vue";
-import { state } from '../../main.js'
+import { useDarkModeStore } from '@/stores/DarkModeStore'
 
 export default {
   data() {
@@ -32,7 +32,7 @@ export default {
   },
   computed: {
         darkMode() {
-            return state.darkMode.value
+            return useDarkModeStore()
         }
   },
   components: {

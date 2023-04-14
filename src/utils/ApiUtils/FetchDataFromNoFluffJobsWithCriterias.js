@@ -1,7 +1,9 @@
 import { state } from '@/main.js';
+import { useFilterStore } from '@/stores/FilterStore';
 
 async function FetchDataFromNoFluffJobsWithCriterias() {
-    let filteringCriterias = state.filteringCriterias.value;
+    let filteringCriterias = useFilterStore().getFilteringCriterias
+    console.log(filteringCriterias)
 
     return await fetch('http://localhost:3000/queryWithCriterias', {
         method: "POST",

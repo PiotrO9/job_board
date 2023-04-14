@@ -1,5 +1,5 @@
 <template>
-  <aside :class="{ dark: darkMode }">
+  <aside :class="{ dark: darkMode.getDarkModeState }">
     <section>
         <SalaryFilter :minSalary=minSal />
         <ExperienceFilter />
@@ -17,7 +17,8 @@
 import SalaryFilter from "../SalaryFilter.vue"
 import ExperienceFilter from "../ExperienceFilter.vue"
 import ContractTypeFilter from "../contract.components/ContractTypeFilter.vue"
-import { state } from '../../main.js'
+import { useDarkModeStore } from '@/stores/DarkModeStore'
+import { useFilterStore } from "@/stores/FilterStore"
 
 export default {
   data() {
@@ -28,10 +29,13 @@ export default {
   },
   computed: {
         darkMode() {
-            return state.darkMode.value
+            return useDarkModeStore()
         },
         filtersInMobileMode() {
-            return state.filtersInMobileMode.value
+            return useFilterStore()
+        },
+        readyForFilteringValue() {
+          return this.filtersInMobileMode.$state.filtersInMobileMode
         }
   },
   components: {
@@ -40,7 +44,7 @@ export default {
     ContractTypeFilter
   },
   watch: {
-    filtersInMobileMode() {
+    readyForFilteringValue() {
       const aside = document.getElementsByTagName("aside")[0]
       if(this.filtersInMobileMode) {
         aside.classList.add("ShowMobileFilters")
@@ -52,17 +56,17 @@ export default {
   },
   methods: {
     SearchingConfirming() {
-      state.toggleReadiness()
+      this.filtersInMobileMode.toggleReadiness()
     },
     SetTwoColumnsDisplayMode() {
       this.DisableActiveDisplayModes()
       const TwoColumnsDisplayMode = document.getElementById("TwoColumnsDisplayMode").classList.add("ActiveDisplayMode")
-      state.setDisplayMode(false)
+      this.filtersInMobileMode.SetterFiltersInMobileMode(true)
     },
     SetThreeColumnsDisplayMode() {
       this.DisableActiveDisplayModes()
       const ThreeColumnsDisplayMode = document.getElementById("ThreeColumnsDisplayMode").classList.add("ActiveDisplayMode")
-      state.setDisplayMode(true)
+      this.filtersInMobileMode.SetterFiltersInMobileMode(true)
     },
     DisableActiveDisplayModes() {
       const TwoColumnsDisplayMode = document.getElementById("TwoColumnsDisplayMode")

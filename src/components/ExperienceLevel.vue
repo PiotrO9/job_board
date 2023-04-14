@@ -1,5 +1,5 @@
 <template>
-  <div class="ExperienceLevel" :class="{ dark: darkMode }">
+  <div class="ExperienceLevel" :class="{ dark: darkMode.getDarkModeState }">
     <fa v-show="isChecked" icon="fa-check"/>
     <input type="checkbox" v-on:change="changeCheckState">
     <p>{{ level }}</p>
@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import { state } from '../main.js'
+import { useDarkModeStore } from '@/stores/DarkModeStore'
 
 export default {
     props: ['level'],
@@ -18,7 +18,7 @@ export default {
     },
     computed: {
         darkMode() {
-            return state.darkMode.value
+            return useDarkModeStore()
         }
     },
     methods: {

@@ -1,5 +1,5 @@
 <template>
-  <div class="ContractType" :class="{ dark: darkMode }">
+  <div class="ContractType" :class="{ dark: darkMode.getDarkModeState }">
     <fa v-show="isChecked" icon="fa-check"/>
     <input type="checkbox" v-on:change="changeCheckState">
     <p>{{ contract }}</p>
@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import { state } from '../../main.js'
+import { useDarkModeStore } from '@/stores/DarkModeStore'
 
 export default {
     props: ['contract'],
@@ -18,7 +18,7 @@ export default {
     },
     computed: {
         darkMode() {
-            return state.darkMode.value
+            return useDarkModeStore()
         }
     },
     methods: {

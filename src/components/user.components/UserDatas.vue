@@ -1,7 +1,7 @@
 <template>
   <div v-if="UserDatas != undefined" 
     class="UserDatas" 
-    :class="{ dark: darkMode }"
+    :class="{ dark: darkMode.getDarkModeState }"
     @click="ArrowClick">
         <img class="UserDatas__PictureData" 
         :src=UserDatas.picture.thumbnail 
@@ -45,7 +45,7 @@
 import FetchRandomUserApi from '@/utils/ApiUtils/FetchRandomUserApi';
 import SetClassNameForUserLocationDatas from '@/utils/SetClassNameForUserLocationDatas.js';
 import GenerateRandomStatisticNumber from '@/utils/GenerateRandomStatisticNumber.js';
-import { state } from '../../main.js';
+import { useDarkModeStore } from '@/stores/DarkModeStore'
 
 export default {
     data() {
@@ -64,7 +64,7 @@ export default {
     },
     computed: {
         darkMode() {
-            return state.darkMode.value
+            return useDarkModeStore()
         }
     },
     mounted() {

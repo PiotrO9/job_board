@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ loadingPhase: jobOffers == null || jobOffers.length < 1, dark: darkMode }" class="JobOffers">
+  <div :class="{ loadingPhase: jobOffers == null || jobOffers.length < 1, dark: darkMode.getDarkModeState }" class="JobOffers">
     <div v-if="jobOffers == null">
       <Loading/>
     </div>
@@ -17,8 +17,9 @@ import FetchDataFromNoFluffJobsWithFilters from "@/utils/ApiUtils/FetchDataFromN
 import JobOffer from "./JobOffer.vue"
 import Loading from "@/components/Loading.vue"
 import NoResults from "@/components/NoResults.vue"
-import { state } from '../../main.js'
 import FetchDataFromNoFluffJobsWithCriterias from "@/utils/ApiUtils/FetchDataFromNoFluffJobsWithCriterias"
+import { useDarkModeStore } from '@/stores/DarkModeStore'
+import { useFilterStore } from "@/stores/FilterStore"
 
 export default {
     data(){
@@ -28,10 +29,13 @@ export default {
     },
     computed: {
         darkMode() {
-            return state.darkMode.value
+            return useDarkModeStore()
         },
         readyState() {
-          return state.readyForFiltering.value
+          return useFilterStore()
+        },
+        readyStateValue() {
+          return this.readyState.readyForFiltering
         }
     },
     components: {
@@ -44,12 +48,12 @@ export default {
         .then((res) => this.jobOffers = res)
     },
     watch: {
-      readyState() {
-        if (state.readyForFiltering.value) {
+      readyStateValue() {
+        if (this.readyStateValue) {
           this.jobOffers = null
           FetchDataFromNoFluffJobsWithCriterias()
             .then(responseOffers => this.jobOffers = responseOffers)
-            .then(state.toggleReadiness())
+            .then(this.readyState.toggleReadiness())
         }
       }
     }
