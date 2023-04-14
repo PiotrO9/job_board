@@ -1,6 +1,6 @@
 <template>  
     <div v-if="userDatas != null" 
-        :class="{ dark: darkMode }" 
+        :class="{ dark: darkMode.getDarkModeState }" 
         class="UserDetailsDatasCard">
             <img :src=userDatas.picture.large>
             <div>
@@ -24,6 +24,7 @@
 
 <script>
 import { state } from '../../main.js'
+import { useDarkModeStore } from '@/stores/DarkModeStore'
 
 export default {
     props: ['imgSource', 'name', 'location'],
@@ -34,7 +35,7 @@ export default {
     },
     computed: {
         darkMode() {
-            return state.darkMode.value
+            return useDarkModeStore()
         }
     },
     mounted() {
@@ -42,7 +43,7 @@ export default {
     },
     methods: {
         SwitchThemes() {
-            state.toggleDarkMode()
+            this.darkMode.toggleDarkMode()
         }
     }
 }

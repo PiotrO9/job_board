@@ -1,5 +1,5 @@
 <template>
-  <header :class="{ dark: darkMode }">
+  <header :class="{ dark: darkMode.getDarkModeState }">
     <div id="LogoContainer">
       <p>
         <span>JOB</span>
@@ -18,11 +18,12 @@
 import SearchFields from "@/components/SearchFields.vue"
 import UserDatas from "@/components/user.components/UserDatas.vue";
 import { state } from '../main.js'
+import { useDarkModeStore } from "@/stores/DarkModeStore";
 
 export default {
   computed: {
         darkMode() {
-            return state.darkMode.value
+            return useDarkModeStore()
         }
   },
   components: {
