@@ -37,13 +37,13 @@ export default {
             return useDarkModeStore()
         }
     },
-    mounted() {
-        this.userDatas = JSON.parse(localStorage.getItem('userDatas'))
-    },
     methods: {
         SwitchThemes() {
             this.darkMode.toggleDarkMode()
         }
+    },
+    mounted() {
+        this.userDatas = JSON.parse(localStorage.getItem('userDatas'))
     }
 }
 </script>

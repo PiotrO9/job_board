@@ -16,14 +16,14 @@ import { useDarkModeStore } from '@/stores/DarkModeStore'
 import { useFilterStore } from '@/stores/FilterStore';
 
 export default {
+    components: {
+        ExperienceLevel
+    },
     data() {
         return {
             ExperienceLevels: [],
             ExperienceNames: ['Trainee', 'Junior', 'Mid', 'Senior', 'Expert']
         }
-    },
-    components: {
-        ExperienceLevel
     },
     computed: {
         darkMode() {

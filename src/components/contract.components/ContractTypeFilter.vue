@@ -16,14 +16,14 @@ import { useDarkModeStore } from '@/stores/DarkModeStore'
 import { useFilterStore } from '@/stores/FilterStore';
 
 export default {
+    components: {
+        ContractType
+    },
     data() {
         return {
             ContractTypes: [],
             ContractTypeNames: ['permanent', 'b2b', 'intern'],
         }
-    },
-    components: {
-        ContractType
     },
     computed: {
         darkMode() {

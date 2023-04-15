@@ -68,7 +68,6 @@ export default {
       this.JobDetailsData = JSON.parse(localStorage.getItem("JobDetailsData"))
       this.JobOfferData = JSON.parse(localStorage.getItem("JobOfferData"))
     }
-
 }
 </script>
 

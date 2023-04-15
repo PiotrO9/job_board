@@ -10,6 +10,9 @@ import { useDarkModeStore } from '@/stores/DarkModeStore'
 
 
 export default {
+  components: {
+    UserDetailsDatas
+  },
   data() {
     return {
       statistics: null,
@@ -20,9 +23,6 @@ export default {
         darkMode() {
             return useDarkModeStore()
         }
-  },
-  components: {
-    UserDetailsDatas
   },
   mounted() {
     let header = document.querySelector("header")

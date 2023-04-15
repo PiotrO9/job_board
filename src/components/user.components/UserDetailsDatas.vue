@@ -24,6 +24,10 @@ import GridUserDetailsDataCell from "../GridUserDetailsDataCell.vue";
 import { useDarkModeStore } from '@/stores/DarkModeStore'
 
 export default {
+  components: {
+    UserDetailsDatasCard,
+    GridUserDetailsDataCell
+  },
   data() {
     return {
       statistics: null,
@@ -35,18 +39,14 @@ export default {
             return useDarkModeStore()
         }
   },
-  components: {
-    UserDetailsDatasCard,
-    GridUserDetailsDataCell
-  },
-  mounted() {
-    this.statistics = JSON.parse(localStorage.getItem('statistics'))
-    this.userDatas = JSON.parse(localStorage.getItem('userDatas'))
-  },
   methods: {
     ReturnToMainPage() {
       this.$router.push({ name: 'main' })
     }
+  },
+  mounted() {
+    this.statistics = JSON.parse(localStorage.getItem('statistics'))
+    this.userDatas = JSON.parse(localStorage.getItem('userDatas'))
   }
 }
 </script>

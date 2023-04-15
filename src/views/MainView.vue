@@ -11,14 +11,14 @@ import JobOffers from "@/components/job.components/JobOffers.vue";
 import { useDarkModeStore } from "@/stores/DarkModeStore";
 
 export default {
-  computed: {
-        darkMode() {
-            return useDarkModeStore()
-        }
-  },
   components: {
     JobsFilter,
     JobOffers
+  },
+  computed: {
+      darkMode() {
+          return useDarkModeStore()
+      }
   },
   mounted() {
     let header = document.querySelector("header")

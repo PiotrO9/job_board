@@ -26,14 +26,14 @@ export default {
         darkMode() {
             return useDarkModeStore()
         }
-  },
-  methods: {
-    RedirectToDetailPage() {
-      FetchDataFromNoFluffJobsDetailPage(this.datas.jobDetailsLink)
-        .then(res => {
-          localStorage.setItem("JobDetailsData", JSON.stringify(res))
-          localStorage.setItem("JobOfferData", JSON.stringify(this.$props.datas))
-          this.$router.push({ name: "offerDetails"})
+    },
+    methods: {
+      RedirectToDetailPage() {
+        FetchDataFromNoFluffJobsDetailPage(this.datas.jobDetailsLink)
+          .then(res => {
+            localStorage.setItem("JobDetailsData", JSON.stringify(res))
+            localStorage.setItem("JobOfferData", JSON.stringify(this.$props.datas))
+            this.$router.push({ name: "offerDetails"})
         })
     }
   }

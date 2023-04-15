@@ -67,11 +67,24 @@ export default {
             return useDarkModeStore()
         }
     },
-    mounted() {
-        FetchRandomUserApi()
-        .then((res) => {
-            this.UserDatas = res
-        })
+    watch: {
+        ModalUserDataVisibility() {
+            setTimeout(() => {
+                if(this.ModalUserDataVisibility) {
+                    const LocationDatas = document.getElementById("LocationDatas")
+                    let className = SetClassNameForUserLocationDatas(this.UserDatas)
+                    if(className != "") {
+                        LocationDatas.classList.add(className)
+                    }
+                }
+
+                this.Statistics = {
+                    posts: GenerateRandomStatisticNumber(10, 150),
+                    followers: GenerateRandomStatisticNumber(10, 1000),
+                    following: GenerateRandomStatisticNumber(10, 500)
+                }
+            }, 200)
+        }
     },
     methods: {
         ArrowClick() {
@@ -99,24 +112,11 @@ export default {
             this.$router.push({ name: 'UserDetailsView' })
         }
     },
-    watch: {
-        ModalUserDataVisibility() {
-            setTimeout(() => {
-                if(this.ModalUserDataVisibility) {
-                    const LocationDatas = document.getElementById("LocationDatas")
-                    let className = SetClassNameForUserLocationDatas(this.UserDatas)
-                    if(className != "") {
-                        LocationDatas.classList.add(className)
-                    }
-                }
-
-                this.Statistics = {
-                    posts: GenerateRandomStatisticNumber(10, 150),
-                    followers: GenerateRandomStatisticNumber(10, 1000),
-                    following: GenerateRandomStatisticNumber(10, 500)
-                }
-            }, 200)
-        }
+    mounted() {
+        FetchRandomUserApi()
+        .then((res) => {
+            this.UserDatas = res
+        })
     }
 }
 </script>

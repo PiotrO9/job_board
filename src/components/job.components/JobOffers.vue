@@ -22,6 +22,11 @@ import { useDarkModeStore } from '@/stores/DarkModeStore'
 import { useFilterStore } from "@/stores/FilterStore"
 
 export default {
+    components: {
+      JobOffer,
+      Loading,
+      NoResults
+    },
     data(){
       return {
         jobOffers: null
@@ -38,15 +43,6 @@ export default {
           return this.readyState.readyForFiltering
         }
     },
-    components: {
-      JobOffer,
-      Loading,
-      NoResults
-    },
-    mounted() {
-      FetchDataFromNoFluffJobsWithFilters()
-        .then((res) => this.jobOffers = res)
-    },
     watch: {
       readyStateValue() {
         if (this.readyStateValue) {
@@ -56,6 +52,10 @@ export default {
             .then(this.readyState.toggleReadiness())
         }
       }
+    },
+    mounted() {
+      FetchDataFromNoFluffJobsWithFilters()
+        .then((res) => this.jobOffers = res)
     }
 }
 </script>
