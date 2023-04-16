@@ -2,7 +2,7 @@
     <div v-if="userDatas != null" 
         :class="{ dark: darkMode.getDarkModeState }" 
         class="UserDetailsDatasCard">
-            <img :src=userDatas.picture.large>
+            <img :src=userDatas.picture.large aria-label="User picture">
             <div>
                 <p>{{ userDatas.name.first }} {{ userDatas.name.last }}</p>
                 <p>{{ userDatas.location.country }}, {{ userDatas.location.city }}</p>
@@ -37,13 +37,13 @@ export default {
             return useDarkModeStore()
         }
     },
-    mounted() {
-        this.userDatas = JSON.parse(localStorage.getItem('userDatas'))
-    },
     methods: {
         SwitchThemes() {
             this.darkMode.toggleDarkMode()
         }
+    },
+    mounted() {
+        this.userDatas = JSON.parse(localStorage.getItem('userDatas'))
     }
 }
 </script>

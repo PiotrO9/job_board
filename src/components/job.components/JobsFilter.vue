@@ -21,6 +21,11 @@ import { useDarkModeStore } from '@/stores/DarkModeStore'
 import { useFilterStore } from "@/stores/FilterStore"
 
 export default {
+  components: {
+    SalaryFilter,
+    ExperienceFilter,
+    ContractTypeFilter
+  },
   data() {
     return {
       minSal: 100,
@@ -37,11 +42,6 @@ export default {
         readyForFilteringValue() {
           return this.filtersInMobileMode.$state.filtersInMobileMode
         }
-  },
-  components: {
-    SalaryFilter,
-    ExperienceFilter,
-    ContractTypeFilter
   },
   watch: {
     readyForFilteringValue() {

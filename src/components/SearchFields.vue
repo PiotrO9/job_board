@@ -28,6 +28,9 @@ import { useDarkModeStore } from '@/stores/DarkModeStore'
 import { useFilterStore } from '@/stores/FilterStore';
 
 export default {
+    components: {
+    SubmitSearchFilters
+  },
   computed: {
         darkMode() {
             return useDarkModeStore()
@@ -35,9 +38,6 @@ export default {
         filterStore() {
             return useFilterStore()
         }
-  },
-  components: {
-    SubmitSearchFilters
   },
   methods: {
     UpdateTitle() {
@@ -77,7 +77,7 @@ export default {
 
             @media (max-width: $OldDesktopWidth) {
                 width: 75%;
-                font-size: 10px;
+                font-size: 12px;
             } 
         }
 

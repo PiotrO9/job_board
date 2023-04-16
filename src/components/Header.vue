@@ -21,6 +21,10 @@ import { useDarkModeStore } from "@/stores/DarkModeStore";
 import { useFilterStore } from "@/stores/FilterStore";
 
 export default {
+  components: {
+    SearchFields,
+    UserDatas
+  },
   computed: {
         darkMode() {
             return useDarkModeStore()
@@ -28,10 +32,6 @@ export default {
         filterStore() {
           return useFilterStore()
         }
-  },
-  components: {
-    SearchFields,
-    UserDatas
   },
   methods: {
     ShowFiltersInMobileMode() {

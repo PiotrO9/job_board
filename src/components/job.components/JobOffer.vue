@@ -1,7 +1,12 @@
 <template>
   <div class="JobOffer" :class="{ dark: darkMode.getDarkModeState }">
     <div class="JobOffer__MainDatas">
-    <img v-if="datas.logoUrl != undefined" class="JobOffer__MainDatas-CompanyLogo" :src=datas.logoUrl :width=datas.width :height=datas.height>
+    <img v-if="datas.logoUrl != undefined" 
+        class="JobOffer__MainDatas-CompanyLogo" 
+        alt="Company logo"
+        :src=datas.logoUrl 
+        :width=datas.width 
+        :height=datas.height>
     <img v-else src="../../assets/images/question-mark.png" alt="Unknown logo">
     <a @click="RedirectToDetailPage">{{ datas.jobOfferName }}</a>
     </div>
@@ -26,14 +31,14 @@ export default {
         darkMode() {
             return useDarkModeStore()
         }
-  },
-  methods: {
-    RedirectToDetailPage() {
-      FetchDataFromNoFluffJobsDetailPage(this.datas.jobDetailsLink)
-        .then(res => {
-          localStorage.setItem("JobDetailsData", JSON.stringify(res))
-          localStorage.setItem("JobOfferData", JSON.stringify(this.$props.datas))
-          this.$router.push({ name: "offerDetails"})
+    },
+    methods: {
+      RedirectToDetailPage() {
+        FetchDataFromNoFluffJobsDetailPage(this.datas.jobDetailsLink)
+          .then(res => {
+            localStorage.setItem("JobDetailsData", JSON.stringify(res))
+            localStorage.setItem("JobOfferData", JSON.stringify(this.$props.datas))
+            this.$router.push({ name: "offerDetails"})
         })
     }
   }

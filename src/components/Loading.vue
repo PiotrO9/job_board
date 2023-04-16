@@ -19,6 +19,17 @@ export default {
           return useFilterStore().$state.filtersInMobileMode
         }
     },
+    watch: {
+      filtersInMobileMode () {
+        const loading = document.querySelector(".Loading")
+        if(this.filtersInMobileMode) {
+          loading.classList.add("HideLoading")
+        }
+        else {
+          loading.classList.remove("HideLoading")
+        }
+      }
+    },
     mounted() {
         const TypeWriterText = document.getElementById("LoadingText")
         const delayTime = 350
@@ -38,18 +49,7 @@ export default {
         .typeString(".")
         .pauseFor(delayTime)
         .start()
-    },
-    watch: {
-    filtersInMobileMode () {
-      const loading = document.querySelector(".Loading")
-      if(this.filtersInMobileMode) {
-        loading.classList.add("HideLoading")
-      }
-      else {
-        loading.classList.remove("HideLoading")
-      }
     }
-  }
 }
 </script>
 

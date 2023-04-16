@@ -7,7 +7,10 @@
         :src=UserDatas.picture.thumbnail 
         alt="Profile picture">
         <p class="UserDatas__NameData">{{ UserDatas.name.first }}</p>
-        <img id="UserDataDownArrow" class="down-arrow" src="../../assets/images/down-arrow.png"> 
+        <img id="UserDataDownArrow" 
+            class="down-arrow" 
+            src="../../assets/images/down-arrow.png"
+            alt="Down arrow - Expand"> 
         <transition appear v-if="ModalUserDataVisibility" name="ModalUserData">
             <div class="modalUserDatas">
                 <div class="modalUserDatas__GeneralDatas">
@@ -67,11 +70,24 @@ export default {
             return useDarkModeStore()
         }
     },
-    mounted() {
-        FetchRandomUserApi()
-        .then((res) => {
-            this.UserDatas = res
-        })
+    watch: {
+        ModalUserDataVisibility() {
+            setTimeout(() => {
+                if(this.ModalUserDataVisibility) {
+                    const LocationDatas = document.getElementById("LocationDatas")
+                    let className = SetClassNameForUserLocationDatas(this.UserDatas)
+                    if(className != "") {
+                        LocationDatas.classList.add(className)
+                    }
+                }
+
+                this.Statistics = {
+                    posts: GenerateRandomStatisticNumber(10, 150),
+                    followers: GenerateRandomStatisticNumber(10, 1000),
+                    following: GenerateRandomStatisticNumber(10, 500)
+                }
+            }, 200)
+        }
     },
     methods: {
         ArrowClick() {
@@ -99,24 +115,11 @@ export default {
             this.$router.push({ name: 'UserDetailsView' })
         }
     },
-    watch: {
-        ModalUserDataVisibility() {
-            setTimeout(() => {
-                if(this.ModalUserDataVisibility) {
-                    const LocationDatas = document.getElementById("LocationDatas")
-                    let className = SetClassNameForUserLocationDatas(this.UserDatas)
-                    if(className != "") {
-                        LocationDatas.classList.add(className)
-                    }
-                }
-
-                this.Statistics = {
-                    posts: GenerateRandomStatisticNumber(10, 150),
-                    followers: GenerateRandomStatisticNumber(10, 1000),
-                    following: GenerateRandomStatisticNumber(10, 500)
-                }
-            }, 200)
-        }
+    mounted() {
+        FetchRandomUserApi()
+        .then((res) => {
+            this.UserDatas = res
+        })
     }
 }
 </script>
