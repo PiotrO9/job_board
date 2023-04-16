@@ -7,7 +7,10 @@
         :src=UserDatas.picture.thumbnail 
         alt="Profile picture">
         <p class="UserDatas__NameData">{{ UserDatas.name.first }}</p>
-        <img id="UserDataDownArrow" class="down-arrow" src="../../assets/images/down-arrow.png"> 
+        <img id="UserDataDownArrow" 
+            class="down-arrow" 
+            src="../../assets/images/down-arrow.png"
+            alt="Down arrow - Expand"> 
         <transition appear v-if="ModalUserDataVisibility" name="ModalUserData">
             <div class="modalUserDatas">
                 <div class="modalUserDatas__GeneralDatas">
