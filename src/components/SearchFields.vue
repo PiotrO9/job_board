@@ -77,7 +77,7 @@ export default {
 
             @media (max-width: $OldDesktopWidth) {
                 width: 75%;
-                font-size: 10px;
+                font-size: 12px;
             } 
         }
 
