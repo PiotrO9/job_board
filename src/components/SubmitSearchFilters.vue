@@ -13,7 +13,6 @@ export default {
     },
     methods: {
         SearchingConfirming() {
-            console.log(123)
             this.filterState.toggleReadiness()
         }
     }
